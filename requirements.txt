@@ -1,0 +1,14 @@
+# Versiones fijadas del entorno en el que pasa la suite completa (Python 3.11, 2026-11-07).
+# Núcleo y tests
+numpy==2.4.6
+pytest==9.2.0
+# Análisis estadístico (analisis/estadistica.py, estudio factorial)
+scipy==1.17.1
+# Mundo Crafter (+ visor opcional y GIF)
+crafter==1.8.3
+pillow==13.0.0
+imageio==2.38.1
+# Mundo Ajedrez (licencia GPL-3.0-or-later; ver NOTICE)
+chess==1.11.2
+# Mundo Snake web (experimental; además: python -m playwright install chromium)
+playwright==1.64.1

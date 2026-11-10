@@ -1,0 +1,1799 @@
+{
+  "linaje": "Linaje_Ophidia_Arcade",
+  "generacion_alcanzada": 26,
+  "axiomas_heredados": [
+    {
+      "id": "Autoestima_Cognitiva",
+      "tipo_componente": "Autoestima_Cognitiva",
+      "arousal": 0.25,
+      "trust": 1.0,
+      "tensor_sensorial": null,
+      "product": {
+        "valor": 0.25
+      },
+      "inputs": [
+        "Comp_Metacognicion"
+      ],
+      "heredado": false,
+      "demostrado_de_novo": false,
+      "sistemas_participantes": [],
+      "created": 1793883555.2913425,
+      "updated": 1793883555.2913425
+    },
+    {
+      "id": "Identidad_Narrativa",
+      "tipo_componente": "Identidad_Narrativa",
+      "arousal": 0.4,
+      "trust": 1.0,
+      "tensor_sensorial": null,
+      "product": {
+        "sujeto": "IdA",
+        "modalidad": "ASUME_ROL",
+        "rol": "Guardian",
+        "en_santuario": false,
+        "axioma": "[PRIORIZA (Proteger_Santuario) SOBRE (Homeostasis)]",
+        "vinculo": "PRIORIZA"
+      },
+      "inputs": [
+        "Arquetipo",
+        "Comp_IdentidadNarrativa"
+      ],
+      "heredado": false,
+      "demostrado_de_novo": false,
+      "sistemas_participantes": [],
+      "created": 1793883555.2914114,
+      "updated": 1793883555.2914116
+    },
+    {
+      "id": "Aversion_Mortal_AUTOENCERRONA_ESPACIAL",
+      "tipo_componente": "Aversion_Traumatica",
+      "arousal": 0.96,
+      "trust": 1.0,
+      "tensor_sensorial": null,
+      "product": {
+        "sujeto": "IdA",
+        "relacion": "ES_LETAL",
+        "tipo_trauma": "AUTOENCERRONA_ESPACIAL",
+        "nodo_fatal": "nodo_17_2",
+        "buffer_seguridad_recomendado": 1,
+        "advertencia": "Evitar corredores cerrados"
+      },
+      "inputs": [],
+      "heredado": false,
+      "demostrado_de_novo": true,
+      "sistemas_participantes": [],
+      "created": 1793883555.3494549,
+      "updated": 1793883555.349455
+    },
+    {
+      "id": "Patron_Desentrampe_Circulante",
+      "tipo_componente": "Patron_Exito_Estrategico",
+      "arousal": 0.88,
+      "trust": 1.0,
+      "tensor_sensorial": null,
+      "product": {
+        "sujeto": "IdA",
+        "relacion": "ES_SEGURO",
+        "estrategia": "DESAHOGO_PERIMETRAL_AMPLIO",
+        "umbral_longitud": 6,
+        "peso_area_libre_bonus": 1.6,
+        "explicacion": "Con cuerpo largo, priorizar bolsas de espacio amplio para desahogar la cola"
+      },
+      "inputs": [],
+      "heredado": false,
+      "demostrado_de_novo": true,
+      "sistemas_participantes": [],
+      "created": 1793883555.3504512,
+      "updated": 1793883555.3504524
+    },
+    {
+      "id": "Axioma_Supervivencia_Gen1",
+      "tipo_componente": "Proposicion_VERDAD",
+      "arousal": 0.88,
+      "trust": 0.92,
+      "tensor_sensorial": null,
+      "product": {
+        "consecuente": "ES_SEGURO",
+        "motivo": "Supervivencia natural 259 latidos",
+        "puntuacion": 1400
+      },
+      "inputs": [],
+      "heredado": false,
+      "demostrado_de_novo": true,
+      "sistemas_participantes": [],
+      "created": 1793883555.3515003,
+      "updated": 1793883555.3515007
+    },
+    {
+      "id": "Axioma_Supervivencia_Gen2",
+      "tipo_componente": "Proposicion_VERDAD",
+      "arousal": 0.88,
+      "trust": 0.92,
+      "tensor_sensorial": null,
+      "product": {
+        "consecuente": "ES_SEGURO",
+        "motivo": "Supervivencia natural 46 latidos",
+        "puntuacion": 160
+      },
+      "inputs": [],
+      "heredado": false,
+      "demostrado_de_novo": true,
+      "sistemas_participantes": [],
+      "created": 1793883569.832908,
+      "updated": 1793883569.8329084
+    },
+    {
+      "id": "Axioma_Supervivencia_Gen3",
+      "tipo_componente": "Proposicion_VERDAD",
+      "arousal": 0.88,
+      "trust": 0.92,
+      "tensor_sensorial": null,
+      "product": {
+        "consecuente": "ES_SEGURO",
+        "motivo": "Supervivencia natural 134 latidos",
+        "puntuacion": 435
+      },
+      "inputs": [],
+      "heredado": false,
+      "demostrado_de_novo": true,
+      "sistemas_participantes": [],
+      "created": 1793883594.4201183,
+      "updated": 1793883594.4201186
+    },
+    {
+      "id": "Axioma_Supervivencia_Gen4",
+      "tipo_componente": "Proposicion_VERDAD",
+      "arousal": 0.88,
+      "trust": 0.92,
+      "tensor_sensorial": null,
+      "product": {
+        "consecuente": "ES_SEGURO",
+        "motivo": "Supervivencia natural 148 latidos",
+        "puntuacion": 265
+      },
+      "inputs": [],
+      "heredado": false,
+      "demostrado_de_novo": true,
+      "sistemas_participantes": [],
+      "created": 1793883634.3834176,
+      "updated": 1793883634.3834186
+    },
+    {
+      "id": "Axioma_Supervivencia_Gen5",
+      "tipo_componente": "Proposicion_VERDAD",
+      "arousal": 0.88,
+      "trust": 0.92,
+      "tensor_sensorial": null,
+      "product": {
+        "consecuente": "ES_SEGURO",
+        "motivo": "Supervivencia natural 319 latidos",
+        "puntuacion": 485
+      },
+      "inputs": [],
+      "heredado": false,
+      "demostrado_de_novo": true,
+      "sistemas_participantes": [],
+      "created": 1793883685.167693,
+      "updated": 1793883685.1676934
+    },
+    {
+      "id": "Axioma_Supervivencia_Gen6",
+      "tipo_componente": "Proposicion_VERDAD",
+      "arousal": 0.88,
+      "trust": 0.92,
+      "tensor_sensorial": null,
+      "product": {
+        "consecuente": "ES_SEGURO",
+        "motivo": "Supervivencia natural 50 latidos",
+        "puntuacion": 145
+      },
+      "inputs": [],
+      "heredado": false,
+      "demostrado_de_novo": true,
+      "sistemas_participantes": [],
+      "created": 1793883698.7481673,
+      "updated": 1793883698.7481675
+    },
+    {
+      "id": "Axioma_Supervivencia_Gen8",
+      "tipo_componente": "Proposicion_VERDAD",
+      "arousal": 0.88,
+      "trust": 0.92,
+      "tensor_sensorial": null,
+      "product": {
+        "consecuente": "ES_SEGURO",
+        "motivo": "Supervivencia natural 191 latidos",
+        "puntuacion": 1055
+      },
+      "inputs": [],
+      "heredado": false,
+      "demostrado_de_novo": true,
+      "sistemas_participantes": [],
+      "created": 1793883752.1994026,
+      "updated": 1793883752.199403
+    },
+    {
+      "id": "Axioma_Supervivencia_Gen9",
+      "tipo_componente": "Proposicion_VERDAD",
+      "arousal": 0.88,
+      "trust": 0.92,
+      "tensor_sensorial": null,
+      "product": {
+        "consecuente": "ES_SEGURO",
+        "motivo": "Supervivencia natural 220 latidos",
+        "puntuacion": 620
+      },
+      "inputs": [],
+      "heredado": false,
+      "demostrado_de_novo": true,
+      "sistemas_participantes": [],
+      "created": 1793883788.3912442,
+      "updated": 1793883788.391245
+    },
+    {
+      "id": "Axioma_Supervivencia_Gen10",
+      "tipo_componente": "Proposicion_VERDAD",
+      "arousal": 0.88,
+      "trust": 0.92,
+      "tensor_sensorial": null,
+      "product": {
+        "consecuente": "ES_SEGURO",
+        "motivo": "Supervivencia natural 68 latidos",
+        "puntuacion": 155
+      },
+      "inputs": [],
+      "heredado": false,
+      "demostrado_de_novo": true,
+      "sistemas_participantes": [],
+      "created": 1793884101.7255988,
+      "updated": 1793884101.725599
+    },
+    {
+      "id": "Axioma_Supervivencia_Gen11",
+      "tipo_componente": "Proposicion_VERDAD",
+      "arousal": 0.88,
+      "trust": 0.92,
+      "tensor_sensorial": null,
+      "product": {
+        "consecuente": "ES_SEGURO",
+        "motivo": "Supervivencia natural 40 latidos",
+        "puntuacion": 100
+      },
+      "inputs": [],
+      "heredado": false,
+      "demostrado_de_novo": true,
+      "sistemas_participantes": [],
+      "created": 1793884114.618571,
+      "updated": 1793884114.6185713
+    },
+    {
+      "id": "Axioma_Supervivencia_Gen12",
+      "tipo_componente": "Proposicion_VERDAD",
+      "arousal": 0.88,
+      "trust": 0.92,
+      "tensor_sensorial": null,
+      "product": {
+        "consecuente": "ES_SEGURO",
+        "motivo": "Supervivencia natural 58 latidos",
+        "puntuacion": 110
+      },
+      "inputs": [],
+      "heredado": false,
+      "demostrado_de_novo": true,
+      "sistemas_participantes": [],
+      "created": 1793884129.5313282,
+      "updated": 1793884129.531329
+    },
+    {
+      "id": "Axioma_Supervivencia_Gen13",
+      "tipo_componente": "Proposicion_VERDAD",
+      "arousal": 0.88,
+      "trust": 0.92,
+      "tensor_sensorial": null,
+      "product": {
+        "consecuente": "ES_SEGURO",
+        "motivo": "Supervivencia natural 121 latidos",
+        "puntuacion": 145
+      },
+      "inputs": [],
+      "heredado": false,
+      "demostrado_de_novo": true,
+      "sistemas_participantes": [],
+      "created": 1793884203.10736,
+      "updated": 1793884203.1073604
+    },
+    {
+      "id": "Axioma_Supervivencia_Gen14",
+      "tipo_componente": "Proposicion_VERDAD",
+      "arousal": 0.88,
+      "trust": 0.92,
+      "tensor_sensorial": null,
+      "product": {
+        "consecuente": "ES_SEGURO",
+        "motivo": "Supervivencia natural 38 latidos",
+        "puntuacion": 120
+      },
+      "inputs": [],
+      "heredado": false,
+      "demostrado_de_novo": true,
+      "sistemas_participantes": [],
+      "created": 1793884215.5302355,
+      "updated": 1793884215.5302362
+    },
+    {
+      "id": "Axioma_Supervivencia_Gen15",
+      "tipo_componente": "Proposicion_VERDAD",
+      "arousal": 0.88,
+      "trust": 0.92,
+      "tensor_sensorial": null,
+      "product": {
+        "consecuente": "ES_SEGURO",
+        "motivo": "Supervivencia natural 33 latidos",
+        "puntuacion": 190
+      },
+      "inputs": [],
+      "heredado": false,
+      "demostrado_de_novo": true,
+      "sistemas_participantes": [],
+      "created": 1793884226.429905,
+      "updated": 1793884226.4299052
+    },
+    {
+      "id": "Axioma_Supervivencia_Gen16",
+      "tipo_componente": "Proposicion_VERDAD",
+      "arousal": 0.88,
+      "trust": 0.92,
+      "tensor_sensorial": null,
+      "product": {
+        "consecuente": "ES_SEGURO",
+        "motivo": "Supervivencia natural 53 latidos",
+        "puntuacion": 45
+      },
+      "inputs": [],
+      "heredado": false,
+      "demostrado_de_novo": true,
+      "sistemas_participantes": [],
+      "created": 1793884707.921979,
+      "updated": 1793884707.9219792
+    },
+    {
+      "id": "Axioma_Supervivencia_Gen17",
+      "tipo_componente": "Proposicion_VERDAD",
+      "arousal": 0.88,
+      "trust": 0.92,
+      "tensor_sensorial": null,
+      "product": {
+        "consecuente": "ES_SEGURO",
+        "motivo": "Supervivencia natural 118 latidos",
+        "puntuacion": 155
+      },
+      "inputs": [],
+      "heredado": false,
+      "demostrado_de_novo": true,
+      "sistemas_participantes": [],
+      "created": 1793884731.4862633,
+      "updated": 1793884731.4862635
+    },
+    {
+      "id": "Axioma_Supervivencia_Gen18",
+      "tipo_componente": "Proposicion_VERDAD",
+      "arousal": 0.88,
+      "trust": 0.92,
+      "tensor_sensorial": null,
+      "product": {
+        "consecuente": "ES_SEGURO",
+        "motivo": "Supervivencia natural 146 latidos",
+        "puntuacion": 60
+      },
+      "inputs": [],
+      "heredado": false,
+      "demostrado_de_novo": true,
+      "sistemas_participantes": [],
+      "created": 1793884758.9626346,
+      "updated": 1793884758.962635
+    },
+    {
+      "id": "Axioma_Supervivencia_Gen19",
+      "tipo_componente": "Proposicion_VERDAD",
+      "arousal": 0.88,
+      "trust": 0.92,
+      "tensor_sensorial": null,
+      "product": {
+        "consecuente": "ES_SEGURO",
+        "motivo": "Supervivencia natural 50 latidos",
+        "puntuacion": 40
+      },
+      "inputs": [],
+      "heredado": false,
+      "demostrado_de_novo": true,
+      "sistemas_participantes": [],
+      "created": 1793960068.7394693,
+      "updated": 1793960068.7394698
+    },
+    {
+      "id": "Axioma_Supervivencia_Gen20",
+      "tipo_componente": "Proposicion_VERDAD",
+      "arousal": 0.88,
+      "trust": 0.92,
+      "tensor_sensorial": null,
+      "product": {
+        "consecuente": "ES_SEGURO",
+        "motivo": "Supervivencia natural 25 latidos",
+        "puntuacion": 45
+      },
+      "inputs": [],
+      "heredado": false,
+      "demostrado_de_novo": true,
+      "sistemas_participantes": [],
+      "created": 1793960303.9631834,
+      "updated": 1793960303.9631836
+    },
+    {
+      "id": "Axioma_Supervivencia_Gen21",
+      "tipo_componente": "Proposicion_VERDAD",
+      "arousal": 0.88,
+      "trust": 0.92,
+      "tensor_sensorial": null,
+      "product": {
+        "consecuente": "ES_SEGURO",
+        "motivo": "Supervivencia natural 25 latidos",
+        "puntuacion": 50
+      },
+      "inputs": [],
+      "heredado": false,
+      "demostrado_de_novo": true,
+      "sistemas_participantes": [],
+      "created": 1793961442.997733,
+      "updated": 1793961442.9977334
+    },
+    {
+      "id": "Causal_REM_nodo_14_1",
+      "tipo_componente": "Logica_CAUSAL",
+      "arousal": 0.65,
+      "trust": 0.86,
+      "tensor_sensorial": null,
+      "product": {
+        "sujeto": "nodo_14_1",
+        "vinculo": "IMPLICA",
+        "consecuente": "ES_NUTRITIVO",
+        "modalidad": "HIPOTESIS"
+      },
+      "inputs": [
+        "Ep_Ophidia_G22_1794056195_178",
+        "Sueno_REM_Concatenacion"
+      ],
+      "heredado": false,
+      "demostrado_de_novo": false,
+      "sistemas_participantes": [],
+      "created": 1794056215.7791011,
+      "updated": 1794056215.7791011
+    },
+    {
+      "id": "Analogia_nodo_14_1_nodo_10_3",
+      "tipo_componente": "Analogia_CAUSAL",
+      "arousal": 0.55,
+      "trust": 0.86,
+      "tensor_sensorial": null,
+      "product": {
+        "sujeto": "nodo_14_1",
+        "vinculo": "ES_ANALOGO_A",
+        "consecuente": "nodo_10_3",
+        "formula": "[nodo_14_1] ES_ANALOGO_A [nodo_10_3]"
+      },
+      "inputs": [
+        "nodo_14_1",
+        "nodo_10_3",
+        "Sueno_REM_Analogia_O1"
+      ],
+      "heredado": false,
+      "demostrado_de_novo": false,
+      "sistemas_participantes": [],
+      "created": 1794056215.7791011,
+      "updated": 1794056215.7791011
+    },
+    {
+      "id": "nodo_14_1",
+      "tipo_componente": "Proposicion_VERDAD",
+      "arousal": 0.75,
+      "trust": 0.7396,
+      "tensor_sensorial": null,
+      "product": {
+        "sujeto": "nodo_14_1",
+        "dominio": "VERDAD",
+        "relacion": "ES_NUTRITIVO",
+        "vinculo": "IMPLICA",
+        "modalidad": "DEMOSTRADO_DEDUCTIVO",
+        "formula": "[nodo_14_1 IMPLICA ES_NUTRITIVO] (DEMOSTRADO_DEDUCTIVO via nodo_13_0)"
+      },
+      "inputs": [
+        "Analogia:nodo_14_1~nodo_13_0",
+        "Causal:nodo_13_0->ES_NUTRITIVO",
+        "Comp_Logica",
+        "Comp_Sentencia_Logica"
+      ],
+      "heredado": false,
+      "demostrado_de_novo": true,
+      "sistemas_participantes": [
+        "S3"
+      ],
+      "created": 1794056215.8946853,
+      "updated": 1794056215.8946853
+    },
+    {
+      "id": "Causal_REM_nodo_13_0",
+      "tipo_componente": "Logica_CAUSAL",
+      "arousal": 0.65,
+      "trust": 0.86,
+      "tensor_sensorial": null,
+      "product": {
+        "sujeto": "nodo_13_0",
+        "vinculo": "IMPLICA",
+        "consecuente": "ES_NUTRITIVO",
+        "modalidad": "HIPOTESIS"
+      },
+      "inputs": [
+        "Ep_Ophidia_G22_1794056195_180",
+        "Sueno_REM_Concatenacion"
+      ],
+      "heredado": false,
+      "demostrado_de_novo": false,
+      "sistemas_participantes": [],
+      "created": 1794056215.7791011,
+      "updated": 1794056215.7791011
+    },
+    {
+      "id": "Analogia_nodo_13_0_nodo_10_3",
+      "tipo_componente": "Analogia_CAUSAL",
+      "arousal": 0.55,
+      "trust": 0.86,
+      "tensor_sensorial": null,
+      "product": {
+        "sujeto": "nodo_13_0",
+        "vinculo": "ES_ANALOGO_A",
+        "consecuente": "nodo_10_3",
+        "formula": "[nodo_13_0] ES_ANALOGO_A [nodo_10_3]"
+      },
+      "inputs": [
+        "nodo_13_0",
+        "nodo_10_3",
+        "Sueno_REM_Analogia_O1"
+      ],
+      "heredado": false,
+      "demostrado_de_novo": false,
+      "sistemas_participantes": [],
+      "created": 1794056215.7791011,
+      "updated": 1794056215.7791011
+    },
+    {
+      "id": "nodo_13_0",
+      "tipo_componente": "Proposicion_VERDAD",
+      "arousal": 0.75,
+      "trust": 0.7396,
+      "tensor_sensorial": null,
+      "product": {
+        "sujeto": "nodo_13_0",
+        "dominio": "VERDAD",
+        "relacion": "ES_NUTRITIVO",
+        "vinculo": "IMPLICA",
+        "modalidad": "DEMOSTRADO_DEDUCTIVO",
+        "formula": "[nodo_13_0 IMPLICA ES_NUTRITIVO] (DEMOSTRADO_DEDUCTIVO via nodo_13_2)"
+      },
+      "inputs": [
+        "Analogia:nodo_13_0~nodo_13_2",
+        "Causal:nodo_13_2->ES_NUTRITIVO",
+        "Comp_Logica",
+        "Comp_Sentencia_Logica"
+      ],
+      "heredado": false,
+      "demostrado_de_novo": true,
+      "sistemas_participantes": [
+        "S3"
+      ],
+      "created": 1794056215.8946853,
+      "updated": 1794056215.8946853
+    },
+    {
+      "id": "Causal_REM_nodo_13_2",
+      "tipo_componente": "Logica_CAUSAL",
+      "arousal": 0.65,
+      "trust": 0.86,
+      "tensor_sensorial": null,
+      "product": {
+        "sujeto": "nodo_13_2",
+        "vinculo": "IMPLICA",
+        "consecuente": "ES_NUTRITIVO",
+        "modalidad": "HIPOTESIS"
+      },
+      "inputs": [
+        "Ep_Ophidia_G22_1794056195_182",
+        "Sueno_REM_Concatenacion"
+      ],
+      "heredado": false,
+      "demostrado_de_novo": false,
+      "sistemas_participantes": [],
+      "created": 1794056215.7791011,
+      "updated": 1794056215.7791011
+    },
+    {
+      "id": "Analogia_nodo_13_2_nodo_10_3",
+      "tipo_componente": "Analogia_CAUSAL",
+      "arousal": 0.55,
+      "trust": 0.86,
+      "tensor_sensorial": null,
+      "product": {
+        "sujeto": "nodo_13_2",
+        "vinculo": "ES_ANALOGO_A",
+        "consecuente": "nodo_10_3",
+        "formula": "[nodo_13_2] ES_ANALOGO_A [nodo_10_3]"
+      },
+      "inputs": [
+        "nodo_13_2",
+        "nodo_10_3",
+        "Sueno_REM_Analogia_O1"
+      ],
+      "heredado": false,
+      "demostrado_de_novo": false,
+      "sistemas_participantes": [],
+      "created": 1794056215.7791011,
+      "updated": 1794056215.7791011
+    },
+    {
+      "id": "nodo_13_2",
+      "tipo_componente": "Proposicion_VERDAD",
+      "arousal": 0.75,
+      "trust": 0.7396,
+      "tensor_sensorial": null,
+      "product": {
+        "sujeto": "nodo_13_2",
+        "dominio": "VERDAD",
+        "relacion": "ES_NUTRITIVO",
+        "vinculo": "IMPLICA",
+        "modalidad": "DEMOSTRADO_DEDUCTIVO",
+        "formula": "[nodo_13_2 IMPLICA ES_NUTRITIVO] (DEMOSTRADO_DEDUCTIVO via nodo_12_3)"
+      },
+      "inputs": [
+        "Analogia:nodo_13_2~nodo_12_3",
+        "Causal:nodo_12_3->ES_NUTRITIVO",
+        "Comp_Logica",
+        "Comp_Sentencia_Logica"
+      ],
+      "heredado": false,
+      "demostrado_de_novo": true,
+      "sistemas_participantes": [
+        "S3"
+      ],
+      "created": 1794056215.8946853,
+      "updated": 1794056215.8946853
+    },
+    {
+      "id": "Causal_REM_nodo_12_3",
+      "tipo_componente": "Logica_CAUSAL",
+      "arousal": 0.65,
+      "trust": 0.86,
+      "tensor_sensorial": null,
+      "product": {
+        "sujeto": "nodo_12_3",
+        "vinculo": "IMPLICA",
+        "consecuente": "ES_NUTRITIVO",
+        "modalidad": "HIPOTESIS"
+      },
+      "inputs": [
+        "Ep_Ophidia_G22_1794056195_184",
+        "Sueno_REM_Concatenacion"
+      ],
+      "heredado": false,
+      "demostrado_de_novo": false,
+      "sistemas_participantes": [],
+      "created": 1794056215.7791011,
+      "updated": 1794056215.7791011
+    },
+    {
+      "id": "Analogia_nodo_12_3_nodo_10_3",
+      "tipo_componente": "Analogia_CAUSAL",
+      "arousal": 0.55,
+      "trust": 0.86,
+      "tensor_sensorial": null,
+      "product": {
+        "sujeto": "nodo_12_3",
+        "vinculo": "ES_ANALOGO_A",
+        "consecuente": "nodo_10_3",
+        "formula": "[nodo_12_3] ES_ANALOGO_A [nodo_10_3]"
+      },
+      "inputs": [
+        "nodo_12_3",
+        "nodo_10_3",
+        "Sueno_REM_Analogia_O1"
+      ],
+      "heredado": false,
+      "demostrado_de_novo": false,
+      "sistemas_participantes": [],
+      "created": 1794056215.7791011,
+      "updated": 1794056215.7791011
+    },
+    {
+      "id": "nodo_12_3",
+      "tipo_componente": "Proposicion_VERDAD",
+      "arousal": 0.75,
+      "trust": 0.7396,
+      "tensor_sensorial": null,
+      "product": {
+        "sujeto": "nodo_12_3",
+        "dominio": "VERDAD",
+        "relacion": "ES_NUTRITIVO",
+        "vinculo": "IMPLICA",
+        "modalidad": "DEMOSTRADO_DEDUCTIVO",
+        "formula": "[nodo_12_3 IMPLICA ES_NUTRITIVO] (DEMOSTRADO_DEDUCTIVO via nodo_10_3)"
+      },
+      "inputs": [
+        "Analogia:nodo_12_3~nodo_10_3",
+        "Causal:nodo_10_3->ES_NUTRITIVO",
+        "Comp_Logica",
+        "Comp_Sentencia_Logica"
+      ],
+      "heredado": false,
+      "demostrado_de_novo": true,
+      "sistemas_participantes": [
+        "S3"
+      ],
+      "created": 1794056215.8946853,
+      "updated": 1794056215.8946853
+    },
+    {
+      "id": "Causal_REM_nodo_10_3",
+      "tipo_componente": "Logica_CAUSAL",
+      "arousal": 0.65,
+      "trust": 0.86,
+      "tensor_sensorial": null,
+      "product": {
+        "sujeto": "nodo_10_3",
+        "vinculo": "IMPLICA",
+        "consecuente": "ES_NUTRITIVO",
+        "modalidad": "HIPOTESIS"
+      },
+      "inputs": [
+        "Ep_Ophidia_G22_1794056195_186",
+        "Sueno_REM_Concatenacion"
+      ],
+      "heredado": false,
+      "demostrado_de_novo": false,
+      "sistemas_participantes": [],
+      "created": 1794056215.7791011,
+      "updated": 1794056215.7791011
+    },
+    {
+      "id": "Axioma_Supervivencia_Gen22",
+      "tipo_componente": "Proposicion_VERDAD",
+      "arousal": 0.88,
+      "trust": 0.92,
+      "tensor_sensorial": null,
+      "product": {
+        "consecuente": "ES_SEGURO",
+        "motivo": "Supervivencia natural 250 latidos",
+        "puntuacion": 1425
+      },
+      "inputs": [],
+      "heredado": false,
+      "demostrado_de_novo": true,
+      "sistemas_participantes": [],
+      "created": 1794056222.6837578,
+      "updated": 1794056222.6837578
+    },
+    {
+      "id": "Analogia_Causal_REM_nodo_14_1_Causal_REM_nodo_10_3",
+      "tipo_componente": "Analogia_CAUSAL",
+      "arousal": 0.55,
+      "trust": 0.92,
+      "tensor_sensorial": null,
+      "product": {
+        "sujeto": "Causal_REM_nodo_14_1",
+        "vinculo": "ES_ANALOGO_A",
+        "consecuente": "Causal_REM_nodo_10_3",
+        "formula": "[Causal_REM_nodo_14_1] ES_ANALOGO_A [Causal_REM_nodo_10_3]"
+      },
+      "inputs": [
+        "Causal_REM_nodo_14_1",
+        "Causal_REM_nodo_10_3",
+        "Sueno_REM_Analogia_O1"
+      ],
+      "heredado": false,
+      "demostrado_de_novo": false,
+      "sistemas_participantes": [],
+      "created": 1794056247.180592,
+      "updated": 1794056247.180592
+    },
+    {
+      "id": "Analogia_Causal_REM_nodo_13_0_Causal_REM_nodo_10_3",
+      "tipo_componente": "Analogia_CAUSAL",
+      "arousal": 0.55,
+      "trust": 0.92,
+      "tensor_sensorial": null,
+      "product": {
+        "sujeto": "Causal_REM_nodo_13_0",
+        "vinculo": "ES_ANALOGO_A",
+        "consecuente": "Causal_REM_nodo_10_3",
+        "formula": "[Causal_REM_nodo_13_0] ES_ANALOGO_A [Causal_REM_nodo_10_3]"
+      },
+      "inputs": [
+        "Causal_REM_nodo_13_0",
+        "Causal_REM_nodo_10_3",
+        "Sueno_REM_Analogia_O1"
+      ],
+      "heredado": false,
+      "demostrado_de_novo": false,
+      "sistemas_participantes": [],
+      "created": 1794056247.1815896,
+      "updated": 1794056247.1815896
+    },
+    {
+      "id": "Analogia_Causal_REM_nodo_13_2_Causal_REM_nodo_10_3",
+      "tipo_componente": "Analogia_CAUSAL",
+      "arousal": 0.55,
+      "trust": 0.92,
+      "tensor_sensorial": null,
+      "product": {
+        "sujeto": "Causal_REM_nodo_13_2",
+        "vinculo": "ES_ANALOGO_A",
+        "consecuente": "Causal_REM_nodo_10_3",
+        "formula": "[Causal_REM_nodo_13_2] ES_ANALOGO_A [Causal_REM_nodo_10_3]"
+      },
+      "inputs": [
+        "Causal_REM_nodo_13_2",
+        "Causal_REM_nodo_10_3",
+        "Sueno_REM_Analogia_O1"
+      ],
+      "heredado": false,
+      "demostrado_de_novo": false,
+      "sistemas_participantes": [],
+      "created": 1794056247.1815896,
+      "updated": 1794056247.1815896
+    },
+    {
+      "id": "Analogia_Causal_REM_nodo_12_3_Causal_REM_nodo_10_3",
+      "tipo_componente": "Analogia_CAUSAL",
+      "arousal": 0.55,
+      "trust": 0.92,
+      "tensor_sensorial": null,
+      "product": {
+        "sujeto": "Causal_REM_nodo_12_3",
+        "vinculo": "ES_ANALOGO_A",
+        "consecuente": "Causal_REM_nodo_10_3",
+        "formula": "[Causal_REM_nodo_12_3] ES_ANALOGO_A [Causal_REM_nodo_10_3]"
+      },
+      "inputs": [
+        "Causal_REM_nodo_12_3",
+        "Causal_REM_nodo_10_3",
+        "Sueno_REM_Analogia_O1"
+      ],
+      "heredado": false,
+      "demostrado_de_novo": false,
+      "sistemas_participantes": [],
+      "created": 1794056247.1815896,
+      "updated": 1794056247.1815896
+    },
+    {
+      "id": "concepto_nodo",
+      "tipo_componente": "Predicado_GENERAL",
+      "arousal": 0.663,
+      "trust": 1.0,
+      "tensor_sensorial": null,
+      "product": {
+        "sujeto": "concepto_nodo",
+        "relacion": "ES_NUTRITIVO",
+        "modalidad": "HIPOTESIS"
+      },
+      "inputs": [
+        "Sueno_REM_Induccion"
+      ],
+      "heredado": false,
+      "demostrado_de_novo": false,
+      "sistemas_participantes": [],
+      "created": 1794056247.180592,
+      "updated": 1794056247.180592
+    },
+    {
+      "id": "Causal_REM_nodo_14_4",
+      "tipo_componente": "Logica_CAUSAL",
+      "arousal": 0.65,
+      "trust": 0.86,
+      "tensor_sensorial": null,
+      "product": {
+        "sujeto": "nodo_14_4",
+        "vinculo": "IMPLICA",
+        "consecuente": "ES_NUTRITIVO",
+        "modalidad": "HIPOTESIS"
+      },
+      "inputs": [
+        "Ep_Ophidia_G23_1794056225_169",
+        "Sueno_REM_Concatenacion"
+      ],
+      "heredado": false,
+      "demostrado_de_novo": false,
+      "sistemas_participantes": [],
+      "created": 1794056247.180592,
+      "updated": 1794056247.180592
+    },
+    {
+      "id": "Causal_REM_nodo_16_4",
+      "tipo_componente": "Logica_CAUSAL",
+      "arousal": 0.65,
+      "trust": 0.86,
+      "tensor_sensorial": null,
+      "product": {
+        "sujeto": "nodo_16_4",
+        "vinculo": "IMPLICA",
+        "consecuente": "ES_NUTRITIVO",
+        "modalidad": "HIPOTESIS"
+      },
+      "inputs": [
+        "Ep_Ophidia_G23_1794056225_171",
+        "Sueno_REM_Concatenacion"
+      ],
+      "heredado": false,
+      "demostrado_de_novo": false,
+      "sistemas_participantes": [],
+      "created": 1794056247.180592,
+      "updated": 1794056247.180592
+    },
+    {
+      "id": "Causal_REM_nodo_17_5",
+      "tipo_componente": "Logica_CAUSAL",
+      "arousal": 0.65,
+      "trust": 0.86,
+      "tensor_sensorial": null,
+      "product": {
+        "sujeto": "nodo_17_5",
+        "vinculo": "IMPLICA",
+        "consecuente": "ES_NUTRITIVO",
+        "modalidad": "HIPOTESIS"
+      },
+      "inputs": [
+        "Ep_Ophidia_G23_1794056225_173",
+        "Sueno_REM_Concatenacion"
+      ],
+      "heredado": false,
+      "demostrado_de_novo": false,
+      "sistemas_participantes": [],
+      "created": 1794056247.180592,
+      "updated": 1794056247.180592
+    },
+    {
+      "id": "Causal_REM_nodo_17_3",
+      "tipo_componente": "Logica_CAUSAL",
+      "arousal": 0.65,
+      "trust": 0.86,
+      "tensor_sensorial": null,
+      "product": {
+        "sujeto": "nodo_17_3",
+        "vinculo": "IMPLICA",
+        "consecuente": "ES_NUTRITIVO",
+        "modalidad": "HIPOTESIS"
+      },
+      "inputs": [
+        "Ep_Ophidia_G23_1794056225_175",
+        "Sueno_REM_Concatenacion"
+      ],
+      "heredado": false,
+      "demostrado_de_novo": false,
+      "sistemas_participantes": [],
+      "created": 1794056247.180592,
+      "updated": 1794056247.180592
+    },
+    {
+      "id": "Causal_REM_nodo_17_1",
+      "tipo_componente": "Logica_CAUSAL",
+      "arousal": 0.65,
+      "trust": 0.86,
+      "tensor_sensorial": null,
+      "product": {
+        "sujeto": "nodo_17_1",
+        "vinculo": "IMPLICA",
+        "consecuente": "ES_NUTRITIVO",
+        "modalidad": "HIPOTESIS"
+      },
+      "inputs": [
+        "Ep_Ophidia_G23_1794056225_177",
+        "Sueno_REM_Concatenacion"
+      ],
+      "heredado": false,
+      "demostrado_de_novo": false,
+      "sistemas_participantes": [],
+      "created": 1794056247.180592,
+      "updated": 1794056247.180592
+    },
+    {
+      "id": "Axioma_Supervivencia_Gen23",
+      "tipo_componente": "Proposicion_VERDAD",
+      "arousal": 0.88,
+      "trust": 0.92,
+      "tensor_sensorial": null,
+      "product": {
+        "consecuente": "ES_SEGURO",
+        "motivo": "Supervivencia natural 250 latidos",
+        "puntuacion": 960
+      },
+      "inputs": [],
+      "heredado": false,
+      "demostrado_de_novo": true,
+      "sistemas_participantes": [],
+      "created": 1794056255.1506326,
+      "updated": 1794056255.1506326
+    },
+    {
+      "id": "Causal_REM_nodo_15_14",
+      "tipo_componente": "Logica_CAUSAL",
+      "arousal": 0.65,
+      "trust": 0.86,
+      "tensor_sensorial": null,
+      "product": {
+        "sujeto": "nodo_15_14",
+        "vinculo": "IMPLICA",
+        "consecuente": "ES_NUTRITIVO",
+        "modalidad": "HIPOTESIS"
+      },
+      "inputs": [
+        "Ep_Ophidia_G24_1794056275_162",
+        "Sueno_REM_Concatenacion"
+      ],
+      "heredado": false,
+      "demostrado_de_novo": false,
+      "sistemas_participantes": [],
+      "created": 1794056287.3078742,
+      "updated": 1794056287.3078742
+    },
+    {
+      "id": "Causal_REM_nodo_13_14",
+      "tipo_componente": "Logica_CAUSAL",
+      "arousal": 0.65,
+      "trust": 0.86,
+      "tensor_sensorial": null,
+      "product": {
+        "sujeto": "nodo_13_14",
+        "vinculo": "IMPLICA",
+        "consecuente": "ES_NUTRITIVO",
+        "modalidad": "HIPOTESIS"
+      },
+      "inputs": [
+        "Ep_Ophidia_G24_1794056275_164",
+        "Sueno_REM_Concatenacion"
+      ],
+      "heredado": false,
+      "demostrado_de_novo": false,
+      "sistemas_participantes": [],
+      "created": 1794056287.3078742,
+      "updated": 1794056287.3078742
+    },
+    {
+      "id": "Causal_REM_nodo_11_14",
+      "tipo_componente": "Logica_CAUSAL",
+      "arousal": 0.65,
+      "trust": 0.86,
+      "tensor_sensorial": null,
+      "product": {
+        "sujeto": "nodo_11_14",
+        "vinculo": "IMPLICA",
+        "consecuente": "ES_NUTRITIVO",
+        "modalidad": "HIPOTESIS"
+      },
+      "inputs": [
+        "Ep_Ophidia_G24_1794056275_166",
+        "Sueno_REM_Concatenacion"
+      ],
+      "heredado": false,
+      "demostrado_de_novo": false,
+      "sistemas_participantes": [],
+      "created": 1794056287.3078742,
+      "updated": 1794056287.3078742
+    },
+    {
+      "id": "Causal_REM_nodo_9_14",
+      "tipo_componente": "Logica_CAUSAL",
+      "arousal": 0.65,
+      "trust": 0.86,
+      "tensor_sensorial": null,
+      "product": {
+        "sujeto": "nodo_9_14",
+        "vinculo": "IMPLICA",
+        "consecuente": "ES_NUTRITIVO",
+        "modalidad": "HIPOTESIS"
+      },
+      "inputs": [
+        "Ep_Ophidia_G24_1794056275_168",
+        "Sueno_REM_Concatenacion"
+      ],
+      "heredado": false,
+      "demostrado_de_novo": false,
+      "sistemas_participantes": [],
+      "created": 1794056287.3078742,
+      "updated": 1794056287.3078742
+    },
+    {
+      "id": "Causal_REM_nodo_7_14",
+      "tipo_componente": "Logica_CAUSAL",
+      "arousal": 0.65,
+      "trust": 0.86,
+      "tensor_sensorial": null,
+      "product": {
+        "sujeto": "nodo_7_14",
+        "vinculo": "IMPLICA",
+        "consecuente": "ES_NUTRITIVO",
+        "modalidad": "HIPOTESIS"
+      },
+      "inputs": [
+        "Ep_Ophidia_G24_1794056275_170",
+        "Sueno_REM_Concatenacion"
+      ],
+      "heredado": false,
+      "demostrado_de_novo": false,
+      "sistemas_participantes": [],
+      "created": 1794056287.3078742,
+      "updated": 1794056287.3078742
+    },
+    {
+      "id": "Axioma_Supervivencia_Gen24",
+      "tipo_componente": "Proposicion_VERDAD",
+      "arousal": 0.88,
+      "trust": 0.92,
+      "tensor_sensorial": null,
+      "product": {
+        "consecuente": "ES_SEGURO",
+        "motivo": "Supervivencia natural 173 latidos",
+        "puntuacion": 750
+      },
+      "inputs": [],
+      "heredado": false,
+      "demostrado_de_novo": true,
+      "sistemas_participantes": [],
+      "created": 1794056290.7862556,
+      "updated": 1794056290.7862556
+    },
+    {
+      "id": "Causal_REM_nodo_19_5",
+      "tipo_componente": "Logica_CAUSAL",
+      "arousal": 0.65,
+      "trust": 0.86,
+      "tensor_sensorial": null,
+      "product": {
+        "sujeto": "nodo_19_5",
+        "vinculo": "IMPLICA",
+        "consecuente": "ES_NUTRITIVO",
+        "modalidad": "HIPOTESIS"
+      },
+      "inputs": [
+        "Ep_Ophidia_G25_1794056964_169",
+        "Sueno_REM_Concatenacion"
+      ],
+      "heredado": false,
+      "demostrado_de_novo": false,
+      "sistemas_participantes": [],
+      "created": 1794056983.7480261,
+      "updated": 1794056983.7480261
+    },
+    {
+      "id": "Causal_REM_nodo_19_7",
+      "tipo_componente": "Logica_CAUSAL",
+      "arousal": 0.65,
+      "trust": 0.86,
+      "tensor_sensorial": null,
+      "product": {
+        "sujeto": "nodo_19_7",
+        "vinculo": "IMPLICA",
+        "consecuente": "ES_NUTRITIVO",
+        "modalidad": "HIPOTESIS"
+      },
+      "inputs": [
+        "Ep_Ophidia_G25_1794056964_171",
+        "Sueno_REM_Concatenacion"
+      ],
+      "heredado": false,
+      "demostrado_de_novo": false,
+      "sistemas_participantes": [],
+      "created": 1794056983.7480261,
+      "updated": 1794056983.7480261
+    },
+    {
+      "id": "Causal_REM_nodo_19_9",
+      "tipo_componente": "Logica_CAUSAL",
+      "arousal": 0.65,
+      "trust": 0.86,
+      "tensor_sensorial": null,
+      "product": {
+        "sujeto": "nodo_19_9",
+        "vinculo": "IMPLICA",
+        "consecuente": "ES_NUTRITIVO",
+        "modalidad": "HIPOTESIS"
+      },
+      "inputs": [
+        "Ep_Ophidia_G25_1794056964_173",
+        "Sueno_REM_Concatenacion"
+      ],
+      "heredado": false,
+      "demostrado_de_novo": false,
+      "sistemas_participantes": [],
+      "created": 1794056983.7480261,
+      "updated": 1794056983.7480261
+    },
+    {
+      "id": "Causal_REM_nodo_17_9",
+      "tipo_componente": "Logica_CAUSAL",
+      "arousal": 0.65,
+      "trust": 0.86,
+      "tensor_sensorial": null,
+      "product": {
+        "sujeto": "nodo_17_9",
+        "vinculo": "IMPLICA",
+        "consecuente": "ES_NUTRITIVO",
+        "modalidad": "HIPOTESIS"
+      },
+      "inputs": [
+        "Ep_Ophidia_G25_1794056964_175",
+        "Sueno_REM_Concatenacion"
+      ],
+      "heredado": false,
+      "demostrado_de_novo": false,
+      "sistemas_participantes": [],
+      "created": 1794056983.7480261,
+      "updated": 1794056983.7480261
+    },
+    {
+      "id": "Causal_REM_nodo_15_9",
+      "tipo_componente": "Logica_CAUSAL",
+      "arousal": 0.65,
+      "trust": 0.86,
+      "tensor_sensorial": null,
+      "product": {
+        "sujeto": "nodo_15_9",
+        "vinculo": "IMPLICA",
+        "consecuente": "ES_NUTRITIVO",
+        "modalidad": "HIPOTESIS"
+      },
+      "inputs": [
+        "Ep_Ophidia_G25_1794056964_177",
+        "Sueno_REM_Concatenacion"
+      ],
+      "heredado": false,
+      "demostrado_de_novo": false,
+      "sistemas_participantes": [],
+      "created": 1794056983.7480261,
+      "updated": 1794056983.7480261
+    },
+    {
+      "id": "Axioma_Supervivencia_Gen25",
+      "tipo_componente": "Proposicion_VERDAD",
+      "arousal": 0.88,
+      "trust": 0.92,
+      "tensor_sensorial": null,
+      "product": {
+        "consecuente": "ES_SEGURO",
+        "motivo": "Supervivencia natural 250 latidos",
+        "puntuacion": 1185
+      },
+      "inputs": [],
+      "heredado": false,
+      "demostrado_de_novo": true,
+      "sistemas_participantes": [],
+      "created": 1794056991.8203428,
+      "updated": 1794056991.8203428
+    },
+    {
+      "id": "Causal_REM_nodo_18_6",
+      "tipo_componente": "Logica_CAUSAL",
+      "arousal": 0.65,
+      "trust": 0.86,
+      "tensor_sensorial": null,
+      "product": {
+        "sujeto": "nodo_18_6",
+        "vinculo": "IMPLICA",
+        "consecuente": "ES_NUTRITIVO",
+        "modalidad": "HIPOTESIS"
+      },
+      "inputs": [
+        "Ep_Ophidia_G26_1794057009_167",
+        "Sueno_REM_Concatenacion"
+      ],
+      "heredado": false,
+      "demostrado_de_novo": false,
+      "sistemas_participantes": [],
+      "created": 1794057021.0712705,
+      "updated": 1794057021.0712705
+    },
+    {
+      "id": "Causal_REM_nodo_18_8",
+      "tipo_componente": "Logica_CAUSAL",
+      "arousal": 0.65,
+      "trust": 0.86,
+      "tensor_sensorial": null,
+      "product": {
+        "sujeto": "nodo_18_8",
+        "vinculo": "IMPLICA",
+        "consecuente": "ES_NUTRITIVO",
+        "modalidad": "HIPOTESIS"
+      },
+      "inputs": [
+        "Ep_Ophidia_G26_1794057009_169",
+        "Sueno_REM_Concatenacion"
+      ],
+      "heredado": false,
+      "demostrado_de_novo": false,
+      "sistemas_participantes": [],
+      "created": 1794057021.0712705,
+      "updated": 1794057021.0712705
+    },
+    {
+      "id": "Causal_REM_nodo_18_10",
+      "tipo_componente": "Logica_CAUSAL",
+      "arousal": 0.65,
+      "trust": 0.86,
+      "tensor_sensorial": null,
+      "product": {
+        "sujeto": "nodo_18_10",
+        "vinculo": "IMPLICA",
+        "consecuente": "ES_NUTRITIVO",
+        "modalidad": "HIPOTESIS"
+      },
+      "inputs": [
+        "Ep_Ophidia_G26_1794057009_171",
+        "Sueno_REM_Concatenacion"
+      ],
+      "heredado": false,
+      "demostrado_de_novo": false,
+      "sistemas_participantes": [],
+      "created": 1794057021.0712705,
+      "updated": 1794057021.0722742
+    },
+    {
+      "id": "Causal_REM_nodo_18_12",
+      "tipo_componente": "Logica_CAUSAL",
+      "arousal": 0.65,
+      "trust": 0.86,
+      "tensor_sensorial": null,
+      "product": {
+        "sujeto": "nodo_18_12",
+        "vinculo": "IMPLICA",
+        "consecuente": "ES_NUTRITIVO",
+        "modalidad": "HIPOTESIS"
+      },
+      "inputs": [
+        "Ep_Ophidia_G26_1794057009_173",
+        "Sueno_REM_Concatenacion"
+      ],
+      "heredado": false,
+      "demostrado_de_novo": false,
+      "sistemas_participantes": [],
+      "created": 1794057021.0722742,
+      "updated": 1794057021.0722742
+    },
+    {
+      "id": "Causal_REM_nodo_18_14",
+      "tipo_componente": "Logica_CAUSAL",
+      "arousal": 0.65,
+      "trust": 0.86,
+      "tensor_sensorial": null,
+      "product": {
+        "sujeto": "nodo_18_14",
+        "vinculo": "IMPLICA",
+        "consecuente": "ES_NUTRITIVO",
+        "modalidad": "HIPOTESIS"
+      },
+      "inputs": [
+        "Ep_Ophidia_G26_1794057009_175",
+        "Sueno_REM_Concatenacion"
+      ],
+      "heredado": false,
+      "demostrado_de_novo": false,
+      "sistemas_participantes": [],
+      "created": 1794057021.0722742,
+      "updated": 1794057021.0722742
+    },
+    {
+      "id": "Axioma_Supervivencia_Gen26",
+      "tipo_componente": "Proposicion_VERDAD",
+      "arousal": 0.88,
+      "trust": 0.92,
+      "tensor_sensorial": null,
+      "product": {
+        "consecuente": "ES_SEGURO",
+        "motivo": "Supervivencia natural 250 latidos",
+        "puntuacion": 895
+      },
+      "inputs": [],
+      "heredado": false,
+      "demostrado_de_novo": true,
+      "sistemas_participantes": [],
+      "created": 1794057025.9016023,
+      "updated": 1794057025.9016023
+    }
+  ],
+  "historial_generaciones": [
+    {
+      "generacion": 1,
+      "individuo": "Ophidia_G1",
+      "latidos": 259,
+      "score": 1400,
+      "fitness": {
+        "s1_reactivo": 53.7,
+        "s2_limbico": 63.0,
+        "s3_racional": 78.7,
+        "global": 66.0,
+        "phi_promedio": 0.429
+      },
+      "axiomas_heredables": 5,
+      "timestamp": 1793883555.3517284
+    },
+    {
+      "generacion": 2,
+      "individuo": "Ophidia_G2",
+      "latidos": 46,
+      "score": 160,
+      "fitness": {
+        "s1_reactivo": 35.5,
+        "s2_limbico": 74.4,
+        "s3_racional": 29.1,
+        "global": 42.7,
+        "phi_promedio": 0.439
+      },
+      "axiomas_heredables": 6,
+      "timestamp": 1793883569.833051
+    },
+    {
+      "generacion": 3,
+      "individuo": "Ophidia_G3",
+      "latidos": 134,
+      "score": 435,
+      "fitness": {
+        "s1_reactivo": 44.5,
+        "s2_limbico": 63.0,
+        "s3_racional": 44.3,
+        "global": 49.0,
+        "phi_promedio": 0.43
+      },
+      "axiomas_heredables": 7,
+      "timestamp": 1793883594.4202795
+    },
+    {
+      "generacion": 4,
+      "individuo": "Ophidia_G4",
+      "latidos": 148,
+      "score": 265,
+      "fitness": {
+        "s1_reactivo": 43.5,
+        "s2_limbico": 63.0,
+        "s3_racional": 35.3,
+        "global": 45.1,
+        "phi_promedio": 0.427
+      },
+      "axiomas_heredables": 8,
+      "timestamp": 1793883634.3836403
+    },
+    {
+      "generacion": 5,
+      "individuo": "Ophidia_G5",
+      "latidos": 319,
+      "score": 485,
+      "fitness": {
+        "s1_reactivo": 58.2,
+        "s2_limbico": 63.0,
+        "s3_racional": 46.7,
+        "global": 54.8,
+        "phi_promedio": 0.433
+      },
+      "axiomas_heredables": 9,
+      "timestamp": 1793883685.1679192
+    },
+    {
+      "generacion": 6,
+      "individuo": "Ophidia_G6",
+      "latidos": 50,
+      "score": 145,
+      "fitness": {
+        "s1_reactivo": 36.3,
+        "s2_limbico": 74.5,
+        "s3_racional": 28.8,
+        "global": 42.8,
+        "phi_promedio": 0.458
+      },
+      "axiomas_heredables": 10,
+      "timestamp": 1793883698.7483618
+    },
+    {
+      "generacion": 7,
+      "individuo": "Ophidia_G7",
+      "latidos": 12,
+      "score": 90,
+      "fitness": {
+        "s1_reactivo": 28.3,
+        "s2_limbico": 81.4,
+        "s3_racional": 21.9,
+        "global": 39.0,
+        "phi_promedio": 0.427
+      },
+      "axiomas_heredables": 10,
+      "timestamp": 1793883718.8049576
+    },
+    {
+      "generacion": 8,
+      "individuo": "Ophidia_G8",
+      "latidos": 191,
+      "score": 1055,
+      "fitness": {
+        "s1_reactivo": 47.1,
+        "s2_limbico": 63.0,
+        "s3_racional": 64.7,
+        "global": 58.1,
+        "phi_promedio": 0.43
+      },
+      "axiomas_heredables": 11,
+      "timestamp": 1793883752.1995623
+    },
+    {
+      "generacion": 9,
+      "individuo": "Ophidia_G9",
+      "latidos": 220,
+      "score": 620,
+      "fitness": {
+        "s1_reactivo": 50.1,
+        "s2_limbico": 63.0,
+        "s3_racional": 52.3,
+        "global": 54.2,
+        "phi_promedio": 0.435
+      },
+      "axiomas_heredables": 12,
+      "timestamp": 1793883788.3913717
+    },
+    {
+      "generacion": 10,
+      "individuo": "Ophidia_G10",
+      "latidos": 68,
+      "score": 155,
+      "fitness": {
+        "s1_reactivo": 39.7,
+        "s2_limbico": 74.9,
+        "s3_racional": 28.4,
+        "global": 44.0,
+        "phi_promedio": 0.427
+      },
+      "axiomas_heredables": 13,
+      "timestamp": 1793884101.725775
+    },
+    {
+      "generacion": 11,
+      "individuo": "Ophidia_G11",
+      "latidos": 40,
+      "score": 100,
+      "fitness": {
+        "s1_reactivo": 34.3,
+        "s2_limbico": 78.9,
+        "s3_racional": 24.6,
+        "global": 41.6,
+        "phi_promedio": 0.427
+      },
+      "axiomas_heredables": 14,
+      "timestamp": 1793884114.618711
+    },
+    {
+      "generacion": 12,
+      "individuo": "Ophidia_G12",
+      "latidos": 58,
+      "score": 110,
+      "fitness": {
+        "s1_reactivo": 37.8,
+        "s2_limbico": 75.6,
+        "s3_racional": 25.5,
+        "global": 42.4,
+        "phi_promedio": 0.434
+      },
+      "axiomas_heredables": 15,
+      "timestamp": 1793884129.5315804
+    },
+    {
+      "generacion": 13,
+      "individuo": "Ophidia_G13",
+      "latidos": 121,
+      "score": 145,
+      "fitness": {
+        "s1_reactivo": 45.3,
+        "s2_limbico": 63.2,
+        "s3_racional": 28.1,
+        "global": 42.9,
+        "phi_promedio": 0.438
+      },
+      "axiomas_heredables": 16,
+      "timestamp": 1793884203.1075118
+    },
+    {
+      "generacion": 14,
+      "individuo": "Ophidia_G14",
+      "latidos": 38,
+      "score": 120,
+      "fitness": {
+        "s1_reactivo": 33.9,
+        "s2_limbico": 77.2,
+        "s3_racional": 26.0,
+        "global": 41.6,
+        "phi_promedio": 0.427
+      },
+      "axiomas_heredables": 17,
+      "timestamp": 1793884215.5303788
+    },
+    {
+      "generacion": 15,
+      "individuo": "Ophidia_G15",
+      "latidos": 33,
+      "score": 190,
+      "fitness": {
+        "s1_reactivo": 32.9,
+        "s2_limbico": 77.7,
+        "s3_racional": 31.4,
+        "global": 43.5,
+        "phi_promedio": 0.446
+      },
+      "axiomas_heredables": 18,
+      "timestamp": 1793884226.4300795
+    },
+    {
+      "generacion": 16,
+      "individuo": "Ophidia_G16",
+      "latidos": 53,
+      "score": 45,
+      "fitness": {
+        "s1_reactivo": 36.9,
+        "s2_limbico": 76.4,
+        "s3_racional": 20.9,
+        "global": 40.4,
+        "phi_promedio": 0.439
+      },
+      "axiomas_heredables": 19,
+      "timestamp": 1793884707.9221156
+    },
+    {
+      "generacion": 17,
+      "individuo": "Ophidia_G17",
+      "latidos": 118,
+      "score": 155,
+      "fitness": {
+        "s1_reactivo": 45.4,
+        "s2_limbico": 63.1,
+        "s3_racional": 28.5,
+        "global": 43.1,
+        "phi_promedio": 0.43
+      },
+      "axiomas_heredables": 20,
+      "timestamp": 1793884731.4864078
+    },
+    {
+      "generacion": 18,
+      "individuo": "Ophidia_G18",
+      "latidos": 146,
+      "score": 60,
+      "fitness": {
+        "s1_reactivo": 43.7,
+        "s2_limbico": 56.0,
+        "s3_racional": 21.7,
+        "global": 38.0,
+        "phi_promedio": 0.429
+      },
+      "axiomas_heredables": 21,
+      "timestamp": 1793884758.9628463
+    },
+    {
+      "generacion": 19,
+      "individuo": "Ophidia_G19",
+      "latidos": 50,
+      "score": 40,
+      "fitness": {
+        "s1_reactivo": 42.7,
+        "s2_limbico": 74.5,
+        "s3_racional": 20.1,
+        "global": 41.6,
+        "phi_promedio": 0.427
+      },
+      "axiomas_heredables": 22,
+      "timestamp": 1793960068.7396448
+    },
+    {
+      "generacion": 20,
+      "individuo": "Ophidia_G20",
+      "latidos": 25,
+      "score": 45,
+      "fitness": {
+        "s1_reactivo": 36.7,
+        "s2_limbico": 76.4,
+        "s3_racional": 20.5,
+        "global": 40.1,
+        "phi_promedio": 0.427
+      },
+      "axiomas_heredables": 23,
+      "timestamp": 1793960303.9633474
+    },
+    {
+      "generacion": 21,
+      "individuo": "Ophidia_G21",
+      "latidos": 25,
+      "score": 50,
+      "fitness": {
+        "s1_reactivo": 36.7,
+        "s2_limbico": 75.9,
+        "s3_racional": 20.9,
+        "global": 40.2,
+        "phi_promedio": 0.427
+      },
+      "axiomas_heredables": 24,
+      "timestamp": 1793961442.9979224
+    },
+    {
+      "generacion": 22,
+      "individuo": "Ophidia_G22",
+      "latidos": 250,
+      "score": 1425,
+      "fitness": {
+        "s1_reactivo": 74.2,
+        "s2_limbico": 86.4,
+        "s3_racional": 100.0,
+        "global": 87.6,
+        "phi_promedio": 0.422
+      },
+      "axiomas_heredables": 38,
+      "timestamp": 1794056222.6837578
+    },
+    {
+      "generacion": 23,
+      "individuo": "Ophidia_G23",
+      "latidos": 250,
+      "score": 960,
+      "fitness": {
+        "s1_reactivo": 74.2,
+        "s2_limbico": 86.4,
+        "s3_racional": 97.0,
+        "global": 86.4,
+        "phi_promedio": 0.422
+      },
+      "axiomas_heredables": 49,
+      "timestamp": 1794056255.1516292
+    },
+    {
+      "generacion": 24,
+      "individuo": "Ophidia_G24",
+      "latidos": 173,
+      "score": 750,
+      "fitness": {
+        "s1_reactivo": 55.2,
+        "s2_limbico": 86.4,
+        "s3_racional": 81.2,
+        "global": 73.4,
+        "phi_promedio": 0.423
+      },
+      "axiomas_heredables": 55,
+      "timestamp": 1794056290.7862556
+    },
+    {
+      "generacion": 25,
+      "individuo": "Ophidia_G25",
+      "latidos": 250,
+      "score": 1185,
+      "fitness": {
+        "s1_reactivo": 74.2,
+        "s2_limbico": 86.4,
+        "s3_racional": 91.8,
+        "global": 84.3,
+        "phi_promedio": 0.422
+      },
+      "axiomas_heredables": 61,
+      "timestamp": 1794056991.8203428
+    },
+    {
+      "generacion": 26,
+      "individuo": "Ophidia_G26",
+      "latidos": 250,
+      "score": 895,
+      "fitness": {
+        "s1_reactivo": 74.2,
+        "s2_limbico": 86.4,
+        "s3_racional": 85.4,
+        "global": 81.7,
+        "phi_promedio": 0.423
+      },
+      "axiomas_heredables": 67,
+      "timestamp": 1794057025.9025993
+    }
+  ],
+  "actualizado": 1794057025.9025993
+}

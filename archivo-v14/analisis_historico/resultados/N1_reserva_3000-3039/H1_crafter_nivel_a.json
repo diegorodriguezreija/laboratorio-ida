@@ -1,0 +1,205 @@
+{
+  "hipotesis": "H1",
+  "mundo": "crafter",
+  "modo_ablacion": "nivel_a",
+  "n_semillas": 40,
+  "rango_semillas": [
+    3000,
+    3039
+  ],
+  "metricas_poblacionales": {
+    "A0": {
+      "crafter_score_poblacional": 22.31,
+      "logros_desbloqueados_unicos": 17,
+      "logros_media": 11.62,
+      "logros_std": 2.61,
+      "logros_mediana": 12.0,
+      "pasos_media": 273.4,
+      "pasos_std": 83.8
+    },
+    "A1": {
+      "crafter_score_poblacional": 20.86,
+      "logros_desbloqueados_unicos": 17,
+      "logros_media": 10.9,
+      "logros_std": 2.73,
+      "logros_mediana": 11.0,
+      "pasos_media": 291.1,
+      "pasos_std": 105.8
+    },
+    "A2": {
+      "crafter_score_poblacional": 1.42,
+      "logros_desbloqueados_unicos": 5,
+      "logros_media": 2.77,
+      "logros_std": 1.01,
+      "logros_mediana": 3.0,
+      "pasos_media": 307.6,
+      "pasos_std": 73.8
+    },
+    "A3": {
+      "crafter_score_poblacional": 16.66,
+      "logros_desbloqueados_unicos": 17,
+      "logros_media": 9.32,
+      "logros_std": 2.48,
+      "logros_mediana": 10.0,
+      "pasos_media": 232.8,
+      "pasos_std": 74.1
+    },
+    "A4": {
+      "crafter_score_poblacional": 15.48,
+      "logros_desbloqueados_unicos": 16,
+      "logros_media": 9.62,
+      "logros_std": 2.12,
+      "logros_mediana": 9.5,
+      "pasos_media": 274.6,
+      "pasos_std": 76.4
+    },
+    "A7": {
+      "crafter_score_poblacional": 21.05,
+      "logros_desbloqueados_unicos": 17,
+      "logros_media": 11.0,
+      "logros_std": 2.7,
+      "logros_mediana": 11.0,
+      "pasos_media": 287.1,
+      "pasos_std": 110.5
+    }
+  },
+  "comparativas_pareadas_vs_a0": {
+    "A1": {
+      "n": 40,
+      "tratamiento": "A0_Tribunal",
+      "control": "A1",
+      "media_tratamiento": 11.625,
+      "media_control": 10.9,
+      "delta_media": 0.725,
+      "ci_95": [
+        0.05,
+        1.525
+      ],
+      "wilcoxon_w": 131.5,
+      "wilcoxon_p": 0.057768,
+      "victorias": 19,
+      "empates": 11,
+      "derrotas": 10,
+      "sign_test_p": 0.136046,
+      "cliffs_delta": 0.165,
+      "significativo_al_5pct": false,
+      "wilcoxon_p_holm_ajustado": 0.115536,
+      "significativo_tras_holm": false
+    },
+    "A2": {
+      "n": 40,
+      "tratamiento": "A0_Tribunal",
+      "control": "A2",
+      "media_tratamiento": 11.625,
+      "media_control": 2.775,
+      "delta_media": 8.85,
+      "ci_95": [
+        7.95,
+        9.675
+      ],
+      "wilcoxon_w": 1.0,
+      "wilcoxon_p": 0.0,
+      "victorias": 39,
+      "empates": 0,
+      "derrotas": 1,
+      "sign_test_p": 0.0,
+      "cliffs_delta": 0.98,
+      "significativo_al_5pct": true,
+      "wilcoxon_p_holm_ajustado": 0.0,
+      "significativo_tras_holm": true
+    },
+    "A3": {
+      "n": 40,
+      "tratamiento": "A0_Tribunal",
+      "control": "A3",
+      "media_tratamiento": 11.625,
+      "media_control": 9.325,
+      "delta_media": 2.3,
+      "ci_95": [
+        1.8244,
+        2.8
+      ],
+      "wilcoxon_w": 0.0,
+      "wilcoxon_p": 1e-06,
+      "victorias": 32,
+      "empates": 8,
+      "derrotas": 0,
+      "sign_test_p": 0.0,
+      "cliffs_delta": 0.4963,
+      "significativo_al_5pct": true,
+      "wilcoxon_p_holm_ajustado": 4e-06,
+      "significativo_tras_holm": true
+    },
+    "A4": {
+      "n": 40,
+      "tratamiento": "A0_Tribunal",
+      "control": "A4",
+      "media_tratamiento": 11.625,
+      "media_control": 9.625,
+      "delta_media": 2.0,
+      "ci_95": [
+        1.075,
+        2.925
+      ],
+      "wilcoxon_w": 120.0,
+      "wilcoxon_p": 0.000263,
+      "victorias": 27,
+      "empates": 2,
+      "derrotas": 11,
+      "sign_test_p": 0.013853,
+      "cliffs_delta": 0.4731,
+      "significativo_al_5pct": true,
+      "wilcoxon_p_holm_ajustado": 0.000789,
+      "significativo_tras_holm": true
+    },
+    "A7": {
+      "n": 40,
+      "tratamiento": "A0_Tribunal",
+      "control": "A7",
+      "media_tratamiento": 11.625,
+      "media_control": 11.0,
+      "delta_media": 0.625,
+      "ci_95": [
+        -0.05,
+        1.425
+      ],
+      "wilcoxon_w": 119.5,
+      "wilcoxon_p": 0.147356,
+      "victorias": 17,
+      "empates": 14,
+      "derrotas": 9,
+      "sign_test_p": 0.168638,
+      "cliffs_delta": 0.1381,
+      "significativo_al_5pct": false,
+      "wilcoxon_p_holm_ajustado": 0.147356,
+      "significativo_tras_holm": false
+    }
+  },
+  "acuerdo_contrafactual_estratificado": {
+    "A1": {
+      "tasa_acuerdo_global_pct": 93.76,
+      "tasa_acuerdo_estres_alto_pct": 0.0,
+      "tasa_acuerdo_inanicion_critica_pct": 95.23
+    },
+    "A2": {
+      "tasa_acuerdo_global_pct": 71.44,
+      "tasa_acuerdo_estres_alto_pct": 0.0,
+      "tasa_acuerdo_inanicion_critica_pct": 76.25
+    },
+    "A3": {
+      "tasa_acuerdo_global_pct": 90.42,
+      "tasa_acuerdo_estres_alto_pct": 0.0,
+      "tasa_acuerdo_inanicion_critica_pct": 92.87
+    },
+    "A4": {
+      "tasa_acuerdo_global_pct": 83.85,
+      "tasa_acuerdo_estres_alto_pct": 0.0,
+      "tasa_acuerdo_inanicion_critica_pct": 86.63
+    },
+    "A7": {
+      "tasa_acuerdo_global_pct": 94.43,
+      "tasa_acuerdo_estres_alto_pct": 0.0,
+      "tasa_acuerdo_inanicion_critica_pct": 95.28
+    }
+  }
+}

@@ -1,0 +1,70 @@
+{
+  "hipotesis": "H2",
+  "mundo": "crafter",
+  "n_semillas": 40,
+  "rango_semillas": [
+    2020,
+    2059
+  ],
+  "metricas_poblacionales": {
+    "Soma_On": {
+      "crafter_score_poblacional": 18.69,
+      "logros_desbloqueados_unicos": 16,
+      "logros_media": 10.57,
+      "pct_media_decisiones_s1": 30.82
+    },
+    "Soma_Off": {
+      "crafter_score_poblacional": 18.35,
+      "logros_desbloqueados_unicos": 16,
+      "logros_media": 10.47,
+      "pct_media_decisiones_s1": 30.07
+    },
+    "Soma_Invertido": {
+      "crafter_score_poblacional": 17.96,
+      "logros_desbloqueados_unicos": 16,
+      "logros_media": 10.38,
+      "pct_media_decisiones_s1": 30.13
+    }
+  },
+  "comparativa_on_vs_off": {
+    "n": 40,
+    "tratamiento": "Soma_On",
+    "control": "Soma_Off",
+    "media_tratamiento": 10.575,
+    "media_control": 10.475,
+    "delta_media": 0.1,
+    "ci_95": [
+      -0.1,
+      0.35
+    ],
+    "wilcoxon_w": 7.5,
+    "wilcoxon_p": 0.516412,
+    "victorias": 3,
+    "empates": 34,
+    "derrotas": 3,
+    "sign_test_p": 1.0,
+    "cliffs_delta": 0.0169,
+    "significativo_al_5pct": false
+  },
+  "comparativa_on_vs_invertido": {
+    "n": 40,
+    "tratamiento": "Soma_On",
+    "control": "Soma_Invertido",
+    "media_tratamiento": 10.575,
+    "media_control": 10.375,
+    "delta_media": 0.2,
+    "ci_95": [
+      -0.075,
+      0.525
+    ],
+    "wilcoxon_w": 12.5,
+    "wilcoxon_p": 0.227377,
+    "victorias": 6,
+    "empates": 31,
+    "derrotas": 3,
+    "sign_test_p": 0.507812,
+    "cliffs_delta": 0.0444,
+    "significativo_al_5pct": false
+  },
+  "decision": "REFUTADA"
+}

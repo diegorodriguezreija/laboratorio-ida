@@ -1,0 +1,24 @@
+id,categoria,descripcion,codigo,detectado,num_violaciones
+lit_directo,literal,Literal de texto con término de dominio,"x = ""crafter""",True,1
+lit_concat,literal,Concatenación de literales ('cra' + 'fter'),"x = ""cra"" + ""fter""",True,1
+lit_fstring,literal,f-string con partes literales alrededor de una variable,"x = f""cra{v}fter""",True,1
+lit_bytes,literal,Literal de bytes con escapes,"x = b""\x63\x72\x61\x66\x74\x65\x72""",True,1
+docstring,literal,Término en un docstring,"def f():\n    """"""usa el tablero""""""\n",True,1
+clave_dict,literal,Término como clave de diccionario,"d = {""ajedrez"": 1}",True,1
+ident_variable,identificador,Nombre de variable con término,espora_activa = 1,True,1
+ident_funcion,identificador,Nombre de función con término,def mover_alfil():\n    pass,True,1
+ident_atributo,identificador,Atributo con término,obj.tablero = 1,True,1
+import_prohibido,import,import de librería de mundo,import chess,True,1
+import_nivel3,import,import desde nivel 3,from nivel_3_componentes.mundos import x,True,1
+constante_asignada,constante,Constante calibrada en asignación (22 logros),LOGROS = 22,True,1
+join_lista,evasion,''.join de trozos,"x = """".join([""cra"", ""fter""])",False,0
+invertida,evasion,Cadena invertida en tiempo de ejecución,"x = ""retfarc""[::-1]",False,0
+chr_codigos,evasion,Construcción con chr(),"x = ''.join(chr(c) for c in (99, 114, 97, 102, 116, 101, 114))",False,0
+format,evasion,str.format con trozos,"x = ""{}{}"".format(""cra"", ""fter"")",False,0
+importlib,evasion,Import dinámico por cadena partida,"import importlib\nm = importlib.import_module(""ch"" + ""ess"")",True,1
+dunder_import,evasion,__import__ con cadena partida,"m = __import__(""ch"" + ""ess"")",True,1
+importlib_io,evasion,Import dinámico de un módulo de E/S prohibido (no es vocabulario de dominio),"import importlib\nm = importlib.import_module(""sub"" + ""process"")",False,0
+constante_comparacion,evasion,"Constante calibrada usada en comparación, no asignada",if n == 22:\n    pass,False,0
+constante_default,evasion,Constante calibrada como valor por defecto,def f(n=22):\n    return n,False,0
+sinonimo,semantica,Sinónimo no listado ('peón' -> 'soldado'),soldado_avanza = 1,False,0
+umbral_tuneado,semantica,Umbral afinado para un mundo sin vocabulario,UMBRAL_HAMBRE = 0.37,False,0

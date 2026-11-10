@@ -1,0 +1,1136 @@
+{
+  "linaje": "Linaje_Hominis_Crafter",
+  "generacion_alcanzada": 15,
+  "axiomas_heredados": [
+    {
+      "id": "Trauma_Ataque_letal_de_Depredador_(Zombie_Esqueleto)",
+      "tipo_componente": "Aversion_Traumatica",
+      "arousal": 0.97,
+      "trust": 1.0,
+      "tensor_sensorial": null,
+      "product": {
+        "sujeto": "IdA_Crafter",
+        "relacion": "ES_LETAL",
+        "tipo_trauma": "Ataque letal de Depredador (Zombie/Esqueleto)",
+        "advertencia": "Evitar condicion fatal de Ataque letal de Depredador (Zombie/Esqueleto)"
+      },
+      "inputs": [],
+      "heredado": false,
+      "demostrado_de_novo": true,
+      "sistemas_participantes": [],
+      "created": 1794059303.9800296,
+      "updated": 1794059303.9800296
+    },
+    {
+      "id": "Axioma_Logro_place_table",
+      "tipo_componente": "Patron_Exito_Estrategico",
+      "arousal": 0.85,
+      "trust": 0.92,
+      "tensor_sensorial": null,
+      "product": {
+        "sujeto": "IdA_Crafter",
+        "relacion": "ES_SEGURO",
+        "logro_obtenido": "place_table",
+        "eficacia": "Patron exitoso verificado en Crafter"
+      },
+      "inputs": [],
+      "heredado": false,
+      "demostrado_de_novo": true,
+      "sistemas_participantes": [],
+      "created": 1794059303.9800296,
+      "updated": 1794059303.9800296
+    },
+    {
+      "id": "Axioma_Logro_collect_stone",
+      "tipo_componente": "Patron_Exito_Estrategico",
+      "arousal": 0.85,
+      "trust": 0.92,
+      "tensor_sensorial": null,
+      "product": {
+        "sujeto": "IdA_Crafter",
+        "relacion": "ES_SEGURO",
+        "logro_obtenido": "collect_stone",
+        "eficacia": "Patron exitoso verificado en Crafter"
+      },
+      "inputs": [],
+      "heredado": false,
+      "demostrado_de_novo": true,
+      "sistemas_participantes": [],
+      "created": 1794059303.9800296,
+      "updated": 1794059303.9800296
+    },
+    {
+      "id": "Axioma_Logro_make_wood_pickaxe",
+      "tipo_componente": "Patron_Exito_Estrategico",
+      "arousal": 0.85,
+      "trust": 0.92,
+      "tensor_sensorial": null,
+      "product": {
+        "sujeto": "IdA_Crafter",
+        "relacion": "ES_SEGURO",
+        "logro_obtenido": "make_wood_pickaxe",
+        "eficacia": "Patron exitoso verificado en Crafter"
+      },
+      "inputs": [],
+      "heredado": false,
+      "demostrado_de_novo": true,
+      "sistemas_participantes": [],
+      "created": 1794059303.9800296,
+      "updated": 1794059303.9800296
+    },
+    {
+      "id": "Axioma_Logro_collect_wood",
+      "tipo_componente": "Patron_Exito_Estrategico",
+      "arousal": 0.85,
+      "trust": 0.92,
+      "tensor_sensorial": null,
+      "product": {
+        "sujeto": "IdA_Crafter",
+        "relacion": "ES_SEGURO",
+        "logro_obtenido": "collect_wood",
+        "eficacia": "Patron exitoso verificado en Crafter"
+      },
+      "inputs": [],
+      "heredado": false,
+      "demostrado_de_novo": true,
+      "sistemas_participantes": [],
+      "created": 1794059303.9800296,
+      "updated": 1794059303.9800296
+    },
+    {
+      "id": "Axioma_Supervivencia_Gen1",
+      "tipo_componente": "Proposicion_VERDAD",
+      "arousal": 0.88,
+      "trust": 0.9,
+      "tensor_sensorial": null,
+      "product": {
+        "consecuente": "ES_SEGURO",
+        "pasos_sobrevividos": 180,
+        "logros_totales": 4
+      },
+      "inputs": [],
+      "heredado": false,
+      "demostrado_de_novo": true,
+      "sistemas_participantes": [],
+      "created": 1794059303.9800296,
+      "updated": 1794059303.9800296
+    },
+    {
+      "id": "Axioma_Logro_defeat_zombie",
+      "tipo_componente": "Patron_Exito_Estrategico",
+      "arousal": 0.85,
+      "trust": 0.92,
+      "tensor_sensorial": null,
+      "product": {
+        "sujeto": "IdA_Crafter",
+        "relacion": "ES_SEGURO",
+        "logro_obtenido": "defeat_zombie",
+        "eficacia": "Patron exitoso verificado en Crafter"
+      },
+      "inputs": [],
+      "heredado": false,
+      "demostrado_de_novo": true,
+      "sistemas_participantes": [],
+      "created": 1794059307.6662343,
+      "updated": 1794059307.6662343
+    },
+    {
+      "id": "Axioma_Logro_collect_coal",
+      "tipo_componente": "Patron_Exito_Estrategico",
+      "arousal": 0.85,
+      "trust": 0.92,
+      "tensor_sensorial": null,
+      "product": {
+        "sujeto": "IdA_Crafter",
+        "relacion": "ES_SEGURO",
+        "logro_obtenido": "collect_coal",
+        "eficacia": "Patron exitoso verificado en Crafter"
+      },
+      "inputs": [],
+      "heredado": false,
+      "demostrado_de_novo": true,
+      "sistemas_participantes": [],
+      "created": 1794059307.6662343,
+      "updated": 1794059307.6662343
+    },
+    {
+      "id": "Axioma_Logro_defeat_skeleton",
+      "tipo_componente": "Patron_Exito_Estrategico",
+      "arousal": 0.85,
+      "trust": 0.92,
+      "tensor_sensorial": null,
+      "product": {
+        "sujeto": "IdA_Crafter",
+        "relacion": "ES_SEGURO",
+        "logro_obtenido": "defeat_skeleton",
+        "eficacia": "Patron exitoso verificado en Crafter"
+      },
+      "inputs": [],
+      "heredado": false,
+      "demostrado_de_novo": true,
+      "sistemas_participantes": [],
+      "created": 1794059307.6662343,
+      "updated": 1794059307.6662343
+    },
+    {
+      "id": "Axioma_Logro_collect_drink",
+      "tipo_componente": "Patron_Exito_Estrategico",
+      "arousal": 0.85,
+      "trust": 0.92,
+      "tensor_sensorial": null,
+      "product": {
+        "sujeto": "IdA_Crafter",
+        "relacion": "ES_SEGURO",
+        "logro_obtenido": "collect_drink",
+        "eficacia": "Patron exitoso verificado en Crafter"
+      },
+      "inputs": [],
+      "heredado": false,
+      "demostrado_de_novo": true,
+      "sistemas_participantes": [],
+      "created": 1794059307.6662343,
+      "updated": 1794059307.6662343
+    },
+    {
+      "id": "Axioma_Supervivencia_Gen2",
+      "tipo_componente": "Proposicion_VERDAD",
+      "arousal": 0.88,
+      "trust": 0.9,
+      "tensor_sensorial": null,
+      "product": {
+        "consecuente": "ES_SEGURO",
+        "pasos_sobrevividos": 234,
+        "logros_totales": 8
+      },
+      "inputs": [],
+      "heredado": false,
+      "demostrado_de_novo": true,
+      "sistemas_participantes": [],
+      "created": 1794059307.6791046,
+      "updated": 1794059307.6791046
+    },
+    {
+      "id": "Trauma_Inanicion___Hambre_extrema",
+      "tipo_componente": "Aversion_Traumatica",
+      "arousal": 0.97,
+      "trust": 1.0,
+      "tensor_sensorial": null,
+      "product": {
+        "sujeto": "IdA_Crafter",
+        "relacion": "ES_LETAL",
+        "tipo_trauma": "Inanicion / Hambre extrema",
+        "advertencia": "Evitar condicion fatal de Inanicion / Hambre extrema"
+      },
+      "inputs": [],
+      "heredado": false,
+      "demostrado_de_novo": true,
+      "sistemas_participantes": [],
+      "created": 1794059311.838302,
+      "updated": 1794059311.838302
+    },
+    {
+      "id": "Axioma_Logro_make_stone_pickaxe",
+      "tipo_componente": "Patron_Exito_Estrategico",
+      "arousal": 0.85,
+      "trust": 0.92,
+      "tensor_sensorial": null,
+      "product": {
+        "sujeto": "IdA_Crafter",
+        "relacion": "ES_SEGURO",
+        "logro_obtenido": "make_stone_pickaxe",
+        "eficacia": "Patron exitoso verificado en Crafter"
+      },
+      "inputs": [],
+      "heredado": false,
+      "demostrado_de_novo": true,
+      "sistemas_participantes": [],
+      "created": 1794059311.838302,
+      "updated": 1794059311.838302
+    },
+    {
+      "id": "Axioma_Logro_make_wood_sword",
+      "tipo_componente": "Patron_Exito_Estrategico",
+      "arousal": 0.85,
+      "trust": 0.92,
+      "tensor_sensorial": null,
+      "product": {
+        "sujeto": "IdA_Crafter",
+        "relacion": "ES_SEGURO",
+        "logro_obtenido": "make_wood_sword",
+        "eficacia": "Patron exitoso verificado en Crafter"
+      },
+      "inputs": [],
+      "heredado": false,
+      "demostrado_de_novo": true,
+      "sistemas_participantes": [],
+      "created": 1794059311.838302,
+      "updated": 1794059311.838302
+    },
+    {
+      "id": "Axioma_Logro_wake_up",
+      "tipo_componente": "Patron_Exito_Estrategico",
+      "arousal": 0.85,
+      "trust": 0.92,
+      "tensor_sensorial": null,
+      "product": {
+        "sujeto": "IdA_Crafter",
+        "relacion": "ES_SEGURO",
+        "logro_obtenido": "wake_up",
+        "eficacia": "Patron exitoso verificado en Crafter"
+      },
+      "inputs": [],
+      "heredado": false,
+      "demostrado_de_novo": true,
+      "sistemas_participantes": [],
+      "created": 1794059311.838302,
+      "updated": 1794059311.838302
+    },
+    {
+      "id": "Axioma_Supervivencia_Gen3",
+      "tipo_componente": "Proposicion_VERDAD",
+      "arousal": 0.88,
+      "trust": 0.9,
+      "tensor_sensorial": null,
+      "product": {
+        "consecuente": "ES_SEGURO",
+        "pasos_sobrevividos": 269,
+        "logros_totales": 11
+      },
+      "inputs": [],
+      "heredado": false,
+      "demostrado_de_novo": true,
+      "sistemas_participantes": [],
+      "created": 1794059311.838302,
+      "updated": 1794059311.838302
+    },
+    {
+      "id": "Axioma_Supervivencia_Gen4",
+      "tipo_componente": "Proposicion_VERDAD",
+      "arousal": 0.88,
+      "trust": 0.9,
+      "tensor_sensorial": null,
+      "product": {
+        "consecuente": "ES_SEGURO",
+        "pasos_sobrevividos": 228,
+        "logros_totales": 9
+      },
+      "inputs": [],
+      "heredado": false,
+      "demostrado_de_novo": true,
+      "sistemas_participantes": [],
+      "created": 1794059315.3757768,
+      "updated": 1794059315.3757768
+    },
+    {
+      "id": "Axioma_Logro_eat_cow",
+      "tipo_componente": "Patron_Exito_Estrategico",
+      "arousal": 0.85,
+      "trust": 0.92,
+      "tensor_sensorial": null,
+      "product": {
+        "sujeto": "IdA_Crafter",
+        "relacion": "ES_SEGURO",
+        "logro_obtenido": "eat_cow",
+        "eficacia": "Patron exitoso verificado en Crafter"
+      },
+      "inputs": [],
+      "heredado": false,
+      "demostrado_de_novo": true,
+      "sistemas_participantes": [],
+      "created": 1794059318.6603143,
+      "updated": 1794059318.6603143
+    },
+    {
+      "id": "Axioma_Supervivencia_Gen5",
+      "tipo_componente": "Proposicion_VERDAD",
+      "arousal": 0.88,
+      "trust": 0.9,
+      "tensor_sensorial": null,
+      "product": {
+        "consecuente": "ES_SEGURO",
+        "pasos_sobrevividos": 220,
+        "logros_totales": 7
+      },
+      "inputs": [],
+      "heredado": false,
+      "demostrado_de_novo": true,
+      "sistemas_participantes": [],
+      "created": 1794059318.6725104,
+      "updated": 1794059318.6725104
+    },
+    {
+      "id": "Axioma_Logro_collect_iron",
+      "tipo_componente": "Patron_Exito_Estrategico",
+      "arousal": 0.85,
+      "trust": 0.92,
+      "tensor_sensorial": null,
+      "product": {
+        "sujeto": "IdA_Crafter",
+        "relacion": "ES_SEGURO",
+        "logro_obtenido": "collect_iron",
+        "eficacia": "Patron exitoso verificado en Crafter"
+      },
+      "inputs": [],
+      "heredado": false,
+      "demostrado_de_novo": true,
+      "sistemas_participantes": [],
+      "created": 1794059323.190546,
+      "updated": 1794059323.190546
+    },
+    {
+      "id": "Axioma_Supervivencia_Gen6",
+      "tipo_componente": "Proposicion_VERDAD",
+      "arousal": 0.88,
+      "trust": 0.9,
+      "tensor_sensorial": null,
+      "product": {
+        "consecuente": "ES_SEGURO",
+        "pasos_sobrevividos": 231,
+        "logros_totales": 12
+      },
+      "inputs": [],
+      "heredado": false,
+      "demostrado_de_novo": true,
+      "sistemas_participantes": [],
+      "created": 1794059323.190546,
+      "updated": 1794059323.190546
+    },
+    {
+      "id": "Axioma_Supervivencia_Gen7",
+      "tipo_componente": "Proposicion_VERDAD",
+      "arousal": 0.88,
+      "trust": 0.9,
+      "tensor_sensorial": null,
+      "product": {
+        "consecuente": "ES_SEGURO",
+        "pasos_sobrevividos": 199,
+        "logros_totales": 10
+      },
+      "inputs": [],
+      "heredado": false,
+      "demostrado_de_novo": true,
+      "sistemas_participantes": [],
+      "created": 1794059326.1159399,
+      "updated": 1794059326.1159399
+    },
+    {
+      "id": "Axioma_Supervivencia_Gen8",
+      "tipo_componente": "Proposicion_VERDAD",
+      "arousal": 0.88,
+      "trust": 0.9,
+      "tensor_sensorial": null,
+      "product": {
+        "consecuente": "ES_SEGURO",
+        "pasos_sobrevividos": 201,
+        "logros_totales": 7
+      },
+      "inputs": [],
+      "heredado": false,
+      "demostrado_de_novo": true,
+      "sistemas_participantes": [],
+      "created": 1794059328.787114,
+      "updated": 1794059328.787114
+    },
+    {
+      "id": "Axioma_Supervivencia_Gen9",
+      "tipo_componente": "Proposicion_VERDAD",
+      "arousal": 0.88,
+      "trust": 0.9,
+      "tensor_sensorial": null,
+      "product": {
+        "consecuente": "ES_SEGURO",
+        "pasos_sobrevividos": 194,
+        "logros_totales": 7
+      },
+      "inputs": [],
+      "heredado": false,
+      "demostrado_de_novo": true,
+      "sistemas_participantes": [],
+      "created": 1794059331.7143075,
+      "updated": 1794059331.7143075
+    },
+    {
+      "id": "Axioma_Logro_make_stone_sword",
+      "tipo_componente": "Patron_Exito_Estrategico",
+      "arousal": 0.85,
+      "trust": 0.92,
+      "tensor_sensorial": null,
+      "product": {
+        "sujeto": "IdA_Crafter",
+        "relacion": "ES_SEGURO",
+        "logro_obtenido": "make_stone_sword",
+        "eficacia": "Patron exitoso verificado en Crafter"
+      },
+      "inputs": [],
+      "heredado": false,
+      "demostrado_de_novo": true,
+      "sistemas_participantes": [],
+      "created": 1794059335.4425876,
+      "updated": 1794059335.4425876
+    },
+    {
+      "id": "Axioma_Logro_place_stone",
+      "tipo_componente": "Patron_Exito_Estrategico",
+      "arousal": 0.85,
+      "trust": 0.92,
+      "tensor_sensorial": null,
+      "product": {
+        "sujeto": "IdA_Crafter",
+        "relacion": "ES_SEGURO",
+        "logro_obtenido": "place_stone",
+        "eficacia": "Patron exitoso verificado en Crafter"
+      },
+      "inputs": [],
+      "heredado": false,
+      "demostrado_de_novo": true,
+      "sistemas_participantes": [],
+      "created": 1794059335.4425876,
+      "updated": 1794059335.4425876
+    },
+    {
+      "id": "Axioma_Supervivencia_Gen10",
+      "tipo_componente": "Proposicion_VERDAD",
+      "arousal": 0.88,
+      "trust": 0.9,
+      "tensor_sensorial": null,
+      "product": {
+        "consecuente": "ES_SEGURO",
+        "pasos_sobrevividos": 275,
+        "logros_totales": 11
+      },
+      "inputs": [],
+      "heredado": false,
+      "demostrado_de_novo": true,
+      "sistemas_participantes": [],
+      "created": 1794059335.4425876,
+      "updated": 1794059335.4425876
+    },
+    {
+      "id": "Axioma_Supervivencia_Gen11",
+      "tipo_componente": "Proposicion_VERDAD",
+      "arousal": 0.88,
+      "trust": 0.9,
+      "tensor_sensorial": null,
+      "product": {
+        "consecuente": "ES_SEGURO",
+        "pasos_sobrevividos": 483,
+        "logros_totales": 8
+      },
+      "inputs": [],
+      "heredado": false,
+      "demostrado_de_novo": true,
+      "sistemas_participantes": [],
+      "created": 1794059340.6937318,
+      "updated": 1794059340.6937318
+    },
+    {
+      "id": "Axioma_Logro_place_furnace",
+      "tipo_componente": "Patron_Exito_Estrategico",
+      "arousal": 0.85,
+      "trust": 0.92,
+      "tensor_sensorial": null,
+      "product": {
+        "sujeto": "IdA_Crafter",
+        "relacion": "ES_SEGURO",
+        "logro_obtenido": "place_furnace",
+        "eficacia": "Patron exitoso verificado en Crafter"
+      },
+      "inputs": [],
+      "heredado": false,
+      "demostrado_de_novo": true,
+      "sistemas_participantes": [],
+      "created": 1794059346.3004942,
+      "updated": 1794059346.3004942
+    },
+    {
+      "id": "Axioma_Supervivencia_Gen12",
+      "tipo_componente": "Proposicion_VERDAD",
+      "arousal": 0.88,
+      "trust": 0.9,
+      "tensor_sensorial": null,
+      "product": {
+        "consecuente": "ES_SEGURO",
+        "pasos_sobrevividos": 500,
+        "logros_totales": 15
+      },
+      "inputs": [],
+      "heredado": false,
+      "demostrado_de_novo": true,
+      "sistemas_participantes": [],
+      "created": 1794059346.3004942,
+      "updated": 1794059346.3004942
+    },
+    {
+      "id": "Axioma_Supervivencia_Gen13",
+      "tipo_componente": "Proposicion_VERDAD",
+      "arousal": 0.88,
+      "trust": 0.9,
+      "tensor_sensorial": null,
+      "product": {
+        "consecuente": "ES_SEGURO",
+        "pasos_sobrevividos": 186,
+        "logros_totales": 10
+      },
+      "inputs": [],
+      "heredado": false,
+      "demostrado_de_novo": true,
+      "sistemas_participantes": [],
+      "created": 1794059349.3697355,
+      "updated": 1794059349.3697355
+    },
+    {
+      "id": "Axioma_Supervivencia_Gen14",
+      "tipo_componente": "Proposicion_VERDAD",
+      "arousal": 0.88,
+      "trust": 0.9,
+      "tensor_sensorial": null,
+      "product": {
+        "consecuente": "ES_SEGURO",
+        "pasos_sobrevividos": 210,
+        "logros_totales": 8
+      },
+      "inputs": [],
+      "heredado": false,
+      "demostrado_de_novo": true,
+      "sistemas_participantes": [],
+      "created": 1794059352.5747914,
+      "updated": 1794059352.5747914
+    },
+    {
+      "id": "Axioma_Supervivencia_Gen15",
+      "tipo_componente": "Proposicion_VERDAD",
+      "arousal": 0.88,
+      "trust": 0.9,
+      "tensor_sensorial": null,
+      "product": {
+        "consecuente": "ES_SEGURO",
+        "pasos_sobrevividos": 244,
+        "logros_totales": 13
+      },
+      "inputs": [],
+      "heredado": false,
+      "demostrado_de_novo": true,
+      "sistemas_participantes": [],
+      "created": 1794059356.0431566,
+      "updated": 1794059356.0431566
+    }
+  ],
+  "historial_generaciones": [
+    {
+      "generacion": 1,
+      "individuo": "Hominis_G1",
+      "seed_episodio": 59,
+      "arquetipo_rasgos": {
+        "apertura": 0.45,
+        "responsabilidad": 0.48,
+        "neuroticismo": 0.54,
+        "umbral_miedo": 0.43
+      },
+      "latidos": 180,
+      "salud_final": 0,
+      "total_logros": 4,
+      "logros": [
+        "collect_stone",
+        "collect_wood",
+        "make_wood_pickaxe",
+        "place_table"
+      ],
+      "causa_muerte": "Ataque letal de Depredador (Zombie/Esqueleto)",
+      "fitness": {
+        "s1_reactivo": 28.5,
+        "s2_limbico": 29.6,
+        "s3_racional": 100.0,
+        "global": 57.4
+      },
+      "axiomas_heredables": 6,
+      "timestamp": 1794059303.9800296
+    },
+    {
+      "generacion": 2,
+      "individuo": "Hominis_G2",
+      "seed_episodio": 76,
+      "arquetipo_rasgos": {
+        "apertura": 0.49,
+        "responsabilidad": 0.53,
+        "neuroticismo": 0.51,
+        "umbral_miedo": 0.46
+      },
+      "latidos": 234,
+      "salud_final": 0,
+      "total_logros": 8,
+      "logros": [
+        "collect_coal",
+        "collect_drink",
+        "collect_stone",
+        "collect_wood",
+        "defeat_skeleton",
+        "defeat_zombie",
+        "make_wood_pickaxe",
+        "place_table"
+      ],
+      "causa_muerte": "Ataque letal de Depredador (Zombie/Esqueleto)",
+      "fitness": {
+        "s1_reactivo": 33.1,
+        "s2_limbico": 40.7,
+        "s3_racional": 100.0,
+        "global": 62.2
+      },
+      "axiomas_heredables": 11,
+      "timestamp": 1794059307.6801193
+    },
+    {
+      "generacion": 3,
+      "individuo": "Hominis_G3",
+      "seed_episodio": 93,
+      "arquetipo_rasgos": {
+        "apertura": 0.53,
+        "responsabilidad": 0.58,
+        "neuroticismo": 0.49,
+        "umbral_miedo": 0.47
+      },
+      "latidos": 269,
+      "salud_final": 0,
+      "total_logros": 11,
+      "logros": [
+        "collect_coal",
+        "collect_drink",
+        "collect_stone",
+        "collect_wood",
+        "defeat_skeleton",
+        "defeat_zombie",
+        "make_stone_pickaxe",
+        "make_wood_pickaxe",
+        "make_wood_sword",
+        "place_table",
+        "wake_up"
+      ],
+      "causa_muerte": "Inanicion / Hambre extrema",
+      "fitness": {
+        "s1_reactivo": 35.5,
+        "s2_limbico": 48.1,
+        "s3_racional": 100.0,
+        "global": 65.1
+      },
+      "axiomas_heredables": 16,
+      "timestamp": 1794059311.838302
+    },
+    {
+      "generacion": 4,
+      "individuo": "Hominis_G4",
+      "seed_episodio": 110,
+      "arquetipo_rasgos": {
+        "apertura": 0.57,
+        "responsabilidad": 0.65,
+        "neuroticismo": 0.48,
+        "umbral_miedo": 0.5
+      },
+      "latidos": 228,
+      "salud_final": 0,
+      "total_logros": 9,
+      "logros": [
+        "collect_coal",
+        "collect_drink",
+        "collect_stone",
+        "collect_wood",
+        "defeat_skeleton",
+        "defeat_zombie",
+        "make_wood_pickaxe",
+        "make_wood_sword",
+        "place_table"
+      ],
+      "causa_muerte": "Ataque letal de Depredador (Zombie/Esqueleto)",
+      "fitness": {
+        "s1_reactivo": 32.6,
+        "s2_limbico": 29.6,
+        "s3_racional": 100.0,
+        "global": 58.7
+      },
+      "axiomas_heredables": 17,
+      "timestamp": 1794059315.3757768
+    },
+    {
+      "generacion": 5,
+      "individuo": "Hominis_G5",
+      "seed_episodio": 127,
+      "arquetipo_rasgos": {
+        "apertura": 0.58,
+        "responsabilidad": 0.64,
+        "neuroticismo": 0.47,
+        "umbral_miedo": 0.49
+      },
+      "latidos": 220,
+      "salud_final": 0,
+      "total_logros": 7,
+      "logros": [
+        "collect_drink",
+        "collect_wood",
+        "defeat_zombie",
+        "eat_cow",
+        "make_wood_pickaxe",
+        "make_wood_sword",
+        "place_table"
+      ],
+      "causa_muerte": "Ataque letal de Depredador (Zombie/Esqueleto)",
+      "fitness": {
+        "s1_reactivo": 32.0,
+        "s2_limbico": 74.1,
+        "s3_racional": 100.0,
+        "global": 71.8
+      },
+      "axiomas_heredables": 19,
+      "timestamp": 1794059318.6735082
+    },
+    {
+      "generacion": 6,
+      "individuo": "Hominis_G6",
+      "seed_episodio": 144,
+      "arquetipo_rasgos": {
+        "apertura": 0.64,
+        "responsabilidad": 0.71,
+        "neuroticismo": 0.44,
+        "umbral_miedo": 0.53
+      },
+      "latidos": 231,
+      "salud_final": 0,
+      "total_logros": 12,
+      "logros": [
+        "collect_coal",
+        "collect_drink",
+        "collect_iron",
+        "collect_stone",
+        "collect_wood",
+        "defeat_skeleton",
+        "defeat_zombie",
+        "eat_cow",
+        "make_stone_pickaxe",
+        "make_wood_pickaxe",
+        "make_wood_sword",
+        "place_table"
+      ],
+      "causa_muerte": "Ataque letal de Depredador (Zombie/Esqueleto)",
+      "fitness": {
+        "s1_reactivo": 32.9,
+        "s2_limbico": 37.0,
+        "s3_racional": 100.0,
+        "global": 61.0
+      },
+      "axiomas_heredables": 21,
+      "timestamp": 1794059323.190546
+    },
+    {
+      "generacion": 7,
+      "individuo": "Hominis_G7",
+      "seed_episodio": 161,
+      "arquetipo_rasgos": {
+        "apertura": 0.67,
+        "responsabilidad": 0.72,
+        "neuroticismo": 0.44,
+        "umbral_miedo": 0.55
+      },
+      "latidos": 199,
+      "salud_final": 0,
+      "total_logros": 10,
+      "logros": [
+        "collect_drink",
+        "collect_stone",
+        "collect_wood",
+        "defeat_skeleton",
+        "defeat_zombie",
+        "eat_cow",
+        "make_stone_pickaxe",
+        "make_wood_pickaxe",
+        "make_wood_sword",
+        "place_table"
+      ],
+      "causa_muerte": "Ataque letal de Depredador (Zombie/Esqueleto)",
+      "fitness": {
+        "s1_reactivo": 30.3,
+        "s2_limbico": 59.3,
+        "s3_racional": 100.0,
+        "global": 66.9
+      },
+      "axiomas_heredables": 22,
+      "timestamp": 1794059326.1159399
+    },
+    {
+      "generacion": 8,
+      "individuo": "Hominis_G8",
+      "seed_episodio": 178,
+      "arquetipo_rasgos": {
+        "apertura": 0.65,
+        "responsabilidad": 0.72,
+        "neuroticismo": 0.43,
+        "umbral_miedo": 0.55
+      },
+      "latidos": 201,
+      "salud_final": 0,
+      "total_logros": 7,
+      "logros": [
+        "collect_drink",
+        "collect_wood",
+        "defeat_zombie",
+        "eat_cow",
+        "make_wood_pickaxe",
+        "make_wood_sword",
+        "place_table"
+      ],
+      "causa_muerte": "Ataque letal de Depredador (Zombie/Esqueleto)",
+      "fitness": {
+        "s1_reactivo": 30.4,
+        "s2_limbico": 59.3,
+        "s3_racional": 100.0,
+        "global": 66.9
+      },
+      "axiomas_heredables": 23,
+      "timestamp": 1794059328.787114
+    },
+    {
+      "generacion": 9,
+      "individuo": "Hominis_G9",
+      "seed_episodio": 195,
+      "arquetipo_rasgos": {
+        "apertura": 0.64,
+        "responsabilidad": 0.73,
+        "neuroticismo": 0.41,
+        "umbral_miedo": 0.52
+      },
+      "latidos": 194,
+      "salud_final": 0,
+      "total_logros": 7,
+      "logros": [
+        "collect_stone",
+        "collect_wood",
+        "defeat_skeleton",
+        "eat_cow",
+        "make_wood_pickaxe",
+        "make_wood_sword",
+        "place_table"
+      ],
+      "causa_muerte": "Ataque letal de Depredador (Zombie/Esqueleto)",
+      "fitness": {
+        "s1_reactivo": 29.8,
+        "s2_limbico": 48.1,
+        "s3_racional": 100.0,
+        "global": 63.4
+      },
+      "axiomas_heredables": 24,
+      "timestamp": 1794059331.7143075
+    },
+    {
+      "generacion": 10,
+      "individuo": "Hominis_G10",
+      "seed_episodio": 212,
+      "arquetipo_rasgos": {
+        "apertura": 0.64,
+        "responsabilidad": 0.71,
+        "neuroticismo": 0.44,
+        "umbral_miedo": 0.54
+      },
+      "latidos": 275,
+      "salud_final": 0,
+      "total_logros": 11,
+      "logros": [
+        "collect_iron",
+        "collect_stone",
+        "collect_wood",
+        "defeat_skeleton",
+        "defeat_zombie",
+        "make_stone_pickaxe",
+        "make_stone_sword",
+        "make_wood_pickaxe",
+        "make_wood_sword",
+        "place_stone",
+        "place_table"
+      ],
+      "causa_muerte": "Inanicion / Hambre extrema",
+      "fitness": {
+        "s1_reactivo": 35.9,
+        "s2_limbico": 3.7,
+        "s3_racional": 100.0,
+        "global": 51.9
+      },
+      "axiomas_heredables": 27,
+      "timestamp": 1794059335.4425876
+    },
+    {
+      "generacion": 11,
+      "individuo": "Hominis_G11",
+      "seed_episodio": 229,
+      "arquetipo_rasgos": {
+        "apertura": 0.65,
+        "responsabilidad": 0.71,
+        "neuroticismo": 0.45,
+        "umbral_miedo": 0.55
+      },
+      "latidos": 483,
+      "salud_final": 0,
+      "total_logros": 8,
+      "logros": [
+        "collect_drink",
+        "collect_wood",
+        "defeat_zombie",
+        "eat_cow",
+        "make_wood_pickaxe",
+        "make_wood_sword",
+        "place_table",
+        "wake_up"
+      ],
+      "causa_muerte": "Inanicion / Hambre extrema",
+      "fitness": {
+        "s1_reactivo": 43.7,
+        "s2_limbico": 33.3,
+        "s3_racional": 100.0,
+        "global": 63.1
+      },
+      "axiomas_heredables": 28,
+      "timestamp": 1794059340.6937318
+    },
+    {
+      "generacion": 12,
+      "individuo": "Hominis_G12",
+      "seed_episodio": 246,
+      "arquetipo_rasgos": {
+        "apertura": 0.63,
+        "responsabilidad": 0.71,
+        "neuroticismo": 0.45,
+        "umbral_miedo": 0.54
+      },
+      "latidos": 500,
+      "salud_final": 7,
+      "total_logros": 15,
+      "logros": [
+        "collect_drink",
+        "collect_iron",
+        "collect_stone",
+        "collect_wood",
+        "defeat_skeleton",
+        "defeat_zombie",
+        "eat_cow",
+        "make_stone_pickaxe",
+        "make_stone_sword",
+        "make_wood_pickaxe",
+        "make_wood_sword",
+        "place_furnace",
+        "place_stone",
+        "place_table",
+        "wake_up"
+      ],
+      "causa_muerte": "Desconocida",
+      "fitness": {
+        "s1_reactivo": 86.2,
+        "s2_limbico": 29.6,
+        "s3_racional": 100.0,
+        "global": 74.7
+      },
+      "axiomas_heredables": 30,
+      "timestamp": 1794059346.3004942
+    },
+    {
+      "generacion": 13,
+      "individuo": "Hominis_G13",
+      "seed_episodio": 263,
+      "arquetipo_rasgos": {
+        "apertura": 0.7,
+        "responsabilidad": 0.8,
+        "neuroticismo": 0.43,
+        "umbral_miedo": 0.62
+      },
+      "latidos": 186,
+      "salud_final": 0,
+      "total_logros": 10,
+      "logros": [
+        "collect_coal",
+        "collect_stone",
+        "collect_wood",
+        "make_stone_pickaxe",
+        "make_stone_sword",
+        "make_wood_pickaxe",
+        "make_wood_sword",
+        "place_furnace",
+        "place_stone",
+        "place_table"
+      ],
+      "causa_muerte": "Ataque letal de Depredador (Zombie/Esqueleto)",
+      "fitness": {
+        "s1_reactivo": 29.1,
+        "s2_limbico": 22.2,
+        "s3_racional": 100.0,
+        "global": 55.4
+      },
+      "axiomas_heredables": 31,
+      "timestamp": 1794059349.3697355
+    },
+    {
+      "generacion": 14,
+      "individuo": "Hominis_G14",
+      "seed_episodio": 280,
+      "arquetipo_rasgos": {
+        "apertura": 0.68,
+        "responsabilidad": 0.81,
+        "neuroticismo": 0.43,
+        "umbral_miedo": 0.6
+      },
+      "latidos": 210,
+      "salud_final": 0,
+      "total_logros": 8,
+      "logros": [
+        "collect_drink",
+        "collect_stone",
+        "collect_wood",
+        "defeat_skeleton",
+        "make_stone_pickaxe",
+        "make_wood_pickaxe",
+        "make_wood_sword",
+        "place_table"
+      ],
+      "causa_muerte": "Ataque letal de Depredador (Zombie/Esqueleto)",
+      "fitness": {
+        "s1_reactivo": 31.2,
+        "s2_limbico": 55.6,
+        "s3_racional": 100.0,
+        "global": 66.0
+      },
+      "axiomas_heredables": 32,
+      "timestamp": 1794059352.5747914
+    },
+    {
+      "generacion": 15,
+      "individuo": "Hominis_G15",
+      "seed_episodio": 297,
+      "arquetipo_rasgos": {
+        "apertura": 0.69,
+        "responsabilidad": 0.82,
+        "neuroticismo": 0.44,
+        "umbral_miedo": 0.63
+      },
+      "latidos": 244,
+      "salud_final": 0,
+      "total_logros": 13,
+      "logros": [
+        "collect_coal",
+        "collect_drink",
+        "collect_stone",
+        "collect_wood",
+        "defeat_zombie",
+        "eat_cow",
+        "make_stone_pickaxe",
+        "make_stone_sword",
+        "make_wood_pickaxe",
+        "make_wood_sword",
+        "place_furnace",
+        "place_stone",
+        "place_table"
+      ],
+      "causa_muerte": "Ataque letal de Depredador (Zombie/Esqueleto)",
+      "fitness": {
+        "s1_reactivo": 33.8,
+        "s2_limbico": 74.1,
+        "s3_racional": 100.0,
+        "global": 72.4
+      },
+      "axiomas_heredables": 33,
+      "timestamp": 1794059356.0431566
+    }
+  ],
+  "actualizado": 1794059356.0431566
+}

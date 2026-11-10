@@ -1,0 +1,17 @@
+cff-version: 1.2.0
+message: "Si usas este software, cítalo con estos metadatos."
+title: "IdA – Identidad Artificial: banco de pruebas de arquitecturas cognitivas bioinspiradas"
+type: software
+authors:
+  - family-names: "Rodriguez Reija"
+    given-names: "Diego"
+version: "13.0.0"
+# date-released: se pone al etiquetar la 13.0.0
+license: Apache-2.0
+repository-code: "https://github.com/diegorodriguezreija/ida-identidad-artificial"
+keywords:
+  - cognitive architecture
+  - ports and adapters
+  - Crafter
+  - reproducibility
+  - learning project

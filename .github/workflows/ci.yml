@@ -1,0 +1,30 @@
+name: CI
+
+on:
+  push:
+  pull_request:
+
+permissions:
+  contents: read
+
+jobs:
+  tests:
+    name: tests (${{ matrix.os }}, Python ${{ matrix.python }})
+    runs-on: ${{ matrix.os }}
+    strategy:
+      fail-fast: false
+      matrix:
+        os: [ubuntu-latest, windows-latest]
+        python: ["3.11", "3.12"]
+    env:
+      PYTHONDONTWRITEBYTECODE: "1"
+      PYTHONIOENCODING: "utf-8"
+      PYTHONUTF8: "1"   # crafter solo se publica como sdist y su setup.py falla con cp1252 en Windows
+      IDA_OUT_DIR: ${{ github.workspace }}/../ida_salidas_ci
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+      - name: Instalar dependencias (extra dev)
+        run: python -m pip install --upgrade pip && pip install -e ".[dev]"
+      - name: Tests de laboratorio (arquitectura, mundos y herramientas)
+        run: python -m pytest -q -m "not network" -p no:cacheprovider

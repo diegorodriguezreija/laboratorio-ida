@@ -1,0 +1,96 @@
+{
+  "esquema": "ida.v14.parametros_mundo/4",
+  "nota": "Configuración para medir los pasos 2 y 3 (python -m v14.observar). Enciende solo observadores en Crafter, el ejemplo mínimo y el Bosque; Snake y Ajedrez siguen apagados. No es la configuración por defecto.",
+  "mundos": {
+    "crafter": {
+      "flags": {
+        "paso1_claves_axiomas_heredados": false,
+        "paso1_cuota_frecuencia": false,
+        "paso1_alerta": false,
+        "memoria_experiencia": "completa",
+        "observar_activa": true,
+        "observar_proactiva": true,
+        "indicadores_generales": true,
+        "reglas_ancestrales": false,
+        "calibracion_cuerpo_crafter": false,
+        "curiosidad_intrinseca": false,
+        "corregir_carga_falsa_crafter": false
+      },
+      "ajustes": {
+        "senales_episodio": "mundo_crafter",
+        "episodio": {
+          "abre_arousal": 0.55,
+          "cierra_arousal": 0.55,
+          "abre_dvit": 1.0,
+          "abre_dali": 2.0,
+          "cierra_dvit": 1.0,
+          "longitud_max": 12,
+          "sorpresa_abre": false
+        },
+        "olvido": {
+          "balance_extremo": 3.0
+        }
+      }
+    },
+    "ejemplo_minimo": {
+      "flags": {
+        "paso1_claves_axiomas_heredados": false,
+        "paso1_cuota_frecuencia": false,
+        "paso1_alerta": false,
+        "memoria_experiencia": "completa",
+        "observar_activa": true,
+        "observar_proactiva": true,
+        "indicadores_generales": true,
+        "reglas_ancestrales": false,
+        "calibracion_cuerpo_crafter": false,
+        "curiosidad_intrinseca": false,
+        "corregir_carga_falsa_crafter": false
+      }
+    },
+    "bosque": {
+      "flags": {
+        "paso1_claves_axiomas_heredados": false,
+        "paso1_cuota_frecuencia": false,
+        "paso1_alerta": false,
+        "memoria_experiencia": "completa",
+        "observar_activa": true,
+        "observar_proactiva": true,
+        "indicadores_generales": true,
+        "reglas_ancestrales": false,
+        "calibracion_cuerpo_crafter": false,
+        "curiosidad_intrinseca": false,
+        "corregir_carga_falsa_crafter": false
+      }
+    },
+    "ajedrez": {
+      "flags": {
+        "paso1_claves_axiomas_heredados": false,
+        "paso1_cuota_frecuencia": false,
+        "paso1_alerta": false,
+        "memoria_experiencia": "apagada",
+        "observar_activa": false,
+        "observar_proactiva": false,
+        "indicadores_generales": false,
+        "reglas_ancestrales": false,
+        "calibracion_cuerpo_crafter": false,
+        "curiosidad_intrinseca": false,
+        "corregir_carga_falsa_crafter": false
+      }
+    },
+    "snake": {
+      "flags": {
+        "paso1_claves_axiomas_heredados": false,
+        "paso1_cuota_frecuencia": false,
+        "paso1_alerta": false,
+        "memoria_experiencia": "apagada",
+        "observar_activa": false,
+        "observar_proactiva": false,
+        "indicadores_generales": false,
+        "reglas_ancestrales": false,
+        "calibracion_cuerpo_crafter": false,
+        "curiosidad_intrinseca": false,
+        "corregir_carga_falsa_crafter": false
+      }
+    }
+  }
+}

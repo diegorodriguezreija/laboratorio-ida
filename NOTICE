@@ -1,0 +1,70 @@
+IdA – Identidad Artificial
+Copyright 2026 Diego Rodriguez Reija
+
+Este aviso no es asesoramiento legal. Resume cómo se ha licenciado el repositorio y qué
+licencias tienen sus dependencias, verificadas el 7 de noviembre de 2026.
+
+==============================================================================
+1. Licencias del propio repositorio
+==============================================================================
+
+- Todo el repositorio, salvo la carpeta indicada abajo, se distribuye bajo la licencia
+  Apache License 2.0 (fichero LICENSE en la raíz).
+
+- La carpeta nivel_3_componentes/mundos/mundo_ajedrez/ (mundo de ajedrez) se distribuye
+  bajo la GNU General Public License versión 3 o posterior (GPL-3.0-or-later; fichero
+  LICENSE dentro de esa carpeta), porque importa la librería python-chess, que se
+  distribuye bajo GPL 3 o posterior.
+
+- Ningún fichero fuera de esa carpeta importa python-chess. El núcleo y el resto de mundos
+  funcionan sin tenerla instalada; un test (tests_arquitectura/test_licencias_y_aislamiento.py)
+  lo comprueba en la integración continua. python-chess se instala solo con el extra
+  opcional [ajedrez].
+
+- Si combinas el mundo de ajedrez con el resto del código y lo distribuyes, revisa las
+  obligaciones de la GPL. Si te importa la cuestión de la obra combinada, consúltalo con
+  un profesional.
+
+==============================================================================
+2. Software de terceros
+==============================================================================
+
+Dependencia             | Versión fijada | Licencia                         | Dónde se usa                         | ¿Se redistribuye?
+------------------------|----------------|----------------------------------|--------------------------------------|------------------
+numpy                   | 2.4.6          | BSD-3-Clause (y componentes 0BSD, MIT, Zlib, CC0-1.0) | Núcleo                  | No (dependencia)
+scipy                   | 1.17.1         | BSD-3-Clause                     | analisis/ (estadística)              | No (dependencia)
+pytest                  | 9.2.0          | MIT                              | Tests                                | No (dependencia)
+crafter                 | 1.8.3          | MIT (Copyright (c) 2021 Danijar Hafner) | Mundo Crafter                 | No (dependencia)
+Pillow                  | 13.0.0         | MIT-CMU                          | Visor opcional de Crafter            | No (dependencia)
+imageio                 | 2.38.1         | BSD-2-Clause                     | GIF opcionales de Crafter            | No (dependencia)
+chess (python-chess)    | 1.11.2         | GPL-3.0-or-later                 | Solo mundo_ajedrez/                  | No (dependencia)
+playwright              | 1.64.1         | Apache-2.0                       | Solo mundo Snake web (experimental)  | No (dependencia)
+Stockfish               | (externo)      | GPL-3.0                          | Rival opcional del mundo de ajedrez  | No. El binario no se incluye; ver IDA_STOCKFISH_PATH
+
+Dependencias transitivas instaladas por las anteriores (licencias según sus metadatos):
+greenlet (MIT AND PSF-2.0), pyee (MIT), opensimplex (MIT), ruamel.yaml (MIT),
+colorama (BSD), iniconfig (MIT), packaging (Apache-2.0 OR BSD-2-Clause), pluggy (MIT),
+Pygments (BSD-2-Clause), typing_extensions (PSF-2.0).
+
+Servicios opcionales que no se incluyen ni se redistribuyen:
+- PostgreSQL + pgvector (imagen Docker pgvector/pgvector:pg16), en nivel_0_demiurgo/.
+  Estado: preparado, no conectado; ningún módulo de IdA se conecta a la base de datos.
+- Ollama (LLM local), consultado opcionalmente por el mundo de ajedrez en localhost.
+- El sitio web https://playsnake.org/, que el mundo Snake web automatiza con Playwright.
+  Es un sitio de terceros con sus propias condiciones de uso.
+
+==============================================================================
+3. Fuentes consultadas
+==============================================================================
+
+Licencias leídas en los ficheros de licencia y metadatos de los paquetes instalados
+(.venv/Lib/site-packages/*.dist-info) y contrastadas en los repositorios oficiales:
+- python-chess: https://github.com/niklasf/python-chess (LICENSE.txt: GPL versión 3;
+  el README indica "GPL 3 (or any later version at your option)").
+- Stockfish: https://github.com/official-stockfish/Stockfish (Copying.txt: GPL versión 3).
+- Crafter: https://github.com/danijar/crafter (LICENSE: MIT).
+- Playwright para Python: https://github.com/microsoft/playwright-python (LICENSE: Apache 2.0).
+
+El texto de LICENSE (Apache-2.0) procede del fichero LICENSE.APACHE distribuido con
+packaging 26.3; el de mundo_ajedrez/LICENSE (GPL-3.0) del LICENSE.txt distribuido con
+chess 1.11.2.

@@ -1,0 +1,166 @@
+{
+  "hipotesis": "H2",
+  "mundo": "crafter",
+  "n_semillas": 40,
+  "rango_semillas": [
+    3000,
+    3039
+  ],
+  "metricas_poblacionales": {
+    "Soma_Dinamico": {
+      "crafter_score_poblacional": 22.06,
+      "logros_desbloqueados_unicos": 17,
+      "logros_media": 11.53,
+      "logros_std": 2.66,
+      "pasos_media": 282.4,
+      "pct_media_decisiones_s1": 34.61
+    },
+    "Soma_Cortisol_0.05": {
+      "crafter_score_poblacional": 21.68,
+      "logros_desbloqueados_unicos": 17,
+      "logros_media": 11.38,
+      "logros_std": 2.49,
+      "pasos_media": 268.0,
+      "pct_media_decisiones_s1": 32.7
+    },
+    "Soma_Cortisol_0.30": {
+      "crafter_score_poblacional": 21.49,
+      "logros_desbloqueados_unicos": 17,
+      "logros_media": 11.18,
+      "logros_std": 2.64,
+      "pasos_media": 267.4,
+      "pct_media_decisiones_s1": 34.94
+    },
+    "Soma_Cortisol_0.60": {
+      "crafter_score_poblacional": 22.28,
+      "logros_desbloqueados_unicos": 17,
+      "logros_media": 11.65,
+      "logros_std": 2.52,
+      "pasos_media": 285.6,
+      "pct_media_decisiones_s1": 37.38
+    },
+    "Soma_Cortisol_0.90": {
+      "crafter_score_poblacional": 22.1,
+      "logros_desbloqueados_unicos": 17,
+      "logros_media": 11.55,
+      "logros_std": 2.78,
+      "pasos_media": 285.8,
+      "pct_media_decisiones_s1": 38.68
+    },
+    "Soma_Invertido": {
+      "crafter_score_poblacional": 21.69,
+      "logros_desbloqueados_unicos": 17,
+      "logros_media": 11.32,
+      "logros_std": 2.64,
+      "pasos_media": 269.1,
+      "pct_media_decisiones_s1": 34.03
+    }
+  },
+  "comparativas_vs_soma_dinamico": {
+    "Soma_Cortisol_0.05": {
+      "n": 40,
+      "tratamiento": "Soma_Dinamico",
+      "control": "Soma_Cortisol_0.05",
+      "media_tratamiento": 11.525,
+      "media_control": 11.375,
+      "delta_media": 0.15,
+      "ci_95": [
+        -0.125,
+        0.45
+      ],
+      "wilcoxon_w": 14.0,
+      "wilcoxon_p": 0.303533,
+      "victorias": 6,
+      "empates": 31,
+      "derrotas": 3,
+      "sign_test_p": 0.507812,
+      "cliffs_delta": 0.0563,
+      "significativo_al_5pct": false,
+      "wilcoxon_p_holm_ajustado": 0.910599
+    },
+    "Soma_Cortisol_0.30": {
+      "n": 40,
+      "tratamiento": "Soma_Dinamico",
+      "control": "Soma_Cortisol_0.30",
+      "media_tratamiento": 11.525,
+      "media_control": 11.175,
+      "delta_media": 0.35,
+      "ci_95": [
+        0.025,
+        0.6756
+      ],
+      "wilcoxon_w": 10.0,
+      "wilcoxon_p": 0.038094,
+      "victorias": 8,
+      "empates": 29,
+      "derrotas": 3,
+      "sign_test_p": 0.226562,
+      "cliffs_delta": 0.0862,
+      "significativo_al_5pct": true,
+      "wilcoxon_p_holm_ajustado": 0.19047
+    },
+    "Soma_Cortisol_0.60": {
+      "n": 40,
+      "tratamiento": "Soma_Dinamico",
+      "control": "Soma_Cortisol_0.60",
+      "media_tratamiento": 11.525,
+      "media_control": 11.65,
+      "delta_media": -0.125,
+      "ci_95": [
+        -0.425,
+        0.175
+      ],
+      "wilcoxon_w": 39.5,
+      "wilcoxon_p": 0.39954,
+      "victorias": 5,
+      "empates": 26,
+      "derrotas": 9,
+      "sign_test_p": 0.42395,
+      "cliffs_delta": -0.0037,
+      "significativo_al_5pct": false,
+      "wilcoxon_p_holm_ajustado": 0.910599
+    },
+    "Soma_Cortisol_0.90": {
+      "n": 40,
+      "tratamiento": "Soma_Dinamico",
+      "control": "Soma_Cortisol_0.90",
+      "media_tratamiento": 11.525,
+      "media_control": 11.55,
+      "delta_media": -0.025,
+      "ci_95": [
+        -0.35,
+        0.3
+      ],
+      "wilcoxon_w": 51.0,
+      "wilcoxon_p": 0.923243,
+      "victorias": 6,
+      "empates": 26,
+      "derrotas": 8,
+      "sign_test_p": 0.790527,
+      "cliffs_delta": -0.0025,
+      "significativo_al_5pct": false,
+      "wilcoxon_p_holm_ajustado": 0.923243
+    },
+    "Soma_Invertido": {
+      "n": 40,
+      "tratamiento": "Soma_Dinamico",
+      "control": "Soma_Invertido",
+      "media_tratamiento": 11.525,
+      "media_control": 11.325,
+      "delta_media": 0.2,
+      "ci_95": [
+        -0.025,
+        0.45
+      ],
+      "wilcoxon_w": 20.0,
+      "wilcoxon_p": 0.11756,
+      "victorias": 8,
+      "empates": 28,
+      "derrotas": 4,
+      "sign_test_p": 0.387695,
+      "cliffs_delta": 0.06,
+      "significativo_al_5pct": false,
+      "wilcoxon_p_holm_ajustado": 0.47024
+    }
+  }
+}

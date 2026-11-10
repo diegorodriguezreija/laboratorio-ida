@@ -1,0 +1,44 @@
+{
+  "hipotesis": "H7",
+  "mundo": "crafter",
+  "n_semillas": 40,
+  "rango_semillas": [
+    2020,
+    2059
+  ],
+  "metricas_poblacionales": {
+    "S2_On": {
+      "crafter_score_poblacional": 18.4,
+      "logros_desbloqueados_unicos": 16,
+      "logros_media": 10.47,
+      "pct_media_decisiones_s2": 9.97
+    },
+    "S2_Neutro": {
+      "crafter_score_poblacional": 14.59,
+      "logros_desbloqueados_unicos": 15,
+      "logros_media": 9.55,
+      "pct_media_decisiones_s2": 0.0
+    }
+  },
+  "comparativa_pareada_logros": {
+    "n": 40,
+    "tratamiento": "S2_On",
+    "control": "S2_Neutro",
+    "media_tratamiento": 10.475,
+    "media_control": 9.55,
+    "delta_media": 0.925,
+    "ci_95": [
+      0.225,
+      1.675
+    ],
+    "wilcoxon_w": 73.0,
+    "wilcoxon_p": 0.008167,
+    "victorias": 20,
+    "empates": 14,
+    "derrotas": 6,
+    "sign_test_p": 0.009355,
+    "cliffs_delta": 0.1837,
+    "significativo_al_5pct": true
+  },
+  "decision": "APOYADA"
+}

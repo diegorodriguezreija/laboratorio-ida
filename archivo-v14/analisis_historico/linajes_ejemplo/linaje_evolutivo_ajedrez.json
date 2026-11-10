@@ -1,0 +1,409 @@
+{
+  "linaje": "Linaje_Caissa_Evolutivo",
+  "generacion_alcanzada": 19,
+  "axiomas_heredados": [
+    {
+      "id": "Patron_Apertura_Exitosa_g1f3_b8c6_b1c3_g8f6",
+      "tipo_componente": "Patron_Exito_Estrategico",
+      "arousal": 0.85,
+      "trust": 1.0,
+      "product": {
+        "sujeto": "IdA",
+        "relacion": "ES_SEGURO",
+        "tipo_patron": "APERTURA_VICTORIOSA",
+        "secuencia": [
+          "g1f3",
+          "b8c6",
+          "b1c3",
+          "g8f6"
+        ]
+      }
+    },
+    {
+      "id": "Patron_Apertura_Exitosa_g1f3_g8f6_b1c3_h8g8",
+      "tipo_componente": "Patron_Exito_Estrategico",
+      "arousal": 0.85,
+      "trust": 1.0,
+      "product": {
+        "sujeto": "IdA",
+        "relacion": "ES_SEGURO",
+        "tipo_patron": "APERTURA_VICTORIOSA",
+        "secuencia": [
+          "g1f3",
+          "g8f6",
+          "b1c3",
+          "h8g8"
+        ]
+      }
+    },
+    {
+      "id": "Patron_Apertura_Exitosa_g1f3_b8a6_b1c3_a6b4",
+      "tipo_componente": "Patron_Exito_Estrategico",
+      "arousal": 0.85,
+      "trust": 1.0,
+      "product": {
+        "sujeto": "IdA",
+        "relacion": "ES_SEGURO",
+        "tipo_patron": "APERTURA_VICTORIOSA",
+        "secuencia": [
+          "g1f3",
+          "b8a6",
+          "b1c3",
+          "a6b4"
+        ]
+      }
+    },
+    {
+      "id": "Patron_Apertura_Exitosa_g1f3_g8h6_b1c3_h6f5",
+      "tipo_componente": "Patron_Exito_Estrategico",
+      "arousal": 0.85,
+      "trust": 1.0,
+      "product": {
+        "sujeto": "IdA",
+        "relacion": "ES_SEGURO",
+        "tipo_patron": "APERTURA_VICTORIOSA",
+        "secuencia": [
+          "g1f3",
+          "g8h6",
+          "b1c3",
+          "h6f5"
+        ]
+      }
+    },
+    {
+      "id": "Patron_Apertura_Exitosa_g1f3_a7a5_b1c3_a8a6",
+      "tipo_componente": "Patron_Exito_Estrategico",
+      "arousal": 0.85,
+      "trust": 1.0,
+      "product": {
+        "sujeto": "IdA",
+        "relacion": "ES_SEGURO",
+        "tipo_patron": "APERTURA_VICTORIOSA",
+        "secuencia": [
+          "g1f3",
+          "a7a5",
+          "b1c3",
+          "a8a6"
+        ]
+      }
+    },
+    {
+      "id": "Patron_Apertura_Exitosa_g1f3_b8c6_b1c3_a8b8",
+      "tipo_componente": "Patron_Exito_Estrategico",
+      "arousal": 0.85,
+      "trust": 1.0,
+      "product": {
+        "sujeto": "IdA",
+        "relacion": "ES_SEGURO",
+        "tipo_patron": "APERTURA_VICTORIOSA",
+        "secuencia": [
+          "g1f3",
+          "b8c6",
+          "b1c3",
+          "a8b8"
+        ]
+      }
+    },
+    {
+      "id": "Patron_Apertura_Exitosa_g1f3_b8a6_b1c3_a8b8",
+      "tipo_componente": "Patron_Exito_Estrategico",
+      "arousal": 0.85,
+      "trust": 1.0,
+      "product": {
+        "sujeto": "IdA",
+        "relacion": "ES_SEGURO",
+        "tipo_patron": "APERTURA_VICTORIOSA",
+        "secuencia": [
+          "g1f3",
+          "b8a6",
+          "b1c3",
+          "a8b8"
+        ]
+      }
+    },
+    {
+      "id": "Patron_Apertura_Exitosa_g1f3_b8c6_b1c3_c6b4",
+      "tipo_componente": "Patron_Exito_Estrategico",
+      "arousal": 0.85,
+      "trust": 1.0,
+      "product": {
+        "sujeto": "IdA",
+        "relacion": "ES_SEGURO",
+        "tipo_patron": "APERTURA_VICTORIOSA",
+        "secuencia": [
+          "g1f3",
+          "b8c6",
+          "b1c3",
+          "c6b4"
+        ]
+      }
+    },
+    {
+      "id": "Patron_Apertura_Exitosa_g1f3_b8a6_b1c3_a6c5",
+      "tipo_componente": "Patron_Exito_Estrategico",
+      "arousal": 0.85,
+      "trust": 1.0,
+      "product": {
+        "sujeto": "IdA",
+        "relacion": "ES_SEGURO",
+        "tipo_patron": "APERTURA_VICTORIOSA",
+        "secuencia": [
+          "g1f3",
+          "b8a6",
+          "b1c3",
+          "a6c5"
+        ]
+      }
+    }
+  ],
+  "historial_generaciones": [
+    {
+      "gen": 1,
+      "individuo": "Caissa_G1",
+      "turnos": 23,
+      "resultado": "VICTORIA",
+      "capturas": 14,
+      "fit_s1": 83.0,
+      "fit_s2": 79.4,
+      "fit_s3": 88.6,
+      "fit_global": 84.2,
+      "jugadas_s3": 23,
+      "axiomas_totales": 1
+    },
+    {
+      "gen": 2,
+      "individuo": "Caissa_G2",
+      "turnos": 21,
+      "resultado": "TABLAS",
+      "capturas": 9,
+      "fit_s1": 57.0,
+      "fit_s2": 79.4,
+      "fit_s3": 63.6,
+      "fit_global": 66.4,
+      "jugadas_s3": 21,
+      "axiomas_totales": 1
+    },
+    {
+      "gen": 3,
+      "individuo": "Caissa_G3",
+      "turnos": 23,
+      "resultado": "VICTORIA",
+      "capturas": 10,
+      "fit_s1": 83.0,
+      "fit_s2": 79.4,
+      "fit_s3": 88.6,
+      "fit_global": 84.2,
+      "jugadas_s3": 23,
+      "axiomas_totales": 2
+    },
+    {
+      "gen": 4,
+      "individuo": "Caissa_G4",
+      "turnos": 12,
+      "resultado": "VICTORIA",
+      "capturas": 5,
+      "fit_s1": 72.0,
+      "fit_s2": 81.6,
+      "fit_s3": 88.6,
+      "fit_global": 81.5,
+      "jugadas_s3": 12,
+      "axiomas_totales": 2
+    },
+    {
+      "gen": 5,
+      "individuo": "Caissa_G5",
+      "turnos": 7,
+      "resultado": "VICTORIA",
+      "capturas": 2,
+      "fit_s1": 67.0,
+      "fit_s2": 60.0,
+      "fit_s3": 88.6,
+      "fit_global": 73.6,
+      "jugadas_s3": 7,
+      "axiomas_totales": 2
+    },
+    {
+      "gen": 6,
+      "individuo": "Caissa_G6",
+      "turnos": 6,
+      "resultado": "VICTORIA",
+      "capturas": 1,
+      "fit_s1": 66.0,
+      "fit_s2": 52.5,
+      "fit_s3": 88.6,
+      "fit_global": 71.0,
+      "jugadas_s3": 6,
+      "axiomas_totales": 2
+    },
+    {
+      "gen": 7,
+      "individuo": "Caissa_G7",
+      "turnos": 53,
+      "resultado": "VICTORIA",
+      "capturas": 9,
+      "fit_s1": 100.0,
+      "fit_s2": 79.4,
+      "fit_s3": 88.6,
+      "fit_global": 89.3,
+      "jugadas_s3": 53,
+      "axiomas_totales": 3
+    },
+    {
+      "gen": 8,
+      "individuo": "Caissa_G8",
+      "turnos": 12,
+      "resultado": "VICTORIA",
+      "capturas": 6,
+      "fit_s1": 72.0,
+      "fit_s2": 81.6,
+      "fit_s3": 88.6,
+      "fit_global": 81.5,
+      "jugadas_s3": 12,
+      "axiomas_totales": 4
+    },
+    {
+      "gen": 9,
+      "individuo": "Caissa_G9",
+      "turnos": 9,
+      "resultado": "VICTORIA",
+      "capturas": 2,
+      "fit_s1": 69.0,
+      "fit_s2": 59.1,
+      "fit_s3": 88.6,
+      "fit_global": 73.9,
+      "jugadas_s3": 9,
+      "axiomas_totales": 5
+    },
+    {
+      "gen": 10,
+      "individuo": "Caissa_G10",
+      "turnos": 18,
+      "resultado": "VICTORIA",
+      "capturas": 6,
+      "fit_s1": 78.0,
+      "fit_s2": 79.4,
+      "fit_s3": 88.6,
+      "fit_global": 82.7,
+      "jugadas_s3": 18,
+      "axiomas_totales": 5
+    },
+    {
+      "gen": 11,
+      "individuo": "Caissa_G11",
+      "turnos": 14,
+      "resultado": "VICTORIA",
+      "capturas": 5,
+      "fit_s1": 74.0,
+      "fit_s2": 80.7,
+      "fit_s3": 88.6,
+      "fit_global": 81.8,
+      "jugadas_s3": 14,
+      "axiomas_totales": 6
+    },
+    {
+      "gen": 12,
+      "individuo": "Caissa_G12",
+      "turnos": 24,
+      "resultado": "VICTORIA",
+      "capturas": 9,
+      "fit_s1": 84.0,
+      "fit_s2": 79.4,
+      "fit_s3": 88.6,
+      "fit_global": 84.5,
+      "jugadas_s3": 24,
+      "axiomas_totales": 7
+    },
+    {
+      "gen": 13,
+      "individuo": "Caissa_G13",
+      "turnos": 36,
+      "resultado": "TABLAS",
+      "capturas": 12,
+      "fit_s1": 72.0,
+      "fit_s2": 79.4,
+      "fit_s3": 63.6,
+      "fit_global": 70.9,
+      "jugadas_s3": 36,
+      "axiomas_totales": 6
+    },
+    {
+      "gen": 14,
+      "individuo": "Caissa_G14",
+      "turnos": 27,
+      "resultado": "VICTORIA",
+      "capturas": 9,
+      "fit_s1": 87.0,
+      "fit_s2": 79.4,
+      "fit_s3": 88.6,
+      "fit_global": 85.4,
+      "jugadas_s3": 27,
+      "axiomas_totales": 7
+    },
+    {
+      "gen": 15,
+      "individuo": "Caissa_G15",
+      "turnos": 18,
+      "resultado": "VICTORIA",
+      "capturas": 7,
+      "fit_s1": 78.0,
+      "fit_s2": 79.4,
+      "fit_s3": 88.6,
+      "fit_global": 82.7,
+      "jugadas_s3": 18,
+      "axiomas_totales": 7
+    },
+    {
+      "gen": 16,
+      "individuo": "Caissa_G16",
+      "turnos": 17,
+      "resultado": "VICTORIA",
+      "capturas": 5,
+      "fit_s1": 77.0,
+      "fit_s2": 79.4,
+      "fit_s3": 88.6,
+      "fit_global": 82.4,
+      "jugadas_s3": 17,
+      "axiomas_totales": 8
+    },
+    {
+      "gen": 17,
+      "individuo": "Caissa_G17",
+      "turnos": 14,
+      "resultado": "VICTORIA",
+      "capturas": 5,
+      "fit_s1": 74.0,
+      "fit_s2": 80.7,
+      "fit_s3": 88.6,
+      "fit_global": 81.8,
+      "jugadas_s3": 14,
+      "axiomas_totales": 9
+    },
+    {
+      "gen": 18,
+      "individuo": "Caissa_G18",
+      "turnos": 40,
+      "resultado": "VICTORIA",
+      "capturas": 7,
+      "fit_s1": 100.0,
+      "fit_s2": 79.4,
+      "fit_s3": 88.6,
+      "fit_global": 89.3,
+      "jugadas_s3": 40,
+      "axiomas_totales": 9
+    },
+    {
+      "gen": 19,
+      "individuo": "Caissa_G19",
+      "turnos": 23,
+      "resultado": "VICTORIA",
+      "capturas": 4,
+      "fit_s1": 83.0,
+      "fit_s2": 71.4,
+      "fit_s3": 88.6,
+      "fit_global": 81.8,
+      "jugadas_s3": 23,
+      "axiomas_totales": 9
+    }
+  ],
+  "actualizado": 1794057388.053643
+}

@@ -1,0 +1,353 @@
+{
+  "metodologia": "Diseno Factorial 2x2 + Controles Placebo y Mediano en N=20 Semillas Nuevas (2000..2019)",
+  "semillas_evaluadas": [
+    2000,
+    2001,
+    2002,
+    2003,
+    2004,
+    2005,
+    2006,
+    2007,
+    2008,
+    2009,
+    2010,
+    2011,
+    2012,
+    2013,
+    2014,
+    2015,
+    2016,
+    2017,
+    2018,
+    2019
+  ],
+  "condiciones": {
+    "C1_Record_Completo": {
+      "nombre": "C1: Arq Récord + Axiomas Récord (2x2 Récord)",
+      "tipo_control": "Experimental Récord",
+      "crafter_score_poblacional": 19.58,
+      "sum_ln": 66.5318,
+      "logros_desbloqueados_unicos": 16,
+      "lista_logros": [
+        "collect_coal",
+        "collect_drink",
+        "collect_iron",
+        "collect_stone",
+        "collect_wood",
+        "defeat_skeleton",
+        "defeat_zombie",
+        "eat_cow",
+        "make_stone_pickaxe",
+        "make_stone_sword",
+        "make_wood_pickaxe",
+        "make_wood_sword",
+        "place_furnace",
+        "place_stone",
+        "place_table",
+        "wake_up"
+      ],
+      "logros_media": 11.15,
+      "logros_std": 2.57,
+      "logros_mediana": 12.0,
+      "logros_iqr": [
+        10.0,
+        12.25
+      ],
+      "fitness_media": 65.91,
+      "fitness_std": 4.9,
+      "fitness_mediana": 66.4,
+      "pasos_media": 268.1,
+      "pasos_std": 91.6
+    },
+    "C2_Solo_Arquetipo": {
+      "nombre": "C2: Arq Récord + Axiomas Vacíos (Ablación Axiomas)",
+      "tipo_control": "Factorial Arquetipo Solo",
+      "crafter_score_poblacional": 19.79,
+      "sum_ln": 66.7601,
+      "logros_desbloqueados_unicos": 16,
+      "lista_logros": [
+        "collect_coal",
+        "collect_drink",
+        "collect_iron",
+        "collect_stone",
+        "collect_wood",
+        "defeat_skeleton",
+        "defeat_zombie",
+        "eat_cow",
+        "make_stone_pickaxe",
+        "make_stone_sword",
+        "make_wood_pickaxe",
+        "make_wood_sword",
+        "place_furnace",
+        "place_stone",
+        "place_table",
+        "wake_up"
+      ],
+      "logros_media": 11.25,
+      "logros_std": 2.64,
+      "logros_mediana": 12.0,
+      "logros_iqr": [
+        10.0,
+        13.0
+      ],
+      "fitness_media": 65.84,
+      "fitness_std": 4.87,
+      "fitness_mediana": 66.4,
+      "pasos_media": 277.4,
+      "pasos_std": 103.2
+    },
+    "C3_Solo_Axiomas": {
+      "nombre": "C3: Arq Fundador + Axiomas Récord (Ablación Arquetipo)",
+      "tipo_control": "Factorial Axiomas Solo",
+      "crafter_score_poblacional": 6.71,
+      "sum_ln": 44.9336,
+      "logros_desbloqueados_unicos": 11,
+      "lista_logros": [
+        "collect_coal",
+        "collect_drink",
+        "collect_stone",
+        "collect_wood",
+        "defeat_skeleton",
+        "defeat_zombie",
+        "eat_cow",
+        "make_wood_pickaxe",
+        "make_wood_sword",
+        "place_table",
+        "wake_up"
+      ],
+      "logros_media": 7.05,
+      "logros_std": 1.32,
+      "logros_mediana": 7.0,
+      "logros_iqr": [
+        6.0,
+        8.0
+      ],
+      "fitness_media": 61.77,
+      "fitness_std": 6.09,
+      "fitness_mediana": 61.1,
+      "pasos_media": 254.4,
+      "pasos_std": 87.8
+    },
+    "C4_Control_Vacio": {
+      "nombre": "C4: Arq Fundador + Axiomas Vacíos (Control Negativo Base)",
+      "tipo_control": "Control Negativo Base",
+      "crafter_score_poblacional": 6.13,
+      "sum_ln": 43.2102,
+      "logros_desbloqueados_unicos": 11,
+      "lista_logros": [
+        "collect_coal",
+        "collect_drink",
+        "collect_stone",
+        "collect_wood",
+        "defeat_skeleton",
+        "defeat_zombie",
+        "eat_cow",
+        "make_wood_pickaxe",
+        "make_wood_sword",
+        "place_table",
+        "wake_up"
+      ],
+      "logros_media": 6.55,
+      "logros_std": 1.69,
+      "logros_mediana": 6.5,
+      "logros_iqr": [
+        5.0,
+        8.0
+      ],
+      "fitness_media": 61.47,
+      "fitness_std": 6.36,
+      "fitness_mediana": 59.75,
+      "pasos_media": 245.4,
+      "pasos_std": 83.4
+    },
+    "C5_Placebo_Sham": {
+      "nombre": "C5: Arq Récord + 33 Axiomas Placebo (Control Sham)",
+      "tipo_control": "Control Placebo Sham",
+      "crafter_score_poblacional": 19.79,
+      "sum_ln": 66.7601,
+      "logros_desbloqueados_unicos": 16,
+      "lista_logros": [
+        "collect_coal",
+        "collect_drink",
+        "collect_iron",
+        "collect_stone",
+        "collect_wood",
+        "defeat_skeleton",
+        "defeat_zombie",
+        "eat_cow",
+        "make_stone_pickaxe",
+        "make_stone_sword",
+        "make_wood_pickaxe",
+        "make_wood_sword",
+        "place_furnace",
+        "place_stone",
+        "place_table",
+        "wake_up"
+      ],
+      "logros_media": 11.25,
+      "logros_std": 2.64,
+      "logros_mediana": 12.0,
+      "logros_iqr": [
+        10.0,
+        13.0
+      ],
+      "fitness_media": 65.84,
+      "fitness_std": 4.87,
+      "fitness_mediana": 66.4,
+      "pasos_media": 277.4,
+      "pasos_std": 103.2
+    },
+    "C6_Linaje_Mediano": {
+      "nombre": "C6: Arq Mediano G8 + 23 Axiomas G8 (Control Mediano)",
+      "tipo_control": "Control Linaje Mediano",
+      "crafter_score_poblacional": 19.79,
+      "sum_ln": 66.7601,
+      "logros_desbloqueados_unicos": 16,
+      "lista_logros": [
+        "collect_coal",
+        "collect_drink",
+        "collect_iron",
+        "collect_stone",
+        "collect_wood",
+        "defeat_skeleton",
+        "defeat_zombie",
+        "eat_cow",
+        "make_stone_pickaxe",
+        "make_stone_sword",
+        "make_wood_pickaxe",
+        "make_wood_sword",
+        "place_furnace",
+        "place_stone",
+        "place_table",
+        "wake_up"
+      ],
+      "logros_media": 11.25,
+      "logros_std": 2.64,
+      "logros_mediana": 12.0,
+      "logros_iqr": [
+        10.0,
+        13.0
+      ],
+      "fitness_media": 66.42,
+      "fitness_std": 5.67,
+      "fitness_mediana": 66.4,
+      "pasos_media": 278.0,
+      "pasos_std": 104.5
+    }
+  },
+  "comparativas_contra_control_vacio": {
+    "C1_Record_Completo": {
+      "delta_crafter_score": 13.45,
+      "delta_logros_media": 4.6,
+      "bootstrap_ci_95": [
+        3.2,
+        5.85
+      ],
+      "wilcoxon_w": 5.0,
+      "wilcoxon_p_value": 0.0002803144305725427,
+      "sign_test": {
+        "victorias": 18,
+        "empates": 1,
+        "derrotas": 1,
+        "binomial_p_value": 7.62939453125e-05
+      },
+      "cliffs_delta": 0.81,
+      "fitness_wilcoxon_p_value": 0.027607480195292144
+    },
+    "C2_Solo_Arquetipo": {
+      "delta_crafter_score": 13.66,
+      "delta_logros_media": 4.7,
+      "bootstrap_ci_95": [
+        3.3,
+        5.95
+      ],
+      "wilcoxon_w": 5.0,
+      "wilcoxon_p_value": 0.0002747267638079423,
+      "sign_test": {
+        "victorias": 18,
+        "empates": 1,
+        "derrotas": 1,
+        "binomial_p_value": 7.62939453125e-05
+      },
+      "cliffs_delta": 0.81,
+      "fitness_wilcoxon_p_value": 0.027607480195292144
+    },
+    "C3_Solo_Axiomas": {
+      "delta_crafter_score": 0.58,
+      "delta_logros_media": 0.5,
+      "bootstrap_ci_95": [
+        -0.15,
+        1.2
+      ],
+      "wilcoxon_w": 8.5,
+      "wilcoxon_p_value": 0.18019441523163582,
+      "sign_test": {
+        "victorias": 6,
+        "empates": 12,
+        "derrotas": 2,
+        "binomial_p_value": 0.2890625
+      },
+      "cliffs_delta": 0.19,
+      "fitness_wilcoxon_p_value": 0.92495987663281
+    },
+    "C5_Placebo_Sham": {
+      "delta_crafter_score": 13.66,
+      "delta_logros_media": 4.7,
+      "bootstrap_ci_95": [
+        3.3,
+        5.95
+      ],
+      "wilcoxon_w": 5.0,
+      "wilcoxon_p_value": 0.0002747267638079423,
+      "sign_test": {
+        "victorias": 18,
+        "empates": 1,
+        "derrotas": 1,
+        "binomial_p_value": 7.62939453125e-05
+      },
+      "cliffs_delta": 0.81,
+      "fitness_wilcoxon_p_value": 0.027607480195292144
+    },
+    "C6_Linaje_Mediano": {
+      "delta_crafter_score": 13.66,
+      "delta_logros_media": 4.7,
+      "bootstrap_ci_95": [
+        3.3,
+        5.95
+      ],
+      "wilcoxon_w": 5.0,
+      "wilcoxon_p_value": 0.0002747267638079423,
+      "sign_test": {
+        "victorias": 18,
+        "empates": 1,
+        "derrotas": 1,
+        "binomial_p_value": 7.62939453125e-05
+      },
+      "cliffs_delta": 0.81,
+      "fitness_wilcoxon_p_value": 0.020622392543651603
+    }
+  },
+  "analisis_factorial_2x2": {
+    "intercepto_c4_base": {
+      "beta": 6.55,
+      "se": 0.489,
+      "p_value": 0.0
+    },
+    "efecto_principal_arquetipo": {
+      "beta": 4.7,
+      "se": 0.692,
+      "p_value": 0.0
+    },
+    "efecto_principal_axiomas": {
+      "beta": 0.5,
+      "se": 0.692,
+      "p_value": 0.4723
+    },
+    "interaccion_arquetipo_x_axiomas": {
+      "beta": -0.6,
+      "se": 0.979,
+      "p_value": 0.5418
+    }
+  }
+}

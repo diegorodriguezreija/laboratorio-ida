@@ -1,0 +1,7 @@
+commit=21dff6c5d9982ed424b34ecc01c8d7324b8f8459 tag=n1-codigo-congelado inicio=2026-11-07T23:19:47+01:00
+fin=2026-11-07T23:52:25+01:00
+H1_nivel_b exit=0 segundos=943
+H1_nivel_a exit=0 segundos=964
+H2_sweep exit=0 segundos=975
+H7_1500p exit=0 segundos=449
+factorial exit=0 segundos=983

@@ -1,0 +1,24 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "laboratorio-ida"
+version = "0.1.0"
+description = "Laboratorio IdA: banco de investigación y contraste empírico de variantes bioinspiradas frente a líneas base tradicionales"
+readme = "README.md"
+requires-python = ">=3.11"
+license = { text = "Apache-2.0 (mundo_ajedrez: GPL-3.0-or-later); ver NOTICE" }
+authors = [{ name = "Diego Rodriguez Reija" }]
+dependencies = ["numpy>=1.26", "scipy>=1.11"]
+
+[project.optional-dependencies]
+crafter = ["crafter>=1.8.3", "pillow>=10.2", "imageio>=2.34"]
+ajedrez = ["chess>=1.10"]                         # GPL-3.0-or-later (ver NOTICE)
+snake = ["playwright>=1.42"]                      # además: python -m playwright install chromium
+dev = ["pytest>=8", "scipy>=1.11", "crafter>=1.8.3", "pillow>=10.2", "imageio>=2.34", "chess>=1.10"]
+todo = ["pytest>=8", "scipy>=1.11", "crafter>=1.8.3", "pillow>=10.2", "imageio>=2.34", "chess>=1.10", "playwright>=1.42"]
+
+[tool.setuptools.packages.find]
+include = ["base*", "herramientas*"]
+namespaces = true
