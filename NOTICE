@@ -11,7 +11,7 @@ licencias tienen sus dependencias, verificadas el 7 de noviembre de 2026.
 - Todo el repositorio, salvo la carpeta indicada abajo, se distribuye bajo la licencia
   Apache License 2.0 (fichero LICENSE en la raíz).
 
-- La carpeta nivel_3_componentes/mundos/mundo_ajedrez/ (mundo de ajedrez) se distribuye
+- La carpeta base/nivel_3_componentes/mundos/mundo_ajedrez/ (mundo de ajedrez) se distribuye
   bajo la GNU General Public License versión 3 o posterior (GPL-3.0-or-later; fichero
   LICENSE dentro de esa carpeta), porque importa la librería python-chess, que se
   distribuye bajo GPL 3 o posterior.
@@ -47,8 +47,6 @@ colorama (BSD), iniconfig (MIT), packaging (Apache-2.0 OR BSD-2-Clause), pluggy 
 Pygments (BSD-2-Clause), typing_extensions (PSF-2.0).
 
 Servicios opcionales que no se incluyen ni se redistribuyen:
-- PostgreSQL + pgvector (imagen Docker pgvector/pgvector:pg16), en nivel_0_demiurgo/.
-  Estado: preparado, no conectado; ningún módulo de IdA se conecta a la base de datos.
 - Ollama (LLM local), consultado opcionalmente por el mundo de ajedrez en localhost.
 - El sitio web https://playsnake.org/, que el mundo Snake web automatiza con Playwright.
   Es un sitio de terceros con sus propias condiciones de uso.
