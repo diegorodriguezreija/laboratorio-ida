@@ -287,10 +287,10 @@ def analizar_datos(ruta_csv: str) -> Dict[str, Any]:
         caso_detectado = "B"
         motivo_caso = f"Excedente Bioinspirado demostrado: Límite inferior IC 95% = {inf_prim:.2f} > +1.0 logro (p = {p_prim_wilcoxon:.4e})."
 
-    # Condición Caso A: Solo Memoria (Equivalencia Demostrada)
-    elif res_tost["equivalente"] and p_holm_dict["Efecto_Memoria"]["significativo"] and m_mem > 0:
+    # Condición Caso A: Solo Memoria (Equivalencia Demostrada por IC 95% estricto dentro de [-1.0, +1.0])
+    elif (inf_prim >= -1.0 and sup_prim <= 1.0) and p_holm_dict["Efecto_Memoria"]["significativo"] and m_mem > 0:
         caso_detectado = "A"
-        motivo_caso = f"Solo Memoria (Equivalencia Demostrada): IC 95% [{inf_prim:.2f}, {sup_prim:.2f}] enteramente contenido en [-1.0, +1.0] (p_TOST = {res_tost['p_tost']:.4e}) y memoria significativa (p_Holm = {p_holm_dict['Efecto_Memoria']['p_holm']:.4e})."
+        motivo_caso = f"Solo Memoria (Equivalencia Demostrada): IC 95% [{inf_prim:.2f}, {sup_prim:.2f}] enteramente contenido en [-1.0, +1.0] y memoria significativa (p_Holm = {p_holm_dict['Efecto_Memoria']['p_holm']:.4e})."
 
     # Condición Caso C: Diferencia Pequeña / Sub-clínica
     elif p_prim_wilcoxon < 0.05 and m_prim > 0 and (inf_prim <= 1.0 or sup_prim >= 1.0):
@@ -298,13 +298,22 @@ def analizar_datos(ruta_csv: str) -> Dict[str, Any]:
         motivo_caso = f"Diferencia pequeña/sub-clínica: Ventaja estadísticamente significativa (p = {p_prim_wilcoxon:.4e}) pero IC [{inf_prim:.2f}, {sup_prim:.2f}] no supera holgadamente el margen de +1.0 logro."
 
     # Condición Caso F: Ineficacia de la Memoria
-    elif res_tost["equivalente"] and not p_holm_dict["Efecto_Memoria"]["significativo"]:
+    elif (inf_prim >= -1.0 and sup_prim <= 1.0) and not p_holm_dict["Efecto_Memoria"]["significativo"]:
         caso_detectado = "F"
         motivo_caso = f"Ineficacia de la Memoria: Equivalencia en primario pero efecto memoria no significativo (p_Holm = {p_holm_dict['Efecto_Memoria']['p_holm']:.4e})."
 
     else:
         caso_detectado = "G"
-        motivo_caso = f"No concluyente: p = {p_prim_wilcoxon:.4e}, IC [{inf_prim:.2f}, {sup_prim:.2f}] desborda [-1.0, +1.0]."
+        if inf_prim < -1.0 and sup_prim <= 1.0:
+            exceso = abs(inf_prim - (-1.0))
+            motivo_caso = (
+                f"No concluyente en equivalencia estricta (en el límite por {exceso:.2f} logros): "
+                f"El IC 95% [{inf_prim:.2f}, {sup_prim:.2f}] desborda levemente el margen inferior [-1.0, +1.0], "
+                f"aunque TOST convencional (al 90% IC) sí concluye equivalencia (p_TOST = {res_tost['p_tost']:.4e}). "
+                f"El límite superior (+{sup_prim:.2f}) descarta un excedente bioinspirado >= 1.0 logro con 95% de confianza."
+            )
+        else:
+            motivo_caso = f"No concluyente: p = {p_prim_wilcoxon:.4e}, IC [{inf_prim:.2f}, {sup_prim:.2f}] desborda [-1.0, +1.0]."
 
     resumen = {
         "n_semillas": n_semillas,
