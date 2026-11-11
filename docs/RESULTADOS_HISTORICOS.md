@@ -44,6 +44,10 @@ A la pregunta central: ***¿Supera el diseño cognitivo orgánico de IdA al dise
 - **Conclusión científica:** El diseño orgánico añade valor heurístico sobre una evaluación estática plana, pero no sustituye la profundidad de cálculo en el árbol de variantes.
 
 ### 3.2. Snake Web (Evaluación N2: 180 episodios en playsnake.org)
+
+> [!NOTE]
+> **Aviso ético y metodológico sobre E-09:** Los 180 episodios de E-09 se ejecutaron contra el servicio web público `playsnake.org` mediante automatización con Playwright. Por motivos éticos y de preservación de recursos de terceros, el laboratorio desaconseja lanzar ejecuciones automáticas masivas contra servidores públicos. Para cualquier réplica o contraste mecánico sobre el juego de Snake, debe emplearse el simulador local síncrono disponible en `experimentos/001-snake-diagnostico-bfs/simulador_snake.py`.
+
 - **Condiciones:** 30 episodios por dificultad (Slug, Worm, Python) para IdA y para el agente tradicional BFS.
 - **Resultados de puntuación:**
   - *Slug (baja velocidad):* IdA −192,3 pts (no concluyente, el IC del 95 % cruza el cero).

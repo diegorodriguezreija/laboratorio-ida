@@ -1,5 +1,7 @@
 import math
+import os
 import time
+import warnings
 from concurrent.futures import ThreadPoolExecutor
 from typing import Tuple, List, Dict, Any, Optional, Set
 import numpy as np
@@ -29,7 +31,7 @@ class AdaptadorSnakeWeb(ISensorEntorno, IActuadorEntorno):
 
     ANCHO_TABLERO: int = 21
     ALTO_TABLERO: int = 15
-    URL_SNAKE: str = "https://playsnake.org/"
+    URL_SNAKE: str = os.getenv("IDA_SNAKE_URL", "https://playsnake.org/")
 
     def __init__(self, headless: bool = True, nivel_dificultad: int = 0):
         self.headless = headless
@@ -65,6 +67,14 @@ class AdaptadorSnakeWeb(ISensorEntorno, IActuadorEntorno):
                 args=["--disable-background-timer-throttling", "--disable-renderer-backgrounding"],
             )
             self._page = self._browser.new_page()
+            if "playsnake.org" in self.URL_SNAKE:
+                warnings.warn(
+                    "Conectando al servicio web público playsnake.org. "
+                    "Para experimentación local controlada sin tráfico de red externo, "
+                    "utilice el simulador síncrono local en experimentos/001-snake-diagnostico-bfs/simulador_snake.py.",
+                    UserWarning,
+                    stacklevel=2,
+                )
             self._page.goto(self.URL_SNAKE, timeout=20000)
             time.sleep(1.0)
             self._despejar_consentimiento_si_existe_sync()

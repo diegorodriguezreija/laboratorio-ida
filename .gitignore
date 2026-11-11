@@ -21,8 +21,11 @@ env/
 *.pem
 *.key
 
-# Salidas de ejecución (IDA_OUT_DIR por defecto)
-salidas/
+# Salidas de ejecución (se conservan los datasets CSV y resúmenes JSON; se ignoran archivos pesados/temporales)
+salidas/*
+!salidas/*/
+!salidas/*/*.csv
+!salidas/*/*.json
 
 # Binarios externos (Stockfish GPL-3.0, no se redistribuye)
 bin/

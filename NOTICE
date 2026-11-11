@@ -8,8 +8,12 @@ licencias tienen sus dependencias, verificadas el 7 de noviembre de 2026.
 1. Licencias del propio repositorio
 ==============================================================================
 
-- Todo el repositorio, salvo la carpeta indicada abajo, se distribuye bajo la licencia
-  Apache License 2.0 (fichero LICENSE en la raíz).
+- Todo el código fuente del repositorio, salvo la carpeta indicada abajo, se distribuye
+  bajo la licencia Apache License 2.0 (fichero LICENSE en la raíz).
+
+- Todos los informes experimentales, documentación y conjuntos de datos empíricos
+  (directorios experimentos/, docs/, salidas/ y ficheros markdown) se distribuyen
+  bajo la licencia Creative Commons Reconocimiento 4.0 Internacional (CC-BY-4.0).
 
 - La carpeta base/nivel_3_componentes/mundos/mundo_ajedrez/ (mundo de ajedrez) se distribuye
   bajo la GNU General Public License versión 3 o posterior (GPL-3.0-or-later; fichero

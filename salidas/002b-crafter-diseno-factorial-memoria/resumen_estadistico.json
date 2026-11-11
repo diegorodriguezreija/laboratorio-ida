@@ -1,0 +1,110 @@
+{
+  "n_semillas": 60,
+  "semillas": [
+    3040,
+    3099
+  ],
+  "brazos": {
+    "B1_Voraz_Reactivo": {
+      "media_logros": 5.583333333333333,
+      "mediana_logros": 5.0,
+      "std_logros": 2.5597382457989037,
+      "crafter_score": 6.738568242786807,
+      "retornos_fuera_de_vista_total": 0
+    },
+    "B2_IdA_SinMemoria": {
+      "media_logros": 10.383333333333333,
+      "mediana_logros": 11.0,
+      "std_logros": 2.946366142611553,
+      "crafter_score": 19.276607415138265,
+      "retornos_fuera_de_vista_total": 0
+    },
+    "B3_Voraz_Memoria": {
+      "media_logros": 10.866666666666667,
+      "mediana_logros": 11.0,
+      "std_logros": 1.7894859281384834,
+      "crafter_score": 14.053027326326307,
+      "retornos_fuera_de_vista_total": 135
+    },
+    "B4_IdA_Canonica": {
+      "media_logros": 10.8,
+      "mediana_logros": 11.0,
+      "std_logros": 3.0631765942331213,
+      "crafter_score": 20.542257548180125,
+      "retornos_fuera_de_vista_total": 0
+    }
+  },
+  "contraste_primario": {
+    "comparativa": "IdA_Canonica (B4) - Voraz_Memoria (B3)",
+    "media_diff": -0.06666666666666667,
+    "ic_95": [
+      -1.0333333333333334,
+      0.9166666666666666
+    ],
+    "wilcoxon_stat": 700.5,
+    "wilcoxon_p": 0.8939854385368003,
+    "tost_equivalencia": {
+      "margen": 1.0,
+      "media": -0.06666666666666667,
+      "se": 0.4928108395119669,
+      "t1": 1.8938977362137936,
+      "p1": 0.03157220098114122,
+      "t2": -2.164454555672907,
+      "p2": 0.01724385830749313,
+      "p_tost": 0.03157220098114122,
+      "equivalente": true
+    },
+    "crafter_score_diff": {
+      "puntual_pp": 6.489230221853818,
+      "ic_95_pp": [
+        3.9042406154314184,
+        8.561801473724252
+      ]
+    }
+  },
+  "contrastes_secundarios_factoriales": {
+    "efecto_arquitectura": {
+      "media_diff": 2.3666666666666667,
+      "ic_95": [
+        1.525,
+        3.2083333333333335
+      ],
+      "stats_holm": {
+        "p_crudo": 6.6746294568802745e-06,
+        "p_holm": 6.6746294568802745e-06,
+        "alpha_k": 0.05,
+        "significativo": true
+      }
+    },
+    "efecto_memoria": {
+      "media_diff": 2.85,
+      "ic_95": [
+        2.425,
+        3.2666666666666666
+      ],
+      "stats_holm": {
+        "p_crudo": 1.3859199558529884e-10,
+        "p_holm": 4.157759867558965e-10,
+        "alpha_k": 0.016666666666666666,
+        "significativo": true
+      }
+    },
+    "interaccion": {
+      "media_diff": -4.866666666666666,
+      "ic_95": [
+        -5.750416666666663,
+        -3.933333333333333
+      ],
+      "stats_holm": {
+        "p_crudo": 8.121624119135689e-10,
+        "p_holm": 1.6243248238271378e-09,
+        "alpha_k": 0.025,
+        "significativo": true
+      }
+    }
+  },
+  "veredicto_escenario": {
+    "caso": "G",
+    "motivo": "No concluyente en equivalencia estricta (en el límite por 0.03 logros): El IC 95% [-1.03, 0.92] desborda levemente el margen inferior [-1.0, +1.0], aunque TOST convencional (al 90% IC) sí concluye equivalencia (p_TOST = 3.1572e-02). El límite superior (+0.92) descarta un excedente bioinspirado >= 1.0 logro con 95% de confianza."
+  }
+}
