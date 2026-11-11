@@ -832,6 +832,7 @@ async def evaluar_individuo_en_semilla(
     soma_modulacion: str = "on",
     recolectar_telemetria: bool = False,
     habilitar_autopoiesis: bool = False,
+    memoria_alocentrica: bool = True,
 ) -> Dict[str, Any]:
     """
     Evalúa de forma limpia y aislada un individuo (con su Arquetipo y su lista de axiomas Weismann)
@@ -880,6 +881,10 @@ async def evaluar_individuo_en_semilla(
         p_heredada = Pieza.from_dict(ax)
         p_heredada.heredado = True
         core.activa.consolidar_pieza(p_heredada.id, p_heredada)
+
+    # Brazo 2: Ablación limpia de memoria alocéntrica espacial (conservando memoria de trabajo y soma)
+    if not memoria_alocentrica and hasattr(core, "activa"):
+        core.activa.consultar_hitos_alocentricos = lambda *args, **kwargs: []
 
     # Manipulación de H2: cortisol constante durante todo el episodio (ver fijar_cortisol)
     if soma_modulacion == "off":
