@@ -59,9 +59,9 @@ Se fija a priori un margen de equivalencia práctica de **$\delta_{\text{equiv}}
 ## 4. Paridad Estricta y Prueba de Identidad Automática
 
 1. **Extensión Aditiva Pura:** `crafter_voraz_memoria.py` hereda de `crafter_voraz.py` sin reescribir la jerarquía de decisiones, ni alterar los umbrales de recolección ni la regla de huida ante esqueletos.
-2. **Prueba de Identidad Demostrada:** Se ejecutó la verificación automática comparando la secuencia completa de acciones entre `crafter_voraz.py` y `crafter_voraz_memoria.py(memoria_activa=False)` sobre 200 pasos en las semillas de entrenamiento 2000–2004 bajo chunks deterministas: **5 de 5 semillas fueron 100 % idénticas (0 discrepancias en 1000 ticks)**.
+2. **Prueba de Identidad Demostrada:** Se ejecutó la verificación automática comparando la secuencia completa de acciones entre `crafter_voraz.py` y `crafter_voraz_memoria.py(memoria_activa=False)` sobre episodios completos hasta muerte o tope (1.409 pasos totales) en las semillas de entrenamiento 2000–2004 bajo chunks deterministas: **5 de 5 semillas fueron 100 % idénticas (0 discrepancias en 1.409 ticks)**.
 3. **Mapeo Alocéntrico Idéntico:** Registra estaciones (`table`, `furnace`), fuentes de agua y yacimientos. Elimina dinámicamente las entradas si la casilla visible cambia (ej. mineral picado).
-4. **Navegación Fuera de Vista Auditada:** El agente voraz con memoria utiliza un vector de aproximación cardinal si el hito está fuera de los $9 \times 9$ casillas, acumulando retornos efectivos comprobados en semillas de entrenamiento (ej. 50 a 108 retornos a la mesa por episodio).
+4. **Navegación Fuera de Vista Auditada:** El agente voraz con memoria utiliza BFS global sobre casillas transitables recordadas si el hito está fuera de vista, contabilizando viajes completos (iniciados fuera de vista y concluidos al alcanzar la adyacencia), con 1 a 3 retornos completos efectivos por episodio verificado en semillas de entrenamiento.
 5. **Recetas Oficiales Verificadas:** El horno requiere piedra $\ge 4$; el pico de hierro requiere mesa y horno adyacentes y 1 de madera, 1 de carbón y 1 de hierro (`crafter.constants.make`).
 
 ---
@@ -75,6 +75,6 @@ Se fija a priori un margen de equivalencia práctica de **$\delta_{\text{equiv}}
 * **Comprobación Previa de los 4 Brazos en Entrenamiento (Semillas 2000–2004):**
   - Brazo 1 (Voraz sin memoria): Mediana 10.0 logros (rango 3–12).
   - Brazo 2 (IdA sin memoria alocéntrica): Mediana 9.0 logros (rango 9–12), 0 excepciones mecánicas.
-  - Brazo 3 (Voraz con memoria): Mediana 9.0 logros (rango 7–12), retornos a mesa verificados.
+  - Brazo 3 (Voraz con memoria): Mediana 11.0 logros (rango 8–11), retornos a mesa verificados (1 a 3 completados).
   - Brazo 4 (IdA completo): Mediana 12.0 logros (rango 10–12).
-* **Hash Congelado Definitivo:** Se congela el commit previo exacto a la ejecución: `75c95dadedf083f7cf3bd505270c4ff854a2b88f`.
+* **Hash Congelado Definitivo:** Se congela el commit previo exacto a la ejecución del código: `6dc8fc2ee1c7fe035ba0d2a5031d8be0c3990622`.
