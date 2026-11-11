@@ -2,66 +2,67 @@
 
 ## 1. Pregunta Experimental
 
-> **¿Proviene la ventaja observada de IdA v12.0 en Crafter 2D del diseño bioinspirado (homeostasis afectiva, modulación somática y arbitraje triúnico) o meramente de la disponibilidad de un mapa de memoria espacial que retiene la ubicación de las estaciones de trabajo y recursos?**
+> **¿Aporta el diseño bioinspirado de IdA v12.0 (homeostasis afectiva, modulación somática y arbitraje triúnico) un excedente medible en progresión técnica frente a una línea base tradicional dotada de memoria espacial equivalente, o la ventaja observada en el Experimento 002 se debía íntegramente a la asimetría de memoria?**
 
 ---
 
-## 2. Hipótesis Formales y Diseño Factorial 2×2
+## 2. Hipótesis Formales y Diseño Factorial 2×2 (Medidas Repetidas Intra-Semilla)
 
-Se define un diseño factorial equilibrado de dos factores entre sujetos pareados por semilla ($2 \times 2$):
+Se define un diseño factorial equilibrado de dos factores con medidas repetidas donde cada semilla procedural se evalúa bajo los 4 brazos ($2 \times 2$):
 * **Factor A (Arquitectura Cognitiva):** `IdA Bioinspirado` vs. `Línea Base Tradicional (Voraz)`.
 * **Factor B (Memoria Espacial):** `Con Memoria Alocéntrica` vs. `Sin Memoria (Reactivo puro al tick)`.
 
-### Matriz Experimental (4 Brazos Pareados)
+### Matriz Experimental (4 Brazos Pareados Intra-Semilla)
 
 | Factor B \ Factor A | A1: Tradicional (Voraz) | A2: Bioinspirado (IdA v12.0) |
 |---|---|---|
-| **B1: Sin Memoria (Reactivo)** | **Brazo 1:** `Voraz Reactivo` (sin memoria, idéntico a Exp 002) | **Brazo 2:** `IdA con Ablación de Memoria` ($S_3$ despojado de consulta a hitos alocéntricos de $S_2$, operando solo sobre fóvea local) |
-| **B2: Con Memoria Espacial** | **Brazo 3:** `Voraz con Memoria` (`crafter_voraz_memoria.py`: mapa idéntico de hitos alocéntricos + retorno A\*) | **Brazo 4:** `IdA Canónico Completo` (`Hominis_G12` con mapa alocéntrico activo) |
+| **B1: Sin Memoria (Reactivo)** | **Brazo 1:** `Voraz Reactivo` (sin memoria, idéntico a Exp 002) | **Brazo 2:** `IdA sin memoria alocéntrica` (Ablación limpia: $S_3$ despojado de consulta a `hitos_alocentricos`, operando únicamente sobre la fóvea visual local actual; conserva memoria de trabajo y soma básico) |
+| **B2: Con Memoria Espacial** | **Brazo 3:** `Voraz con Memoria` (`crafter_voraz_memoria.py`: extensión aditiva pura sobre Voraz base con mapa alocéntrico idéntico, limpieza de recursos modificados y retorno A\*) | **Brazo 4:** `IdA Canónico Completo` (`Hominis_G12` con mapa alocéntrico activo y memoria hipocampal) |
 
 ### Contrastes Estadísticos y Jerarquía de Hipótesis
 
 1. **Contraste Primario ($H_{1}$):**
-   - Comparación pareada entre **Brazo 4 (IdA Completo)** y **Brazo 3 (Voraz con Memoria)**.
-   - $H_{1,0}$: La diferencia en logros por episodio es igual a cero ($\Delta_{\text{primario}} = \text{Logros}_{B4} - \text{Logros}_{B3} = 0$).
+   - Comparación pareada intra-semilla entre **Brazo 4 (IdA Completo)** y **Brazo 3 (Voraz con Memoria)**.
+   - Variable: Número total de logros desbloqueados por episodio.
+   - $H_{1,0}$: La diferencia pareada es igual a cero ($\Delta_{\text{primario}} = \text{Logros}_{B4} - \text{Logros}_{B3} = 0$).
    - $H_{1,1}$: $\Delta_{\text{primario}} \ne 0$ (bilateral, $\alpha = 0.05$).
 2. **Efecto Principal de la Arquitectura ($H_{\text{Arq}}$):**
    - $\Delta_{\text{Arq}} = \frac{1}{2} [(\text{Logros}_{B4} - \text{Logros}_{B3}) + (\text{Logros}_{B2} - \text{Logros}_{B1})]$.
-   - Mide si IdA supera al Voraz independientemente del estado de la memoria.
+   - Mide el excedente organísmico promedio a través de ambos niveles de memoria.
 3. **Efecto Principal de la Memoria ($H_{\text{Mem}}$):**
    - $\Delta_{\text{Mem}} = \frac{1}{2} [(\text{Logros}_{B4} - \text{Logros}_{B2}) + (\text{Logros}_{B3} - \text{Logros}_{B1})]$.
-   - Mide el impacto neto de añadir memoria espacial a ambos sistemas.
-4. **Interacción ($H_{\text{Int}}$):**
+   - Mide el impacto neto de disponer de memoria espacial en ambas arquitecturas.
+4. **Interacción Arquitectura $\times$ Memoria ($H_{\text{Int}}$):**
    - $\text{Int} = (\text{Logros}_{B4} - \text{Logros}_{B3}) - (\text{Logros}_{B2} - \text{Logros}_{B1})$.
-   - Evalúa si el beneficio de la memoria es asimétrico entre ambas arquitecturas (estimado con IC Bootstrap al 95 %).
+   - Evalúa si IdA aprovecha la memoria con mayor o menor eficacia que el voraz (estimado mediante IC Bootstrap al 95 %).
+5. **Control de Comparaciones Múltiples:**
+   - El contraste primario se evalúa a $\alpha = 0.05$. Los tres contrastes secundarios ($\Delta_{\text{Arq}}$, $\Delta_{\text{Mem}}$, $\text{Int}$) se ajustan mediante el procedimiento secuencial de Holm-Bonferroni.
 
 ---
 
-## 3. Matriz de Decisión y Criterios de Falsación A Priori
+## 3. Matriz de Decisión y Criterios de Falsación A Priori (TOST)
 
-Para evitar ambigüedades sobre qué significa «igualdad» o «equivalencia», se fija a priori un margen de equivalencia clínica/práctica de **$\delta_{\text{equiv}} = \pm 1.0$ logro por episodio**:
+Se fija a priori un margen de equivalencia práctica de **$\delta_{\text{equiv}} = \pm 1.0$ logro por episodio**. La interpretación de los resultados se regirá por la siguiente tabla exhaustiva:
 
-| Escenario | Condición Empírica | Interpretación Científica Formal |
+| Escenario | Condición Empírica Formal | Interpretación Científica Formal |
 |---|---|---|
-| **Caso A: Solo Memoria** | $\Delta_{\text{primario}} \in [-1.0, +1.0]$ (equivalencia demostrada por TOST) y $\Delta_{\text{Mem}} > 0$ significativo. | **Falsación del excedente bioinspirado:** La superioridad observada en Exp 002 se debía íntegramente a la asimetría de memoria; un agente clásico con memoria equipara a IdA. |
-| **Caso B: Excedente Bioinspirado Demostrado** | $\Delta_{\text{primario}} > +1.0$ logro ($p < 0.05$) y $\Delta_{\text{Arq}} > 0$ significativo. | **Confirmación de superioridad bioinspirada:** El chasis organísmico aporta una ventaja neta de progresión técnica incluso frente a una línea base dotada de memoria espacial idéntica. |
-| **Caso C: Interacción Sinérgica** | $\text{Int} > 0$ con $\text{IC}_{95\%}$ estrictamente superior a cero. | IdA aprovecha la memoria espacial de forma cualitativamente más eficaz que el sistema voraz gracias a la modulación homeostática. |
-| **Caso D: Avería de Ablación** | $\text{Logros}_{B2} < \text{Logros}_{B1} - 1.0$ logro ($p < 0.05$). | La ablación de memoria en IdA introdujo una avería mecánica colateral en lugar de aislar el factor memoria. Requiere invalidar y revisar la ablación. |
-| **Caso E: No Concluyente** | $\Delta_{\text{primario}}$ no alcanza significación ($p \ge 0.05$) pero su IC 95 % excede el margen $[-1.0, +1.0]$. | Muestra insuficiente para discernir entre diferencia pequeña y equivalencia. Se reporta con honestidad como no concluyente. |
+| **Caso A: Solo Memoria (Equivalencia)** | El IC 95 % de $\Delta_{\text{primario}}$ queda contenido enteramente dentro de $[-1.0, +1.0]$ logros (equivalencia demostrada por TOST) y $\Delta_{\text{Mem}} > 0$ ($p_{\text{Holm}} < 0.05$). | **Falsación del excedente bioinspirado:** La ventaja observada en el Exp 002 se debía a la falta de memoria del voraz; una memoria clásica de ingeniería equipara el rendimiento de IdA. |
+| **Caso B: Excedente Bioinspirado Demostrado** | Límite inferior del IC 95 % de $\Delta_{\text{primario}} > +1.0$ logro y $p < 0.05$. | **Confirmación de superioridad bioinspirada:** El chasis organísmico aporta una ventaja neta de progresión técnica estadísticamente separable y de relevancia práctica ($\ge 1.0$ logro) frente a la línea base con memoria idéntica. |
+| **Caso C: Diferencia Pequeña / Sub-clínica** | $\Delta_{\text{primario}} > 0$ estadísticamente significativo ($p < 0.05$), pero su IC 95 % no supera $+1.0$ logro o cruza $+1.0$. | Existe una ventaja medible pero por debajo del margen de relevancia práctica predefinido ($\le 1.0$ logro). |
+| **Caso D: Interacción Sinérgica** | Límite inferior del IC 95 % de $\text{Int} > 0$ ($p_{\text{Holm}} < 0.05$). | IdA aprovecha la memoria espacial de forma sinérgica frente a la heurística voraz gracias a la modulación homeostática. |
+| **Caso E: Avería de la Ablación** | $\text{Logros}_{B2} < \text{Logros}_{B1} - 1.0$ logro ($p_{\text{Holm}} < 0.05$). | La ablación de memoria alocéntrica en IdA introdujo una avería mecánica colateral en lugar de aislar el factor memoria. Requiere invalidar y revisar la ablación. |
+| **Caso F: Ineficacia de la Memoria** | El IC 95 % de $\Delta_{\text{primario}} \in [-1.0, +1.0]$, pero $\Delta_{\text{Mem}}$ no es significativo ($p_{\text{Holm}} \ge 0.05$). | La memoria espacial implementada no tuvo efecto medible en ninguna de las dos arquitecturas. |
+| **Caso G: No Concluyente** | $\Delta_{\text{primario}}$ no alcanza significación ($p \ge 0.05$) pero su IC 95 % desborda el margen $[-1.0, +1.0]$. | Muestra insuficiente para discernir entre diferencia pequeña y equivalencia. |
 
 ---
 
-## 4. Paridad Estricta de la Memoria y Restricción de Factores
+## 4. Paridad Estricta y Prueba de Identidad Automática
 
-Para garantizar que el Factor B represente exactamente el mismo mecanismo en ambos brazos:
-1. **Módulo de Memoria Compartido:** El agente voraz con memoria (`crafter_voraz_memoria.py`) implementa la misma estructura de memoria alocéntrica que IdA:
-   - Registro alocéntrico de estaciones (`table`, `furnace`), fuentes de agua y yacimientos (`stone`, `iron`, `coal`) observados en el campo local ($9 \times 9$).
-   - Regla de persistencia y capacidad idéntica (permanencia $1.0$ para mesas, retención de coordenadas absolutas observadas).
-2. **Prohibición de Manipulaciones Cruzadas:**
-   - **Combate con esqueletos idéntico:** La regla de autodefensa frente a esqueletos permanece inalterada respecto a `crafter_voraz.py` (huida evasiva si salud baja), para no confundir el efecto de combate con el factor memoria.
-   - **Vista local:** Ambos brazos operan estrictamente bajo radio 6 ($9 \times 9$ casillas).
-3. **Definición de la Ablación de IdA (Brazo 2):**
-   - En `CompCrafterS3`, se anula la llamada a `activa.consultar_hitos_alocentricos` (retornando lista vacía `[]`) forzando a que $S_3$ planifique exclusivamente con las piezas presentes en la fóvea visual actual (`escena`), exactamente igual que el voraz reactivo.
+1. **Extensión Aditiva Pura:** `crafter_voraz_memoria.py` hereda de `crafter_voraz.py` sin reescribir la jerarquía de decisiones, ni alterar los umbrales de recolección ni la regla de huida ante esqueletos.
+2. **Prueba de Identidad Demostrada:** Se ejecutó la verificación automática comparando la secuencia completa de acciones entre `crafter_voraz.py` y `crafter_voraz_memoria.py(memoria_activa=False)` sobre 200 pasos en las semillas de entrenamiento 2000–2004 bajo chunks deterministas: **5 de 5 semillas fueron 100 % idénticas (0 discrepancias en 1000 ticks)**.
+3. **Mapeo Alocéntrico Idéntico:** Registra estaciones (`table`, `furnace`), fuentes de agua y yacimientos. Elimina dinámicamente las entradas si la casilla visible cambia (ej. mineral picado).
+4. **Navegación Fuera de Vista Auditada:** El agente voraz con memoria utiliza un vector de aproximación cardinal si el hito está fuera de los $9 \times 9$ casillas, acumulando retornos efectivos comprobados en semillas de entrenamiento (ej. 50 a 108 retornos a la mesa por episodio).
+5. **Recetas Oficiales Verificadas:** El horno requiere piedra $\ge 4$; el pico de hierro requiere mesa y horno adyacentes y 1 de madera, 1 de carbón y 1 de hierro (`crafter.constants.make`).
 
 ---
 
@@ -70,7 +71,10 @@ Para garantizar que el Factor B represente exactamente el mismo mecanismo en amb
 * **Rango de Semillas Vírgenes:** Se evalúan **60 semillas pareadas estrictamente nuevas** de la partición de evaluación:
   $$\text{Semillas } 3040 \text{ a } 3099 \quad (N = 60 \text{ por brazo}, \text{Total } 240 \text{ episodios})$$
   *(Las semillas 3000–3039 quedan excluidas para evitar sobreajuste retrospectivo).*
-* **Efecto Mínimo Detectable (MDE):** Con $N = 60$ semillas pareadas y una $\sigma_{\text{diff}} \approx 2.5$ logros, el diseño alcanza una potencia estadística del $80 \%$ ($\beta = 0.20, \alpha = 0.05$) para detectar diferencias pareadas $\ge 0.91$ logros por episodio.
-* **Presupuesto y Hash Congelado:**
-  - Commit base congelado para la ejecución: `629acd1` (o el commit inmediato tras registrar este archivo).
-  - Presupuesto de prueba de humo previo en entrenamiento: 5 episodios en semillas 2000–2004 para verificar que IdA con ablación no arroja excepciones ni bucles infinitos.
+* **Potencia Estadística:** Con $N = 60$ semillas pareadas y una $\sigma_{\text{diff}} \approx 2.5$ logros, el diseño alcanza una potencia estadística del $80 \%$ ($\beta = 0.20, \alpha = 0.05$) para detectar diferencias pareadas $\ge 0.91$ logros por episodio.
+* **Comprobación Previa de los 4 Brazos en Entrenamiento (Semillas 2000–2004):**
+  - Brazo 1 (Voraz sin memoria): Mediana 10.0 logros (rango 3–12).
+  - Brazo 2 (IdA sin memoria alocéntrica): Mediana 9.0 logros (rango 9–12), 0 excepciones mecánicas.
+  - Brazo 3 (Voraz con memoria): Mediana 9.0 logros (rango 7–12), retornos a mesa verificados.
+  - Brazo 4 (IdA completo): Mediana 12.0 logros (rango 10–12).
+* **Hash Congelado:** Se congela el commit previo a la ejecución: `71603cb` (y el commit resultante tras esta ficha).
