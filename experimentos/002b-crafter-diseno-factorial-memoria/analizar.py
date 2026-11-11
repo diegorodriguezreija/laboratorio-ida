@@ -116,15 +116,18 @@ def calcular_crafter_score_bootstrap_diff(
     rng = np.random.default_rng(seed)
     n = len(logros_a)
 
-    score_a_orig = calcular_crafter_score_poblacional(logros_a)["crafter_score"]
-    score_b_orig = calcular_crafter_score_poblacional(logros_b)["crafter_score"]
+    hist_a = [{"logros": l} for l in logros_a]
+    hist_b = [{"logros": l} for l in logros_b]
+
+    score_a_orig = calcular_crafter_score_poblacional(hist_a)["crafter_score"]
+    score_b_orig = calcular_crafter_score_poblacional(hist_b)["crafter_score"]
     diff_orig = score_a_orig - score_b_orig
 
     diffs_boot = []
     for _ in range(n_boot):
         idx = rng.integers(0, n, size=n)
-        sub_a = [logros_a[i] for i in idx]
-        sub_b = [logros_b[i] for i in idx]
+        sub_a = [{"logros": logros_a[i]} for i in idx]
+        sub_b = [{"logros": logros_b[i]} for i in idx]
         sa = calcular_crafter_score_poblacional(sub_a)["crafter_score"]
         sb = calcular_crafter_score_poblacional(sub_b)["crafter_score"]
         diffs_boot.append(sa - sb)
@@ -255,10 +258,10 @@ def analizar_datos(ruta_csv: str) -> Dict[str, Any]:
         }
 
     # 3. CRAFTER SCORE POBLACIONAL
-    cs_b1 = calcular_crafter_score_poblacional(b1_desglose)
-    cs_b2 = calcular_crafter_score_poblacional(b2_desglose)
-    cs_b3 = calcular_crafter_score_poblacional(b3_desglose)
-    cs_b4 = calcular_crafter_score_poblacional(b4_desglose)
+    cs_b1 = calcular_crafter_score_poblacional([{"logros": l} for l in b1_desglose])
+    cs_b2 = calcular_crafter_score_poblacional([{"logros": l} for l in b2_desglose])
+    cs_b3 = calcular_crafter_score_poblacional([{"logros": l} for l in b3_desglose])
+    cs_b4 = calcular_crafter_score_poblacional([{"logros": l} for l in b4_desglose])
 
     cs_diff_puntual, cs_inf, cs_sup = calcular_crafter_score_bootstrap_diff(b4_desglose, b3_desglose)
 
