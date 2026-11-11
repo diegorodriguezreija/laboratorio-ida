@@ -12,7 +12,7 @@
 
 Se evaluó el rendimiento de **IdA v12.0** (arquetipo seleccionado `Hominis_G12` con axiomas ancestrales weismannianos consolidados) frente a una **Línea Base Tradicional Voraz sin memoria** (`crafter_voraz.py`) y un **Control Aleatorio Uniforme** sobre las mismas **40 semillas pareadas** (3000 a 3039) de la partición de evaluación reservada de Crafter 2D. Se mantuvo paridad de observación (ventana local de visión $9 \times 9$, radio 6) e inventario.
 
-* **Veredicto:** **Mejora clara frente a la línea base voraz reactiva sin memoria (+15.61 pp de Crafter Score, IC 95 %: [+12.34 %, +18.41 %]; +5.88 logros por episodio, $p < 10^{-6}$). Diferencia en supervivencia pura no significativa (+33.9 pasos, $p = 0.067$ unilateral).**
+* **Veredicto:** **Mejora clara frente a la línea base voraz reactiva sin memoria (+15.61 pp de Crafter Score [IC 95 %: +12.34 pp, +18.41 pp]; +5.88 logros por episodio, $p < 10^{-6}$). Diferencia en supervivencia pura no significativa (+33.9 pasos, $p = 0.067$ unilateral).**
 * **Alcance y Límite de la Conclusión:** La ventaja observada demuestra la superioridad de IdA frente a un sistema heurístico reactivo clásico que carece de memoria espacial. Dado que el agente voraz olvida la ubicación de los recursos tan pronto salen de su campo de visión local ($9 \times 9$), los datos presentes no permiten atribuir de forma causal la ventaja a los componentes bioinspirados (sistemas límbico/afectivo o arbitraje triúnico) frente a lo que aportaría una memoria espacial convencional. Dicha atribución queda pendiente de verificación en el Experimento 002b (voraz con memoria de mapa vs. IdA con ablación de memoria).
 
 ---
@@ -25,7 +25,7 @@ En [PREGUNTA.md](PREGUNTA.md), la sección 2 postulaba:
 **Desviación metodológica:** El *Crafter Score* (Hafner, 2021) es formalmente una métrica agregada poblacional (la media geométrica de las tasas de éxito $s_i$ de los 22 logros calculadas sobre el total de la muestra $N=40$). Al ser una función no lineal de las tasas agregadas, no existe una cifra de Crafter Score univariante e independiente por semilla que permita aplicar directamente el test de rangos con signo de Wilcoxon sobre diferencias individuales de score.
 
 **Corrección aplicada:**
-1. Para contrastar la métrica primaria agregada, se construyó un **Intervalo de Confianza Bootstrap al 95 % de la diferencia poblacional pareada** ($\text{CrafterScore}_{\text{IdA}} - \text{CrafterScore}_{\text{Voraz}}$) mediante $B = 10.000$ remuestreos de las 40 semillas pareadas.
+1. Para contrastar la métrica primaria agregada, se construyó un **Intervalo de Confianza Bootstrap al 95 % de la diferencia poblacional pareada** ($\text{CrafterScore}_{\text{IdA}} - \text{CrafterScore}_{\text{Voraz}}$) mediante $B = 10.000$ remuestreos de las 40 semillas pareadas. La estimación puntual sobre los datos es de **+15.61 pp**, con un IC 95 % percentil de **[+12.34 pp, +18.41 pp]**. (La media de las réplicas bootstrap es de +15.48 pp, ligeramente menor debido a la concavidad de la media geométrica).
 2. Como contraste inferencial complementario a nivel de episodio pareado por semilla, se evaluó el **número total de logros desbloqueados por episodio** mediante el test de Wilcoxon pareado bilateral y el test de signos binomial.
 
 ---
@@ -36,7 +36,7 @@ En [PREGUNTA.md](PREGUNTA.md), la sección 2 postulaba:
 
 | Métrica | IdA v12.0 (Bioinspirado) | Agente Voraz (Sin Memoria) | Control Aleatorio (Suelo) | Diferencia Pareada (IdA − Voraz) | IC 95 % Bootstrap (10.000 réplicas) | $p$-valor | Tamaño del Efecto |
 |---|---|---|---|---|---|---|---|
-| **Crafter Score Poblacional** | **22.07 %** | 6.46 % | 1.20 % | **+15.61 pp** | **[+12.34 %, +18.41 %]** | — | — |
+| **Crafter Score Poblacional** | **22.07 %** | 6.46 % | 1.20 % | **+15.61 pp** | **[+12.34 pp, +18.41 pp]** | — | — |
 | **Logros por episodio (Media $\pm$ SD)** | **11.53 $\pm$ 2.64** | 5.65 $\pm$ 2.68 | 2.38 $\pm$ 0.73 | **+5.88 logros** | **[+4.90, +6.80]** | **$p < 10^{-6}$** (Wilcoxon bilateral) | Cliff's $\delta = +0.852$ (Grande) |
 | **Logros por episodio (Mediana, IQR)** | **12.0 (3.25)** | 5.0 (2.00) | 2.0 (1.00) | **+6.0 logros** | — | **$p < 10^{-6}$** (Signos: 38 V / 1 E / 1 D) | — |
 | **Pasos de vida (Media $\pm$ SD)** | **282.2 $\pm$ 111.4** | 248.4 $\pm$ 95.8 | 211.5 $\pm$ 76.1 | **+33.9 pasos** | **[−9.0, +76.6]** | $p = 0.067$ (Unilateral $H_2$) / $p = 0.134$ (Bilateral) | Cliff's $\delta = +0.261$ (Pequeño) |
@@ -83,11 +83,13 @@ En [PREGUNTA.md](PREGUNTA.md), la sección 2 postulaba:
 El análisis de comportamiento muestra que el agente voraz coloca la mesa de trabajo (`place_table`) en el 100 % de los episodios, pero solo llega a fabricar el pico de madera en el 32.5 %. La causa es directa: tan pronto coloca la mesa, una necesidad metabólica prioritaria (sed o caza) o una amenaza hace que el agente se mueva unos pasos. Al superar las 6 casillas de distancia, la mesa desaparece de su vista local y, al no contar con memoria persistente de objetos pasados, el voraz queda en un bucle errante buscando árboles nuevos sin volver a su mesa.
 IdA, por su parte, mantiene en la estructura de memoria de $S_3$ los nodos observados recientemente. Esta diferencia no demuestra por sí misma la superioridad de una arquitectura bioinspirada frente a una tradicional: **cualquier agente clásico provisto de un mapa de memoria local y un algoritmo de ruta (A*) habría recordado la mesa de trabajo**. 
 
-### 5.2 Combate con Esqueletos: Exposición y Tasa Condicionada
-La diferencia en `defeat_skeleton` (60.0 % en IdA vs. 0.0 % en el voraz) se auditó empíricamente para verificar si se debía a una falta de exposición del voraz (por picar menos piedra) o a incapacidad táctica de combate:
-* En las 40 semillas, el agente voraz tuvo al menos un esqueleto dentro de su campo de visión local en **31 de las 40 semillas (77.5 % de exposición)**, y estuvo bajo fuego directo de proyectiles de flecha en **21 semillas (52.5 %)**.
-* Su tasa de victoria condicionada a la presencia de esqueletos fue del **0.0 % (0 / 31)**. En IdA, la tasa de victoria fue del **60.0 % (24 / 40)**.
-* **Hipótesis del mecanismo:** Los esqueletos en Crafter retroceden si el agente se acerca a distancia $\le 3$ casillas y disparan flechas balísticas a distancia $\le 5$ casillas (`crafter/objects.py:Skeleton.update`). El agente voraz, al detectar peligro cercano, ejecuta una huida en sentido opuesto alejándose del hostil, manteniéndose perpetuamente en la zona de tiro sin alcanzarlo. La hipótesis a contrastar formalmente es si la aproximación agresiva en combate cuerpo a cuerpo es suficiente para resolver el enfrentamiento, o si se requiere un componente deliberativo específico.
+### 5.2 Combate con Esqueletos: Exposición y Tasas Condicionadas
+La diferencia en `defeat_skeleton` (60.0 % en IdA vs. 0.0 % en el voraz) se auditó empíricamente bajo la misma definición estricta de exposición física (presencia de al menos un esqueleto en la ventana de visión local de $9 \times 9$ casillas en algún tick del episodio):
+* **Exposición:** En las 40 semillas, el agente voraz tuvo esqueletos en su ventana local en **31 de las 40 semillas (77.5 %)** y estuvo bajo fuego directo de flechas en **21 semillas (52.5 %)**. IdA tuvo esqueletos en su ventana local en **36 de las 40 semillas (90.0 %)**.
+* **Tasa de éxito condicionada a la exposición:**
+  - **Agente Voraz:** **0.0 % (0 / 31)**.
+  - **IdA v12.0:** **66.7 % (24 / 36)**.
+* **Hipótesis del mecanismo:** En Crafter (`crafter/objects.py:Skeleton`), los esqueletos retroceden si el jugador se aproxima a $\le 3$ casillas y disparan flechas balísticas a distancia $\le 5$. El agente voraz, al priorizar la huida cuando sufre daño a distancia, se mantiene dentro del radio de tiro del esqueleto sin llegar nunca a golpearlo en combate cuerpo a cuerpo. En contraste, IdA avanza activamente en aproximación frontal cuando detecta agresión balística, logrando conectar los golpes necesarios para derrotarlo. La verificación de si esta respuesta se debe a la arquitectura afectiva/reactiva o a una regla de combate táctico simple queda sujeta a prueba en el Experimento 002b.
 
 ---
 
