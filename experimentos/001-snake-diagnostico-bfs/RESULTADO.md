@@ -30,7 +30,7 @@ La regla fijada a priori establecía que el simulador debía reproducir la derro
 
 > [!WARNING]
 > **Veredicto: LA COMPROBACIÓN DE VALIDEZ FALLA.**  
-> El simulador síncrono en memoria **no reproduce la derrota de E-09**. En condiciones síncronas sin límite de tiempo por latido, IdA y BFS no muestran diferencias estadísticamente detectables (el IC 95 % descarta diferencias medias mayores a unas 5–6 unidades de longitud).  
+> El simulador síncrono en memoria **no reproduce la derrota de E-09**. En condiciones síncronas sin límite de tiempo por latido, IdA y BFS no muestran diferencias detectables (el IC 95 % descarta diferencias medias mayores a unas 5–6 unidades de longitud).  
 > *Consecuencia metodológica:* Este experimento **no responde a la pregunta original** («¿por qué perdió IdA en E-09?»). Las métricas que siguen caracterizan el comportamiento de IdA en régimen síncrono, pero no explican aquella derrota histórica en la web.
 
 ---
@@ -44,12 +44,12 @@ Sin embargo, la **calibración empírica directa** sobre esta máquina debilita 
 * **Latencia de BFS:** Media = **0.50 ms** (máximo = 0.65 ms).
 * *Interpretación:* Incluso en su latido más lento, el cálculo interno de IdA consume **menos del 6 % del presupuesto de 80 ms** de Python y menos del 4 % de Worm. La diferencia neta entre IdA y BFS es de apenas ~2.7 ms por tick.
 
-Si en E-09 la línea base BFS también atravesaba el puente de Chromium/Playwright (como documenta `medir_snake.py`), los retrasos de IPC y renderizado afectaban a ambos brazos por igual. Por tanto, **el coste de cálculo interno de IdA no puede explicar por sí solo la brecha histórica de E-09**.
+Dado que en E-09 la línea base BFS también atravesaba el puente de Chromium/Playwright (como documenta el código fuente de `medir_snake.py`), los retrasos de IPC y renderizado afectaban a ambos brazos por igual. Por tanto, **el coste de cálculo interno de IdA no puede explicar por sí solo la brecha histórica de E-09**.
 
-Las causas más plausibles de la discrepancia residen en factores externos de la plataforma web que no forman parte del simulador:
-1. **Diferencias de métrica:** En Playsnake.org la puntuación registrada incluía bonificaciones temporales y de velocidad (puntuaciones de 1500–3500 puntos), mientras que aquí se mide longitud lineal estricta.
-2. **Buffer de entrada del navegador:** Playsnake procesaba eventos de teclado en tiempo real; discrepancias sutiles en la emisión asíncrona de eventos pueden haber provocado pérdida de teclas o giros descartados.
-3. **Lectura asíncrona del DOM:** El scraping de celdas mediante `page.evaluate()` en Chromium introducía jitter no determinista.
+Las hipótesis alternativas más plausibles sobre la discrepancia con Playsnake.org residen en:
+1. **Diferencias de métrica (Hipótesis):** En Playsnake.org la puntuación no era la longitud lineal de la serpiente sino una puntuación acumulada en el juego web, potencialmente influida por el tiempo de permanencia o bonificaciones.
+2. **Buffer de entrada del navegador (Hipótesis):** Playsnake procesaba eventos de teclado en tiempo real; el juego web puede haber ignorado pulsaciones concurrentes o en ráfaga cuando los agentes enviaban teclas sucesivas.
+3. **Lectura asíncrona del DOM (Hipótesis):** El scraping de celdas mediante `page.evaluate()` en Chromium introducía jitter no determinista.
 
 ---
 
@@ -66,24 +66,25 @@ Proporción de giros seguidos de contragiro en $\le 2$ ticks que no reducen la d
 ### Métrica B: Contrafactual de Espacio Libre Residual
 Pérdida de área conexa accesible por movimiento ($\delta = (A_{max} - A_{IdA}) / N_{libres}$), comparada contra la acción legal que maximiza el flood-fill conexo ($A_{max}$):
 
-* **Frecuencia de decisiones subóptimas ($\delta > 0$):** Mediana = **0.26 %** de los ticks (Media: 0.28 %, IC 95 % [0.24 %, 0.33 %]). Representa en promedio unos 3.3 ticks por episodio (164 ticks en total sobre 61 648 latidos).
+* **Frecuencia de decisiones subóptimas ($\delta > 0$):** Mediana = **0.26 %** de los ticks (Media: 0.28 %, IC 95 % [0.24 %, 0.33 %]). Representa en promedio unos 3.2 ticks por episodio (**161 ticks en total** sobre 61 648 latidos evaluados).
 * **Magnitud de la pérdida cuando $\delta > 0$:** Mediana = **18.08 %** del tablero libre (Media: 24.00 %, IC 95 % [20.41 %, 29.30 %]).
 * **Asociación temporal con la muerte (comparación contra tasa base):**
-  * La tasa global por tick de decisiones con $\delta > 0$ es de **0.261 %**.
+  * La tasa global por tick de decisiones con $\delta > 0$ es de **0.261 %** (161 / 61 648).
   * En una ventana aleatoria cualquiera de 30 ticks, la probabilidad esperable por azar de encontrar al menos un tick con $\delta > 0$ es de solo el **7.55 %** ($1 - (1 - 0.00261)^{30}$).
   * Frente a ese 7.55 % basal, en el **57.1 % de las muertes por auto-encierro (28 de 49 episodios)** se registró al menos un tick con $\delta > 0$ en los 30 ticks previos al colapso.
-  * La presencia de decisiones subóptimas de espacio en la ventana terminal es **7.6 veces superior a la tasa base**, confirmando una asociación temporal directa con el desenlace fatal.
+  * La presencia de decisiones subóptimas de espacio en la ventana terminal es **7.6 veces superior a la tasa base**.
+  * *Advertencia metodológica:* Esta correlación debe interpretarse como una **asociación temporal, no necesariamente causal directa**. La tasa base global no está condicionada a la longitud de la serpiente ni a la fragmentación del espacio (en tablero abierto $\delta > 0$ es casi imposible), por lo que parte de la concentración en la fase final es de origen mecánico. Asimismo, la ventana de 30 ticks fue elegida a posteriori.
 
 ### Métrica C: Interferencia de S1 sobre S3 y Origen de $\delta > 0$
 1. **Bifurcación contrafactual en agonía:**
    * En 41 de los 50 episodios (**82.0 %**) hubo al menos una discrepancia entre S1 y S3 en la ventana de los 5 ticks previos a la muerte.
    * **Interferencias destructivas confirmadas:** **0 casos (0.0 %)**. En todos los episodios donde se forzó la propuesta de S3 desde el punto de desacuerdo, la serpiente pereció igualmente en $\le 5$ ticks (situación ya terminal).
 2. **Origen de las decisiones subóptimas de espacio ($\delta > 0$):**
-   * De los 164 ticks con $\delta > 0$ registrados en las 50 semillas:
-     * En **101 ticks (61.6 %)**: S1 y S3 coincidían en proponer la misma acción.
-     * En **63 ticks (38.4 %)**: fue el propio **S3 quien propuso la acción con pérdida de área** frente a una alternativa distinta de S1.
+   * De los 161 ticks con $\delta > 0$ registrados en las 50 semillas:
+     * En **99 ticks (61.5 %)**: S1 y S3 coincidían en proponer la misma acción.
+     * En **62 ticks (38.5 %)**: fue el propio **S3 quien propuso la acción con pérdida de área** frente a una alternativa distinta de S1.
      * En **0 ticks (0.0 %)**: la pérdida de área se debió a S1 imponiéndose sobre una alternativa de mayor espacio propuesta por S3.
-   * *Diagnóstico:* Los datos demuestran con certeza que S1 nunca se impuso a una alternativa mejor de S3. En el 61.6 % de los fallos ambos sistemas convergieron en la misma casilla, y en el 38.4 % restante el fallo provino del horizonte prospectivo de S3.
+   * *Diagnóstico:* Los datos demuestran con certeza que S1 nunca se impuso a una alternativa mejor de S3. En el 61.5 % de los fallos ambos sistemas convergieron en la misma casilla, y en el 38.5 % restante el fallo provino del horizonte prospectivo de S3.
 
 ---
 
@@ -103,7 +104,7 @@ Clasificación exhaustiva de las 50 muertes:
 > En una inspección preliminar, 24 casos fueron etiquetados provisionalmente como «oscilación fatal» debido a que el algoritmo detectó cambios de sentido en los 3 ticks finales. El análisis detallado demostró que correspondían a giros en U forzados por la ausencia de salidas dentro de un bolsillo ya cerrado. Al unificar la taxonomía bajo la regla a priori (colisión contra el cuerpo = auto-encierro), los 49 casos se agrupan en su causa real.
 
 ### Mecanismo de saturación en ambos brazos
-Ambos agentes colapsan al alcanzar longitudes elevadas ($L \approx 70-80$, ocupando el 25 % del tablero) cuando el espacio libre restante queda fragmentado. La diferencia en el contacto final reside en los reflejos:
+Ambos agentes colapsan al alcanzar longitudes elevadas ($L \approx 70-80$, ocupando el 25 % del tablero) cuando el espacio libre restante queda fragmentado:
 * La línea base BFS (heurística voraz de camino más corto que maximiza área por flood-fill si el camino no es seguro) avanza en su dirección inercial cuando las opciones legales se reducen a cero, chocando contra el muro (90 % de sus muertes).
 * IdA cuenta con un veto perimetral en S1; al quedarse sin salidas, gira hacia el interior, colisionando contra su propio cuerpo (98 % de sus muertes).
 
@@ -111,6 +112,22 @@ Ambos agentes colapsan al alcanzar longitudes elevadas ($L \approx 70-80$, ocupa
 
 ## 5. Síntesis Final
 
-1. **Validez externa:** El experimento síncrono no reproduce la brecha de E-09. La hipótesis de que la derrota histórica se debió al coste de cálculo interno queda empíricamente debilitada al medir que IdA consume menos del 6 % del presupuesto de tick. Las diferencias observadas en la web apuntan a factores del entorno de ejecución (buffer de teclado, métrica de puntuación, renderizado del DOM).
-2. **Capacidad táctica de IdA:** En condiciones síncronas, IdA y BFS no muestran diferencias detectables en longitud final (media 71.84 frente a 71.18, IC 95 % [-4.50, +5.64], 23 victorias por brazo).
-3. **El origen de los auto-encierros:** Las decisiones con pérdida de espacio conexo ocurren con una frecuencia 7.6 veces mayor a la tasa base en los 30 ticks previos al colapso. En el 61.6 % de ellas S1 y S3 coincidían, y en el 38.4 % provinieron del horizonte prospectivo de S3; en ningún caso S1 se impuso a una propuesta mejor de S3.
+1. **Validez externa:** El experimento síncrono no reproduce la brecha de E-09. La hipótesis de que la derrota histórica se debió al coste de cálculo interno queda empíricamente debilitada al medir que IdA consume menos del 6 % del presupuesto de tick.
+2. **Capacidad táctica de IdA:** En condiciones síncronas, IdA y BFS **no muestran diferencias detectables** en longitud final (media 71.84 frente a 71.18, IC 95 % [-4.50, +5.64], 23 victorias por brazo).
+3. **El origen de los auto-encierros:** Las decisiones con pérdida de espacio conexo ocurren con una frecuencia 7.6 veces mayor a la tasa base en los 30 ticks previos al colapso. En el 61.5 % de ellas S1 y S3 coincidían, y en el 38.5 % provinieron del horizonte prospectivo de S3; en ningún caso S1 se impuso a una propuesta mejor de S3.
+
+---
+
+## Anexo: Auditoría de E-09 sobre los Registros Históricos de N2_snake.csv
+
+Para comprobar si en el estudio original E-09 IdA sufría descarte de ticks o pérdida de cadencia temporal en la web, se auditaron los 180 episodios de `N2_snake.csv`:
+
+| Dificultad (Velocidad) | Plazo Nominal del Tick | Ticks/s IdA (Media ± DT) | Ticks/s BFS (Media ± DT) | Latidos Vividos IdA | Latidos Vividos BFS |
+|---|---|---|---|---|---|
+| **Slug (Lenta)** | ~160 ms | **6.31** (± 0.23) | **6.71** (± 1.71) | 581.3 (Med: 587.0) | 691.5 (Med: 669.5) |
+| **Worm (Media)** | ~112 ms | **8.95** (± 0.28) | **8.83** (± 0.15) | 538.8 (Med: 470.0) | 777.1 (Med: 720.0) |
+| **Python (Rápida)** | ~65 ms | **15.50** (± 0.48) | **15.26** (± 0.14) | 559.8 (Med: 550.5) | 821.9 (Med: 759.5) |
+
+### Conclusiones de la auditoría de E-09:
+1. **IdA no se saltaba ticks en la web:** La cadencia de ejecución por segundo fue rigurosamente idéntica entre IdA y BFS en las tres dificultades (en Python, 15.50 ticks/s para IdA vs. 15.26 ticks/s para BFS). La hipótesis de retraso acumulado o pérdida de ticks queda **formalmente descartada**.
+2. **Naturaleza de la brecha en E-09:** La ratio de puntuación por latido fue idéntica en ambos agentes (~2.8 a 3.1 puntos por latido). La brecha de puntuación a favor de BFS procedía exclusivamente de que BFS sobrevivía más latidos en el navegador web (en Python: 821.9 latidos frente a 559.8 de IdA). Dado que en el simulador local IdA sobrevive más de 1100 latidos y empata con BFS, la vulnerabilidad de IdA en la web radicaba probablemente en la interacción asíncrona con el gestor de eventos de teclado de Chromium o en pequeñas latencias de transducción sensorial.
