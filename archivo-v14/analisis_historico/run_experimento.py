@@ -24,7 +24,7 @@ import numpy as np
 
 # Añadir raíz al sys.path
 RUTA_DIR = os.path.dirname(os.path.abspath(__file__))
-RUTA_RAIZ = os.path.abspath(os.path.join(RUTA_DIR, ".."))
+RUTA_RAIZ = os.path.abspath(os.path.join(RUTA_DIR, "..", ".."))
 if RUTA_RAIZ not in sys.path:
     sys.path.insert(0, RUTA_RAIZ)
 
@@ -37,10 +37,16 @@ from nivel_3_componentes.mundos.mundo_crafter.mundo_crafter_runner import (
     evaluar_individuo_en_semilla,
 )
 from nivel_3_componentes.rutas_salida import directorio_salidas
-from analisis.estadistica import (
-    evaluar_comparativa_pareada,
-    corregir_holm_bonferroni,
-)
+try:
+    from herramientas.estadistica import (
+        evaluar_comparativa_pareada,
+        corregir_holm_bonferroni,
+    )
+except ImportError:
+    from analisis.estadistica import (
+        evaluar_comparativa_pareada,
+        corregir_holm_bonferroni,
+    )
 
 
 def parsear_rango_semillas(rango_str: str) -> List[int]:

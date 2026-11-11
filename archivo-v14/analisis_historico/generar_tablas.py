@@ -21,16 +21,21 @@ from collections import Counter, defaultdict
 from statistics import mean, median
 from typing import Dict, List, Optional
 
-RAIZ = os.path.abspath(os.path.join(os.path.dirname(__file__), ".."))
+RAIZ = os.path.abspath(os.path.join(os.path.dirname(__file__), "..", ".."))
 if RAIZ not in sys.path:
     sys.path.insert(0, RAIZ)
+if os.path.join(RAIZ, "base") not in sys.path:
+    sys.path.insert(0, os.path.join(RAIZ, "base"))
 
 import numpy as np  # noqa: E402
 
-from analisis.estadistica import corregir_holm_bonferroni, evaluar_comparativa_pareada  # noqa: E402
+try:
+    from herramientas.estadistica import corregir_holm_bonferroni, evaluar_comparativa_pareada  # noqa: E402
+except ImportError:
+    from analisis.estadistica import corregir_holm_bonferroni, evaluar_comparativa_pareada  # noqa: E402
 from nivel_3_componentes.mundos.mundo_crafter.mundo_crafter_runner import calcular_crafter_score_poblacional  # noqa: E402
 
-RES = os.path.join(RAIZ, "analisis", "resultados")
+RES = os.path.join(RAIZ, "archivo-v14", "resultados_historicos")
 N1 = os.path.join(RES, "N1_reserva_3000-3039")
 SALIDA = os.path.join(RAIZ, "docs", "RESULTADOS_TABLAS.md")
 
