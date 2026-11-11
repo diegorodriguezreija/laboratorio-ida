@@ -37,7 +37,7 @@ Historial oficial de contrastes empíricos realizados en el marco de IdA. Cada e
 
 | # | Experimento | Estado | Mundo | Pregunta de Investigación | Veredicto |
 |---|---|---|---|---|---|
-| **001** | `001-snake-diagnostico-bfs` | **Completado** | Snake | ¿Qué mecanismo intrínseco de IdA explica su desventaja frente a BFS (auto-encierro, interferencia S1, u oscilación)? | **Empate (23-23-4)**. Sin latencia web, IdA empata con BFS (71,8 vs 71,2); la brecha de E-09 era por reloj de red. 0 % interferencia S1. [Ver RESULTADO.md](experimentos/001-snake-diagnostico-bfs/RESULTADO.md) |
+| **001** | `001-snake-diagnostico-bfs` | **Completado** | Snake | ¿Qué mecanismo intrínseco de IdA explica su desventaja frente a BFS (auto-encierro, interferencia S1, u oscilación)? | **Validez no reproducida (Empate 23-23-4)**. En síncrono no hay diferencias detectables (IC 95 %: [-4,5, +5,6]). Se plantea la hipótesis de latencia para 001b. [Ver RESULTADO.md](experimentos/001-snake-diagnostico-bfs/RESULTADO.md) |
 | **002** | `002-crafter-ida-vs-voraz` | Planificado | Crafter | ¿Aporta el chasis bioinspirado de IdA una ventaja de supervivencia o progreso frente a un agente tradicional voraz con vista local idéntica? | *(Pendiente)* |
 | **003** | `003-ajedrez-coste-afectivo` | Planificado | Ajedrez | Experimento de control: ¿cuál es el coste en centipeones (Stockfish) de la modulación afectiva en un entorno determinista sin homeostasis frente a Minimax puro (1-ply / 2-ply)? | *(Pendiente)* |
 | **004** | `004-desacuerdos-tribunal-r3` | Planificado | Crafter | ¿Salva vidas el Tribunal A0 en el 4 % de bifurcaciones donde discrepa de A1 y A3? | *(Pendiente)* |
