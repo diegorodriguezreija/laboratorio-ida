@@ -10,7 +10,7 @@ import pathlib
 import pytest
 
 RAIZ = pathlib.Path(__file__).resolve().parent.parent
-CARPETAS_CODIGO = [RAIZ / d for d in ("nivel_1_core", "nivel_2_sistemas", "nivel_3_componentes", "analisis", "tests_arquitectura")]
+CARPETAS_CODIGO = [RAIZ / "base" / d for d in ("nivel_1_core", "nivel_2_sistemas", "nivel_3_componentes")] + [RAIZ / "tests_arquitectura", RAIZ / "herramientas"]
 
 RUNNERS = [
     ("nivel_3_componentes.mundos.mundo_crafter.mundo_crafter_runner", None),
