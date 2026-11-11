@@ -77,4 +77,4 @@ Se fija a priori un margen de equivalencia práctica de **$\delta_{\text{equiv}}
   - Brazo 2 (IdA sin memoria alocéntrica): Mediana 9.0 logros (rango 9–12), 0 excepciones mecánicas.
   - Brazo 3 (Voraz con memoria): Mediana 9.0 logros (rango 7–12), retornos a mesa verificados.
   - Brazo 4 (IdA completo): Mediana 12.0 logros (rango 10–12).
-* **Hash Congelado:** Se congela el commit previo a la ejecución: `71603cb` (y el commit resultante tras esta ficha).
+* **Hash Congelado Definitivo:** Se congela el commit previo exacto a la ejecución: `75c95dadedf083f7cf3bd505270c4ff854a2b88f`.
