@@ -1,5 +1,6 @@
 """El harness de experimentos falla con un error explícito ante opciones no implementadas (nunca en silencio)."""
 
+import os
 import pathlib
 import subprocess
 import sys
@@ -7,7 +8,7 @@ import sys
 import pytest
 
 RAIZ = pathlib.Path(__file__).resolve().parent.parent
-HARNESS = RAIZ / "analisis" / "run_experimento.py"
+HARNESS = RAIZ / "archivo-v14" / "analisis_historico" / "run_experimento.py"
 
 
 @pytest.mark.parametrize(
@@ -29,7 +30,13 @@ def test_harness_rechaza_opciones_no_implementadas(args, mensaje, tmp_path):
         encoding="utf-8",
         errors="replace",
         timeout=120,
-        env={"PYTHONDONTWRITEBYTECODE": "1", "PYTHONIOENCODING": "utf-8", "SYSTEMROOT": __import__("os").environ.get("SYSTEMROOT", "")},
+        env={
+            **os.environ,
+            "PYTHONDONTWRITEBYTECODE": "1",
+            "PYTHONIOENCODING": "utf-8",
+            "PYTHONPATH": os.pathsep.join(filter(None, [str(RAIZ / "base"), str(RAIZ), os.environ.get("PYTHONPATH", "")])),
+            "SYSTEMROOT": os.environ.get("SYSTEMROOT", ""),
+        },
     )
     assert res.returncode == 2, res.stdout + res.stderr
     assert mensaje in res.stderr
