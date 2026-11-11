@@ -6,8 +6,10 @@ Implementa un diseño aditivo puro sobre AgenteCrafterVoraz (crafter_voraz.py):
 - Se limita a añadir un mapa cognitivo alocéntrico de hitos permanentes (mesas, hornos, agua, minerales).
 - Actualiza dinámicamente la memoria: registra cuando descubre un hito y elimina/actualiza cuando
   el material cambia (ej. al picar piedra, la casilla se actualiza a camino).
-- Soporta navegación tanto en vista local como hacia objetivos fuera de vista mediante A*/BFS
-  sobre casillas transitables recordadas o vector de aproximación euclídeo.
+- Soporta navegación tanto en vista local como hacia objetivos fuera de vista mediante BFS
+  sobre casillas transitables recordadas.
+- Métrica de telemetría: retornos_fuera_de_vista contabiliza viajes COMPLETADOS que se iniciaron
+  estando el objetivo fuera de la ventana de visión local y concluyeron alcanzando la adyacencia.
 - Cumple la PRUEBA DE IDENTIDAD: si memoria_activa=False, la secuencia de acciones es 100% idéntica
   a la de AgenteCrafterVoraz en cualquier semilla.
 """
@@ -51,8 +53,10 @@ class AgenteCrafterVorazMemoria(AgenteCrafterVoraz):
         # Mapa de casillas transitables recordadas (caminables conocidas)
         self.casillas_transitables_recordadas: Set[Tuple[int, int]] = set()
         self.paso_actual: int = 0
-        # Métrica de telemetría: contador de retornos guiados hacia objetivos fuera de vista
+        # Métrica de telemetría: contador de viajes completos hacia objetivos iniciados fuera de vista
         self.retornos_fuera_de_vista: int = 0
+        self._viaje_activo_pos: Optional[Tuple[int, int]] = None
+        self._viaje_activo_es_fuera_de_vista: bool = False
 
     def registrar_observacion_en_memoria(
         self,
@@ -134,10 +138,62 @@ class AgenteCrafterVorazMemoria(AgenteCrafterVoraz):
         px, py = player_pos
         self.registrar_observacion_en_memoria(px, py, vista_local)
 
+        # Monitorear si hemos completado un viaje iniciado fuera de vista
+        if self._viaje_activo_pos is not None:
+            vx, vy = self._viaje_activo_pos
+            if abs(vx - px) + abs(vy - py) <= 1:
+                if self._viaje_activo_es_fuera_de_vista:
+                    self.retornos_fuera_de_vista += 1
+                self._viaje_activo_pos = None
+                self._viaje_activo_es_fuera_de_vista = False
+
         # Ejecutamos la lógica base del voraz
         return super().decidir(
             player_pos, facing, salud, comida, bebida, energia, daylight, sleeping, inventario, vista_local
         )
+
+    def _interactuar_o_acercar_material(
+        self,
+        px: int,
+        py: int,
+        facing: Tuple[int, int],
+        material_target: str,
+        vista_local: Dict[Tuple[int, int], Tuple[str, Any]],
+        interact_es_do: bool = True,
+    ) -> Optional[str]:
+        """
+        Extensión aditiva: si el material no está en la vista local, consulta memoria alocéntrica.
+        """
+        if not self.memoria_activa:
+            return super()._interactuar_o_acercar_material(
+                px, py, facing, material_target, vista_local, interact_es_do
+            )
+
+        # Primero probar con el comportamiento base sobre la vista local
+        paso_local = super()._interactuar_o_acercar_material(
+            px, py, facing, material_target, vista_local, interact_es_do
+        )
+        if paso_local is not None:
+            return paso_local
+
+        # Si no está visible, consultar memoria alocéntrica (equivalente a IdA S3)
+        if material_target == "water":
+            hitos = self.consultar_hitos_memoria("fuente_agua", "water")
+        elif material_target in ("stone", "coal", "iron"):
+            hitos = self.consultar_hitos_memoria("yacimiento_mineral", material_target)
+        else:
+            hitos = []
+
+        if hitos:
+            hitos.sort(key=lambda p: abs(p[0] - px) + abs(p[1] - py))
+            target = hitos[0]
+            # Iniciar viaje hacia recurso recordado si aplica
+            if self._viaje_activo_pos != target:
+                self._viaje_activo_pos = target
+                self._viaje_activo_es_fuera_de_vista = True
+            return self._navegar_hacia(px, py, target, vista_local, interactuar_adyacente=True)
+
+        return None
 
     def _resolver_tecnologia(
         self,
@@ -148,7 +204,7 @@ class AgenteCrafterVorazMemoria(AgenteCrafterVoraz):
         vista_local: Dict[Tuple[int, int], Tuple[str, Any]],
     ) -> Optional[str]:
         """
-        Sobrescribe EXCLUSIVAMENTE el retorno a estaciones cuando no son visibles en la vista local,
+        Sobrescribe el retorno a estaciones cuando no son visibles en la vista local,
         respetando las recetas oficiales de Crafter.
         """
         if not self.memoria_activa:
@@ -204,33 +260,30 @@ class AgenteCrafterVorazMemoria(AgenteCrafterVoraz):
             if not mesa_pos and madera >= 2:
                 return ACC_PLACE_TABLE
             if mesa_pos and not mesa_adyacente and madera >= 1:
-                paso = self._navegar_hacia(px, py, mesa_pos, vista_local)
-                if paso:
-                    if mesa_en_memoria:
-                        self.retornos_fuera_de_vista += 1
-                    return paso
+                if self._viaje_activo_pos != mesa_pos:
+                    self._viaje_activo_pos = mesa_pos
+                    self._viaje_activo_es_fuera_de_vista = mesa_en_memoria
+                return self._navegar_hacia(px, py, mesa_pos, vista_local)
 
         # Regla T2: Crear espada de madera
         if tiene_wood_pickaxe and not tiene_wood_sword:
             if mesa_adyacente and madera >= 1:
                 return ACC_MAKE_WOOD_SWORD
             if mesa_pos and not mesa_adyacente and madera >= 1:
-                paso = self._navegar_hacia(px, py, mesa_pos, vista_local)
-                if paso:
-                    if mesa_en_memoria:
-                        self.retornos_fuera_de_vista += 1
-                    return paso
+                if self._viaje_activo_pos != mesa_pos:
+                    self._viaje_activo_pos = mesa_pos
+                    self._viaje_activo_es_fuera_de_vista = mesa_en_memoria
+                return self._navegar_hacia(px, py, mesa_pos, vista_local)
 
         # Regla T3: Crear pico de piedra
         if tiene_wood_pickaxe and not tiene_stone_pickaxe:
             if mesa_adyacente and piedra >= 1 and madera >= 1:
                 return ACC_MAKE_STONE_PICKAXE
             if mesa_pos and not mesa_adyacente and piedra >= 1 and madera >= 1:
-                paso = self._navegar_hacia(px, py, mesa_pos, vista_local)
-                if paso:
-                    if mesa_en_memoria:
-                        self.retornos_fuera_de_vista += 1
-                    return paso
+                if self._viaje_activo_pos != mesa_pos:
+                    self._viaje_activo_pos = mesa_pos
+                    self._viaje_activo_es_fuera_de_vista = mesa_en_memoria
+                return self._navegar_hacia(px, py, mesa_pos, vista_local)
 
         # Regla T4: Colocar horno (requiere piedra >= 4)
         if tiene_stone_pickaxe and not horno_pos and piedra >= 4:
@@ -240,15 +293,13 @@ class AgenteCrafterVorazMemoria(AgenteCrafterVoraz):
         if tiene_stone_pickaxe and not tiene_iron_pickaxe and horno_pos and mesa_pos:
             if horno_adyacente and mesa_adyacente and hierro >= 1 and carbon >= 1 and madera >= 1:
                 return ACC_MAKE_IRON_PICKAXE
-            # Si tenemos los 3 materiales pero falta acercarse a mesa u horno
             if hierro >= 1 and carbon >= 1 and madera >= 1:
-                # Navegar hacia la estación más lejana de las dos
                 target = horno_pos if not horno_adyacente else mesa_pos
-                paso = self._navegar_hacia(px, py, target, vista_local)
-                if paso:
-                    if horno_en_memoria or mesa_en_memoria:
-                        self.retornos_fuera_de_vista += 1
-                    return paso
+                target_mem = horno_en_memoria if not horno_adyacente else mesa_en_memoria
+                if self._viaje_activo_pos != target:
+                    self._viaje_activo_pos = target
+                    self._viaje_activo_es_fuera_de_vista = target_mem
+                return self._navegar_hacia(px, py, target, vista_local)
 
         return None
 
@@ -258,34 +309,78 @@ class AgenteCrafterVorazMemoria(AgenteCrafterVoraz):
         py: int,
         destino: Tuple[int, int],
         vista_local: Dict[Tuple[int, int], Tuple[str, Any]],
+        interactuar_adyacente: bool = True,
     ) -> Optional[str]:
         """
-        Navega hacia un objetivo cardinal.
-        1. Si está dentro de la vista local, utiliza BFS exacto.
-        2. Si está fuera de la vista local, busca en el mapa de casillas transitables recordadas.
-        3. Si no hay camino continuo conocido, da el paso cardinal legal que más reduce la distancia Manhattan.
+        Navega hacia un objetivo destino usando BFS sobre casillas transitables recordadas y visibles.
+        Si destino está adyacente (distancia Manhattan <= 1) e interactuar_adyacente es True, retorna None.
+        Si la ruta completa no está explorada, avanza hacia el nodo transitable conocido más cercano al objetivo.
         """
         dest_x, dest_y = destino
         dist_m = abs(dest_x - px) + abs(dest_y - py)
-        if dist_m <= 1:
+        if interactuar_adyacente and dist_m <= 1:
+            return None
+        if not interactuar_adyacente and dist_m == 0:
             return None
 
-        # 1. Intentar BFS sobre vista local
-        paso_local = self._camino_bfs(px, py, destino, vista_local, interactuar_adyacente=True)
-        if paso_local and paso_local in ACCION_MOVIMIENTO:
-            return ACCION_MOVIMIENTO[paso_local]
+        # Si el destino está visible en la vista local, usar BFS local
+        if destino in vista_local:
+            paso_local = self._camino_bfs(px, py, destino, vista_local, interactuar_adyacente=interactuar_adyacente)
+            if paso_local and paso_local in ACCION_MOVIMIENTO:
+                return ACCION_MOVIMIENTO[paso_local]
 
-        # 2. Si el objetivo está fuera de la vista local (distancia > 6), planificar sobre memoria global recordada
-        candidatos = []
-        for d in DIRECCIONES_CARDINALES:
-            cand = (px + d[0], py + d[1])
-            if self._es_transitable(cand, vista_local):
-                nueva_dist = abs(dest_x - cand[0]) + abs(dest_y - cand[1])
-                candidatos.append((nueva_dist, d))
+        # BFS global sobre el conjunto de casillas transitables recordadas + vista actual
+        def _es_transitable_nodo(pos: Tuple[int, int]) -> bool:
+            if pos in vista_local:
+                return self._es_transitable(pos, vista_local)
+            return pos in self.casillas_transitables_recordadas
 
-        if candidatos:
-            candidatos.sort(key=lambda x: x[0])
-            mejor_d = candidatos[0][1]
-            return ACCION_MOVIMIENTO.get(mejor_d, ACC_NOOP)
+        cola = deque([(px, py)])
+        visitados = {(px, py)}
+        padres: Dict[Tuple[int, int], Tuple[Tuple[int, int], Tuple[int, int]]] = {}
+        meta_encontrada: Optional[Tuple[int, int]] = None
+        nodo_mas_cercano = (px, py)
+        min_dist_al_destino = dist_m
+
+        while cola:
+            actual = cola.popleft()
+            cx, cy = actual
+            d_actual = abs(dest_x - cx) + abs(dest_y - cy)
+
+            if d_actual < min_dist_al_destino:
+                min_dist_al_destino = d_actual
+                nodo_mas_cercano = actual
+
+            if interactuar_adyacente:
+                if d_actual == 1:
+                    meta_encontrada = actual
+                    break
+            else:
+                if d_actual == 0:
+                    meta_encontrada = actual
+                    break
+
+            for d in DIRECCIONES_CARDINALES:
+                vecino = (cx + d[0], cy + d[1])
+                if vecino not in visitados and _es_transitable_nodo(vecino):
+                    visitados.add(vecino)
+                    padres[vecino] = (actual, d)
+                    cola.append(vecino)
+
+        target = meta_encontrada if meta_encontrada else (nodo_mas_cercano if nodo_mas_cercano != (px, py) else None)
+        if not target:
+            return None
+
+        curr = target
+        primer_paso = None
+        while curr != (px, py):
+            p_padre, dir_paso = padres[curr]
+            if p_padre == (px, py):
+                primer_paso = dir_paso
+                break
+            curr = p_padre
+
+        if primer_paso and primer_paso in ACCION_MOVIMIENTO:
+            return ACCION_MOVIMIENTO[primer_paso]
 
         return None
